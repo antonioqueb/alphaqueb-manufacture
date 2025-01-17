@@ -34,7 +34,7 @@ export default function MultiCards() {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 py-12">
-      <Card className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 border border-gray-100 dark:border-gray-800 relative">
+      <Card className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 border border-zinc-100 dark:border-zinc-800 relative">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-lg font-semibold text-custom-orange dark:text-zinc-200">
             Ahorros Anuales Generados
@@ -50,7 +50,7 @@ export default function MultiCards() {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </Card>
 
-      <Card className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 border border-gray-100 dark:border-gray-800 relative">
+      <Card className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 border border-zinc-100 dark:border-zinc-800 relative">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-lg font-semibold text-custom-orange dark:text-zinc-200">
             Desarrollos Activos
@@ -66,7 +66,7 @@ export default function MultiCards() {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </Card>
 
-      <Card className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 border border-gray-100 dark:border-gray-800 relative">
+      <Card className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 border border-zinc-100 dark:border-zinc-800 relative">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-lg font-semibold text-custom-orange dark:text-zinc-200">
             Clientes Activos
@@ -82,7 +82,7 @@ export default function MultiCards() {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </Card>
 
-      <Card className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 border border-gray-100 dark:border-gray-800 relative">
+      <Card className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 border border-zinc-100 dark:border-zinc-800 relative">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-lg font-semibold text-custom-orange dark:text-zinc-200">
             Clientes Totales

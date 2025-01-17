@@ -89,60 +89,60 @@ const Footer = () => {
                         Más Políticas <FaAngleDown className="ml-1" />
                     </button>
                     {isDropdownOpen && (
-                        <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded shadow-lg z-10">
+                        <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-zinc-800 rounded shadow-lg z-10">
                             <ul className="py-1">
                                 <li>
-                                    <Link href="/aviso-de-cumplimiento-ambiental" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/aviso-de-cumplimiento-ambiental" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Aviso de Cumplimiento Ambiental
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/aviso-legal" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/aviso-legal" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Aviso Legal
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-accesibilidad" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-accesibilidad" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Accesibilidad
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-anti-soborno-y-corrupcion" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-anti-soborno-y-corrupcion" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Anti-Soborno y Corrupción
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-comentarios-o-contenido-generado-por-usuarios" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-comentarios-o-contenido-generado-por-usuarios" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Comentarios o Contenido Generado por Usuarios
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-cookies" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-cookies" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Cookies
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-cumplimiento-regulatorio" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-cumplimiento-regulatorio" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Cumplimiento Regulatorio
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-enlaces-externos" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-enlaces-externos" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Enlaces Externos
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-etica-empresarial" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-etica-empresarial" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Ética Empresarial
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-proteccion-de-datos-personales" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-proteccion-de-datos-personales" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Protección de Datos Personales
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-uso-aceptable-de-recursos-tecnologicos" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <Link href="/politica-de-uso-aceptable-de-recursos-tecnologicos" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Uso Aceptable de Recursos Tecnológicos
                                     </Link>
                                 </li>

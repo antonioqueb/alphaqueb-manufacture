@@ -64,7 +64,7 @@ export default async function BlogPostPage({ params }) {
 
     return (
         <article className="max-w-3xl mx-auto py-8 ">
-           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 text-gray-800 dark:text-gray-200">
+           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 text-zinc-800 dark:text-zinc-200">
                 {post.frontMatter.title}
             </h1>
             <Image

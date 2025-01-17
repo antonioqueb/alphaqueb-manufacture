@@ -31,17 +31,17 @@ const App = () => {
        <TooltipProvider>
          <div className="p-6">
        
-             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-200">{COPY.title}</h2>
-             <p className="text-lg mb-4 text-gray-700 dark:text-gray-200">{COPY.description1}</p>
-             <p className="text-base mb-4 text-gray-600 dark:text-gray-200">{COPY.description2}</p>
-             <p className="text-base mb-4 text-gray-600 dark:text-gray-200">{COPY.description3}</p>
-             <p className="text-base mb-4 font-semibold text-gray-900">{COPY.advantagesTitle}</p>
+             <h2 className="text-3xl font-bold mb-4 text-zinc-900 dark:text-zinc-200">{COPY.title}</h2>
+             <p className="text-lg mb-4 text-zinc-700 dark:text-zinc-200">{COPY.description1}</p>
+             <p className="text-base mb-4 text-zinc-600 dark:text-zinc-200">{COPY.description2}</p>
+             <p className="text-base mb-4 text-zinc-600 dark:text-zinc-200">{COPY.description3}</p>
+             <p className="text-base mb-4 font-semibold text-zinc-900">{COPY.advantagesTitle}</p>
              <ul className="list-disc pl-6 mb-6 space-y-2">
                {COPY.advantages.map((advantage, index) => {
                  const [key, value] = advantage.split(": ");
                  return (
-                   <li key={index} className="text-gray-600 dark:text-gray-200">
-                     <strong className="text-gray-900 dark:text-gray-200">{key}:</strong> {value}
+                   <li key={index} className="text-zinc-600 dark:text-zinc-200">
+                     <strong className="text-zinc-900 dark:text-zinc-200">{key}:</strong> {value}
                    </li>
                  );
                })}
@@ -54,7 +54,7 @@ const App = () => {
                </Button>
                <Tooltip>
                  <TooltipContent>
-                   <p className="text-sm text-gray-700 dark:text-gray-200">{COPY.tooltipContent}</p>
+                   <p className="text-sm text-zinc-700 dark:text-zinc-200">{COPY.tooltipContent}</p>
                  </TooltipContent>
                </Tooltip>
              </div>

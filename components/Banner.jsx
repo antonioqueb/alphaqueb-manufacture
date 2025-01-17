@@ -4,8 +4,8 @@ import { useState } from "react";
 
 // Diccionario de textos (copy)
 const copy = {
-  title: "Transformando la manufactura mexicana con soluciones tecnológicas innovadoras",
-  description: "En Alphaqueb Consulting, convertimos desafíos operativos en ventajas competitivas con soluciones personalizadas de automatización, digitalización y optimización. Reducimos costos hasta un 30%, aumentamos la productividad en un 40% y mejoramos la calidad de los productos para empresas manufactureras.",
+  title: "Innovación en Manufactura: Soluciones TI Industriales",
+  description: "En Alphaqueb Consulting, convertimos desafíos operativos en ventajas competitivas con soluciones personalizadas de automatización, digitalización y optimización. Reducimos costos hasta un 30%, aumentamos la productividad en un 40% y mejoramos la calidad de los productos para empresas manufactureras. ¿Listo para ver qué significa esto para tu negocio? Solicita una consulta hoy mismo y descubre más.",
   bannerAlt: "Consultoría tecnológica - Impulsa la eficiencia y competitividad de tu empresa manufacturera con Alphaqueb Consulting",
 };
 

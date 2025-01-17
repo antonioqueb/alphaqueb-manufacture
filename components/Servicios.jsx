@@ -49,7 +49,7 @@ export default function Servicios() {
         {copy.services.map((service, index) => (
           <div
             key={index}
-            className="group relative dark:bg-stone-900 bg-white rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl overflow-hidden border border-gray-100 dark:border-gray-800"
+            className="group relative dark:bg-stone-900 bg-white rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl overflow-hidden border border-zinc-100 dark:border-zinc-800"
           >
             <div className="relative w-full aspect-w-16 aspect-h-9">
               <Image
