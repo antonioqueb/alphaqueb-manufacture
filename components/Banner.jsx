@@ -56,7 +56,7 @@ export default function Banner() {
 
   return (
     <section className="w-full flex flex-col lg:flex-row xl:pb-2">
-      <div className="w-full lg:w-7/12 py-2 flex flex-col justify-center">
+      <div className="w-full lg:w-9/12 py-2 flex flex-col justify-center">
         <CardHeader className="text-start animate-fade-in-up px-0">
           <CardTitle className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-zinc-800 mb-3 dark:text-zinc-100">
             {copy.title}
