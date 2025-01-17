@@ -2,7 +2,6 @@
 import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { url } from 'inspector';
 
 // Diccionario de textos (copy)
 const copy = {
