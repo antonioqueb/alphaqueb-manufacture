@@ -23,7 +23,7 @@ const copy = {
         "Diseñamos soluciones de automatización personalizadas que incrementan la capacidad de producción, mejoran la consistencia y reducen costos operativos.",
       imageSrc: "/automatizacion.jpg",
       imageAlt: "Automatización Industrial",
-      slug: "automatiza",
+      slug: "automatizar",
       
     },
     {
@@ -32,7 +32,7 @@ const copy = {
         "Acompañamiento estratégico para digitalizar procesos operativos, comerciales y administrativos, mejorando la toma de decisiones y la eficiencia global.",
       imageSrc: "/digital.jpg",
       imageAlt: "Transformación Digital Manufacturera",
-      slug: "automatiza",
+      slug: "trasformar",
     },
   ],
   learnMore: "Conoce más →",
