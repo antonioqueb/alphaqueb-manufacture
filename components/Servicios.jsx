@@ -15,6 +15,7 @@ const copy = {
         "Monitoreo y control en tiempo real de procesos industriales, optimizando la supervisión y reduciendo tiempos de inactividad hasta un 40%.",
       imageSrc: "/scada.jpg",
       imageAlt: "Sistemas SCADA para Manufactura",
+      slug: "scada",
     },
     {
       title: "Automatización de Líneas de Producción",
@@ -22,6 +23,8 @@ const copy = {
         "Diseñamos soluciones de automatización personalizadas que incrementan la capacidad de producción, mejoran la consistencia y reducen costos operativos.",
       imageSrc: "/automatizacion.jpg",
       imageAlt: "Automatización Industrial",
+      slug: "automatiza",
+      
     },
     {
       title: "Consultoría en Transformación Digital",
@@ -29,6 +32,7 @@ const copy = {
         "Acompañamiento estratégico para digitalizar procesos operativos, comerciales y administrativos, mejorando la toma de decisiones y la eficiencia global.",
       imageSrc: "/digital.jpg",
       imageAlt: "Transformación Digital Manufacturera",
+      slug: "automatiza",
     },
   ],
   learnMore: "Conoce más →",
@@ -67,7 +71,7 @@ export default function Servicios() {
                 {service.description}
               </p>
               <Link
-                href="#"
+                href={`/servicios/${service.slug}`}
                 className="mt-4 block text-lg font-medium text-custom-orange hover:text-custom-orange-dark transition-colors duration-300"
               >
                 {copy.learnMore}
