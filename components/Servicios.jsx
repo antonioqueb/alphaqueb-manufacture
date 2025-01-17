@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
+import { url } from 'inspector';
 
 // Diccionario de textos (copy)
 const copy = {
@@ -15,6 +16,7 @@ const copy = {
         "Monitoreo y control en tiempo real de procesos industriales, optimizando la supervisión y reduciendo tiempos de inactividad hasta un 40%.",
       imageSrc: "/scada.jpg",
       imageAlt: "Sistemas SCADA para Manufactura",
+      url: "/servicios/scada",
     },
     {
       title: "Automatización de Líneas de Producción",
@@ -22,6 +24,7 @@ const copy = {
         "Diseñamos soluciones de automatización personalizadas que incrementan la capacidad de producción, mejoran la consistencia y reducen costos operativos.",
       imageSrc: "/automatizacion.jpg",
       imageAlt: "Automatización Industrial",
+      url: "/servicios/automatizar",
     },
     {
       title: "Consultoría en Transformación Digital",
@@ -29,6 +32,7 @@ const copy = {
         "Acompañamiento estratégico para digitalizar procesos operativos, comerciales y administrativos, mejorando la toma de decisiones y la eficiencia global.",
       imageSrc: "/digital.jpg",
       imageAlt: "Transformación Digital Manufacturera",
+      url: "/servicios/transformar",
     },
   ],
   learnMore: "Conoce más →",
@@ -67,7 +71,7 @@ export default function Servicios() {
                 {service.description}
               </p>
               <Link
-                href="#"
+                href={copy.url}
                 className="mt-4 block text-lg font-medium text-custom-orange hover:text-custom-orange-dark transition-colors duration-300"
               >
                 {copy.learnMore}
