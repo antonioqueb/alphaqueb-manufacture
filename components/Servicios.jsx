@@ -32,7 +32,7 @@ const copy = {
         "Acompañamiento estratégico para digitalizar procesos operativos, comerciales y administrativos, mejorando la toma de decisiones y la eficiencia global.",
       imageSrc: "/digital.jpg",
       imageAlt: "Transformación Digital Manufacturera",
-      slug: "trasformar",
+      slug: "transformar",
     },
   ],
   learnMore: "Conoce más →",
