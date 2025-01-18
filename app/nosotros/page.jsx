@@ -5,7 +5,7 @@ import ContactSection from '@/components/ContactSection';
 
 // Diccionario de textos (copy)
 const copy = {
-  title: "Transformando la Industria Manufacturera a Través de la Tecnología: Somos Expertos en Manufactura",
+  title: "Transformando la Industria Manufacturera a Través de la Tecnología",
   description:
     "Bienvenidos a Alphaqueb Consulting, tu aliado estratégico en la manufactura. Entendemos la manufactura mejor que nadie, y fusionamos tecnología e innovación para revolucionar tus operaciones. Ofrecemos soluciones tecnológicas avanzadas que optimizan procesos, reducen costos y potencian la competitividad. Somos expertos en la manufactura, trabajamos con pasión para que tu empresa alcance sus metas en un mercado dinámico.",
     
