@@ -5,79 +5,77 @@ import ContactSection from '@/components/ContactSection';
 
 // Diccionario de textos (copy)
 const copy = {
-  title: "Transformando la Industria Manufacturera a Través de la Tecnología",
+  title: "Impulsamos la manufactura con tecnología de vanguardia",
   description:
-    "Bienvenidos a Alphaqueb Consulting, tu aliado estratégico en la manufactura. Entendemos la manufactura mejor que nadie, y fusionamos tecnología e innovación para revolucionar tus operaciones. Ofrecemos soluciones tecnológicas avanzadas que optimizan procesos, reducen costos y potencian la competitividad. Somos expertos en la manufactura, trabajamos con pasión para que tu empresa alcance sus metas en un mercado dinámico.",
-    
-  tagline: "Expertos en la Manufactura. Soluciones a tu medida", 
-  
+    "Bienvenido a Alphaqueb Consulting. Aquí, transformamos la manufactura a través de la innovación tecnológica. No solo ofrecemos soluciones, sino que construimos el futuro de tu empresa. Entendemos las complejidades de la producción, la cadena de suministro y las listas de materiales como nadie más en el sector. Nuestra misión es llevar tu empresa manufacturera al siguiente nivel.",
+  tagline: "Soluciones a tu medida. Resultados excepcionales.",
   history: {
-    title: "Nuestro Recorrido: Crecemos Contigo",
+    title: "Nuestro recorrido en la evolución de la manufactura",
     content:
-      "Fundada en 2017 por visionarios de la manufactura, Alphaqueb Consulting nació con una misión clara: transformar la operación de las empresas a través de tecnologías innovadoras. Desde entonces, nuestro crecimiento ha ido de la mano con el éxito de nuestros clientes. En agosto de 2023, nos consolidamos como Sociedad por Acciones Simplificada (SAS), reafirmando nuestro compromiso con la excelencia y la innovación. Hoy, seguimos siendo tu aliado estratégico confiable.",
+      "Desde 2017, lideramos la transformación en la manufactura. Con una visión audaz, creamos Alphaqueb Consulting para redefinir cómo las empresas abordan sus operaciones. Nuestra evolución hacia una Sociedad por Acciones Simplificada (SAS) en 2023, es solo un reflejo de nuestro compromiso con la excelencia y la innovación constante. Hemos crecido para que tu empresa crezca.",
   },
   mission: {
-    title: "Nuestra Misión: El Socio Confiable en Tu Transformación Digital",
+    title: "Nuestra misión es ser tu aliado de confianza en la transformación digital",
     content:
-      "Ser el socio confiable en la transformación digital de la industria manufacturera, es nuestro principal objetivo. Ofrecemos soluciones tecnológicas avanzadas que impulsan el crecimiento y la competitividad de nuestros clientes, para que estén siempre un paso adelante en un mercado exigente. Nos adaptamos a tu ritmo y necesidades.",
+      "Nuestro objetivo es claro: liderar la transformación digital en la manufactura. Proporcionamos soluciones tecnológicas que impulsan tu crecimiento y competitividad en un mercado que exige más. Nos adaptamos a tus necesidades, y juntos, alcanzaremos nuevos estándares de éxito.",
   },
   values: {
-    title: "La Base de Nuestro Éxito: Tu Éxito",
+    title: "Nuestros cimientos",
     items: [
       {
-        title: "Especialización en Manufactura",
+        title: "Enfoque exclusivo en manufactura",
         description:
-          "Nos enfocamos exclusivamente en la industria manufacturera, lo que nos permite entender las dinámicas de producción, cadena de suministro y listas de materiales a profundidad. Somos expertos en la manufactura.",
+          "Dominamos la manufactura a profundidad. Conocemos las dinámicas de producción, la cadena de suministro y las listas de materiales como ningún otro consultor.",
       },
       {
-        title: "Atención Personalizada 1 a 1",
+        title: "Atención personalizada y cercana",
         description:
-          "Establecemos relaciones personales con nuestros clientes a través de videoconferencias y visitas presenciales, ofreciendo un trato cercano y adaptándonos a sus necesidades. Disponibilidad a tu alcance.",
+          "Nos involucramos contigo personalmente, a través de videoconferencias y visitas, entendiendo tus necesidades y adaptando nuestras soluciones. Tu comodidad es nuestra prioridad.",
       },
       {
-          title: "Movilidad Global con Enfoque en México",
-          description:
-            "Tenemos capacidad para viajar tanto dentro de México como a Estados Unidos, Europa y Latinoamérica, brindando soporte donde nos necesites, con un enfoque en México.",
-        },
-      {
-        title: "Confidencialidad Extrema",
+        title: "Alcance global con presencia en méxico",
         description:
-          "La privacidad es fundamental. Tratamos tus datos con la máxima confidencialidad y seguridad en cada paso de nuestros procesos. La seguridad es nuestra prioridad.",
-      },
-     {
-        title: "Escalabilidad y Prevención de Desastres",
-        description:
-          "Diseñamos sistemas escalables e independientes de un solo punto de fallo, asegurando tu continuidad y protegiendo tus operaciones. Sistemas construidos para crecer contigo. Infraestructuras robustas.",
+          "Estamos donde nos necesitas. Operamos dentro de México, Estados Unidos, Europa y Latinoamérica, asegurando soluciones sin fronteras. Con una base sólida en México, entendemos tus necesidades locales.",
       },
       {
-        title: "Plataforma Multicloud",
+        title: "Confidencialidad como prioridad",
         description:
-          "Ofrecemos soluciones multicloud para evitar la dependencia de un solo proveedor y asegurar la estabilidad de tus operaciones. La tranquilidad de no tener una plataforma única. No dependemos de una sola nube.",
-       },
-       {
-         title: "Sistemas Altamente Seguros",
-         description:
-           "Protegemos la información de nuestros clientes con sistemas de seguridad multicapa. La seguridad es nuestra prioridad en cada comunicación. ",
-        },
-        {
-          title: "Énfasis en los Procesos Internos",
-         description:
-           "Nos enfocamos en entender los procesos de tu empresa, no en vender sistemas. Priorizamos el cumplimiento de tus necesidades. No nos casamos con ningún sistema en particular.",
-       },
-       {
-           title: "Soluciones Personalizadas",
-           description:
-            "Entendemos tus necesidades y proponemos soluciones hechas a la medida. Nos enfocamos en tus objetivos, más que en la herramienta en sí.",
-         },
-         {
-           title: "Integridad en Nuestra Operación",
-           description:
-            "Trabajamos con discreción y aseguramos la confidencialidad de tus procesos. Tus servicios son confidenciales y tu información está protegida.",
-          },
+          "La seguridad y la privacidad de tu información son intocables. Protegemos tus datos con el máximo rigor en cada fase de nuestros procesos.",
+      },
+      {
+        title: "Escalabilidad y resiliencia",
+        description:
+          "Construimos sistemas que crecen contigo y se mantienen firmes ante cualquier desafío. Prevenimos desastres, aseguramos tu continuidad.",
+      },
+      {
+        title: "Independencia en la nube",
+        description:
+          "No dependemos de un único proveedor. Nuestras soluciones multicloud garantizan la estabilidad y la continuidad de tus operaciones.",
+      },
+      {
+        title: "Seguridad en cada capa",
+        description:
+          "Protegemos tu información con sistemas de seguridad multicapa, manteniéndote siempre un paso adelante en la seguridad.",
+      },
+      {
+        title: "Comprensión profunda de tus procesos",
+        description:
+          "Priorizamos entender tus procesos antes de ofrecer cualquier solución. No vendemos sistemas, creamos resultados.",
+      },
+      {
+        title: "Soluciones a tu medida, no más",
+        description:
+          "Creamos soluciones únicas, diseñadas para lograr tus objetivos específicos. Tu visión, nuestra herramienta.",
+      },
+      {
+        title: "Discreción y compromiso inquebrantable",
+        description:
+          "Nuestra integridad es parte de nuestra marca. Trabajamos con discreción y garantizamos la confidencialidad en cada proyecto. Tu confianza, nuestra responsabilidad.",
+      },
     ],
   },
   imageSrc: "/dark.png",
-  imageAlt: "Alphaqueb Consulting: Expertos en la Manufactura",
+  imageAlt: "Alphaqueb Consulting tu socio en la manufactura",
 };
 
 export default function Nosotros() {
