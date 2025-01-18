@@ -5,46 +5,79 @@ import ContactSection from '@/components/ContactSection';
 
 // Diccionario de textos (copy)
 const copy = {
-  title: "Transformando la Industria Manufacturera a Través de la Tecnología",
+  title: "Transformando la Industria Manufacturera a Través de la Tecnología: Somos Expertos en Manufactura",
   description:
-    "Bienvenidos a Alphaqueb Consulting, donde la tecnología y la innovación se unen para revolucionar la industria manufacturera. Somos una empresa líder en consultoría especializada, dedicada a proporcionar soluciones tecnológicas avanzadas que optimizan procesos, reducen costos y potencian la competitividad de nuestros clientes. Cada día, trabajamos con pasión para ayudar a las empresas a alcanzar sus metas y superar los desafíos del mercado.",
+    "Bienvenidos a Alphaqueb Consulting, tu aliado estratégico en la manufactura. Entendemos la manufactura mejor que nadie, y fusionamos tecnología e innovación para revolucionar tus operaciones. Ofrecemos soluciones tecnológicas avanzadas que optimizan procesos, reducen costos y potencian la competitividad. Somos expertos en la manufactura, trabajamos con pasión para que tu empresa alcance sus metas en un mercado dinámico.",
+    
+  tagline: "Expertos en la Manufactura. Soluciones a tu medida", 
+  
   history: {
-    title: "Nuestro recorrido",
+    title: "Nuestro Recorrido: Crecemos Contigo",
     content:
-      "Todo comenzó en 2017, cuando un grupo de visionarios decidió cambiar el panorama de la industria manufacturera. Fundamos Alphaqueb Consulting con una misión clara: transformar la manera en que las empresas abordan sus operaciones mediante la adopción de tecnologías innovadoras. Desde entonces, hemos recorrido un camino lleno de éxitos, aprendizajes y crecimiento constante. En agosto de 2023, dimos un paso importante al consolidarnos como una Sociedad por Acciones Simplificada (SAS) bajo el nombre comercial Alphaqueb Consulting. Este hito no solo reafirma nuestro compromiso con la excelencia y la innovación, sino que también nos permite expandir nuestras capacidades para seguir siendo un aliado estratégico confiable para nuestros clientes.",
+      "Fundada en 2017 por visionarios de la manufactura, Alphaqueb Consulting nació con una misión clara: transformar la operación de las empresas a través de tecnologías innovadoras. Desde entonces, nuestro crecimiento ha ido de la mano con el éxito de nuestros clientes. En agosto de 2023, nos consolidamos como Sociedad por Acciones Simplificada (SAS), reafirmando nuestro compromiso con la excelencia y la innovación. Hoy, seguimos siendo tu aliado estratégico confiable.",
   },
   mission: {
-    title: "Ser el principal aliado confiable en la transformación digital de tu empresa manufacturera",
+    title: "Nuestra Misión: El Socio Confiable en Tu Transformación Digital",
     content:
-      "Nuestra misión es simple pero poderosa: ser el socio confiable en la transformación digital de la industria manufacturera. Nos esforzamos por proporcionar soluciones tecnológicas avanzadas que impulsen el crecimiento y la competitividad de nuestros clientes, asegurando que estén siempre un paso adelante en un mercado cada vez más dinámico y exigente.",
+      "Ser el socio confiable en la transformación digital de la industria manufacturera, es nuestro principal objetivo. Ofrecemos soluciones tecnológicas avanzadas que impulsan el crecimiento y la competitividad de nuestros clientes, para que estén siempre un paso adelante en un mercado exigente. Nos adaptamos a tu ritmo y necesidades.",
   },
   values: {
-    title: "La base de nuestro exito",
+    title: "La Base de Nuestro Éxito: Tu Éxito",
     items: [
       {
-        title: "Innovación",
+        title: "Especialización en Manufactura",
         description:
-          "Estamos comprometidos con la innovación constante. No nos conformamos con lo convencional; buscamos continuamente nuevas formas de resolver los desafíos más complejos de la industria.",
+          "Nos enfocamos exclusivamente en la industria manufacturera, lo que nos permite entender las dinámicas de producción, cadena de suministro y listas de materiales a profundidad. Somos expertos en la manufactura.",
       },
       {
-        title: "Experiencia",
+        title: "Atención Personalizada 1 a 1",
         description:
-          "Contamos con un equipo de expertos con más de 20 años de experiencia en la industria manufacturera. Esta vasta experiencia nos permite ofrecer asesoramiento y soluciones altamente especializadas que realmente marcan la diferencia.",
+          "Establecemos relaciones personales con nuestros clientes a través de videoconferencias y visitas presenciales, ofreciendo un trato cercano y adaptándonos a sus necesidades. Disponibilidad a tu alcance.",
       },
       {
-        title: "Integridad",
+          title: "Movilidad Global con Enfoque en México",
+          description:
+            "Tenemos capacidad para viajar tanto dentro de México como a Estados Unidos, Europa y Latinoamérica, brindando soporte donde nos necesites, con un enfoque en México.",
+        },
+      {
+        title: "Confidencialidad Extrema",
         description:
-          "Actuamos con integridad y transparencia en todas nuestras relaciones y proyectos. Creemos firmemente que la confianza es la base de cualquier relación exitosa.",
+          "La privacidad es fundamental. Tratamos tus datos con la máxima confidencialidad y seguridad en cada paso de nuestros procesos. La seguridad es nuestra prioridad.",
+      },
+     {
+        title: "Escalabilidad y Prevención de Desastres",
+        description:
+          "Diseñamos sistemas escalables e independientes de un solo punto de fallo, asegurando tu continuidad y protegiendo tus operaciones. Sistemas construidos para crecer contigo. Infraestructuras robustas.",
       },
       {
-        title: "Colaboración",
+        title: "Plataforma Multicloud",
         description:
-          "Fomentamos la colaboración estrecha con nuestros clientes. Entendemos que cada cliente es único, y trabajamos mano a mano para entender sus necesidades específicas y superar sus expectativas, construyendo relaciones duraderas basadas en el éxito mutuo.",
-      },
+          "Ofrecemos soluciones multicloud para evitar la dependencia de un solo proveedor y asegurar la estabilidad de tus operaciones. La tranquilidad de no tener una plataforma única. No dependemos de una sola nube.",
+       },
+       {
+         title: "Sistemas Altamente Seguros",
+         description:
+           "Protegemos la información de nuestros clientes con sistemas de seguridad multicapa. La seguridad es nuestra prioridad en cada comunicación. ",
+        },
+        {
+          title: "Énfasis en los Procesos Internos",
+         description:
+           "Nos enfocamos en entender los procesos de tu empresa, no en vender sistemas. Priorizamos el cumplimiento de tus necesidades. No nos casamos con ningún sistema en particular.",
+       },
+       {
+           title: "Soluciones Personalizadas",
+           description:
+            "Entendemos tus necesidades y proponemos soluciones hechas a la medida. Nos enfocamos en tus objetivos, más que en la herramienta en sí.",
+         },
+         {
+           title: "Integridad en Nuestra Operación",
+           description:
+            "Trabajamos con discreción y aseguramos la confidencialidad de tus procesos. Tus servicios son confidenciales y tu información está protegida.",
+          },
     ],
   },
   imageSrc: "/dark.png",
-  imageAlt: "Nuestra Empresa Consultora",
+  imageAlt: "Alphaqueb Consulting: Expertos en la Manufactura",
 };
 
 export default function Nosotros() {
