@@ -18,10 +18,11 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Servicios TI Manufactura - Alphaqueb Consulting",
+  title: "Software Avanzado y Soporte TI para Manufactura Inteligente | Alphaqueb Consulting",
   description:
-    "Convertimos desafíos operativos en ventajas competitivas con soluciones personalizadas de automatización, digitalización y optimización. Reducimos costos hasta un 30%, aumentamos la productividad en un 40% y mejoramos la calidad de los productos para empresas manufactureras.",
+    "Optimizamos procesos manufactureros con software avanzado, sistemas SCADA y soluciones de automatización industrial. Reducimos costos, aumentamos productividad hasta un 40% y aceleramos la transformación digital para mejorar la supervisión y toma de decisiones en tiempo real.",
 };
+
 
 export default function RootLayout({ children }) {
     const initialTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : 'system';
