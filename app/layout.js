@@ -18,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Alphaqueb Consulting",
+  title: "Servicios TI Manufactura - Alphaqueb Consulting",
   description:
     "Convertimos desafíos operativos en ventajas competitivas con soluciones personalizadas de automatización, digitalización y optimización. Reducimos costos hasta un 30%, aumentamos la productividad en un 40% y mejoramos la calidad de los productos para empresas manufactureras.",
 };
