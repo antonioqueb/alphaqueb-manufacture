@@ -21,14 +21,14 @@ function getPosts() {
 }
 
 export default function LastNews() {
-  const posts = getPosts();
+  const posts = getPosts().slice(0, 45); // Limitar a los últimos 30 posts
   return (
-    <section className="py-8 text-center ">
+    <section className="py-8 text-center">
       <h2 className="text-3xl font-semibold mb-6 dark:text-white">Últimas noticias</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {posts.map((post) => (
           <Link href={`/blogs/${post.slug}`} key={post.slug} className="block rounded-md shadow-md hover:shadow-lg transition-shadow duration-300 dark:bg-zinc-800">
-            <div className="relative h-48 overflow-hidden ">
+            <div className="relative h-48 overflow-hidden">
               <Image
                 src={post.frontMatter.image}
                 alt={post.frontMatter.title}
