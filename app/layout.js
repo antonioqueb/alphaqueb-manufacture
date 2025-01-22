@@ -18,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Software Avanzado y Soporte TI para Manufactura Inteligente | Alphaqueb Consulting",
+  title: "Manufactura Inteligente | Alphaqueb Consulting",
   description:
     "Optimizamos procesos manufactureros con software avanzado, sistemas SCADA y soluciones de automatización industrial. Reducimos costos, aumentamos productividad hasta un 40% y aceleramos la transformación digital para mejorar la supervisión y toma de decisiones en tiempo real.",
 };
