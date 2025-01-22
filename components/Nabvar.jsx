@@ -1,6 +1,6 @@
 "use client";
-import MyLightImage from '@/public/dark.png';
-import MyDarkImage from '@/public/dark.png';
+import MyLightImage from '@/public/brand/white.png';
+import MyDarkImage from '@/public/brand/dark.png';
 import * as React from "react";
 import { useEffect, useState } from "react";
 import Image from "next/image";
