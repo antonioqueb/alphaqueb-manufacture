@@ -163,8 +163,8 @@ export default function Navbar() {
               <Image
                 src={MyDarkImage}
                 alt="Logo de Alphaqueb"
-                width={75}
-                height={75}
+                width={45}
+                height={45}
               />
             </div>
           ) : (
@@ -172,8 +172,8 @@ export default function Navbar() {
               <Image
                 src={MyLightImage}
                 alt="Logo de Alphaqueb"
-                width={75}
-                height={75}
+                width={45}
+                height={45}
               />
             </div>
           )}

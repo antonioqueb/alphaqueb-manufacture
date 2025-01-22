@@ -46,8 +46,8 @@ const Footer = () => {
                             <Image
                                 src={MyDarkImage}
                                 alt="Logo de Alphaqueb"
-                                width={90}
-                                height={90}
+                                width={40}
+                                height={40}
                                 className="rounded-full"
                             />
                         </div>
@@ -56,8 +56,8 @@ const Footer = () => {
                             <Image
                                 src={MyLightImage}
                                 alt="Logo de Alphaqueb"
-                                width={90}
-                                height={90}
+                                width={40}
+                                height={40}
                                 className="rounded-full"
                             />
                         </div>
