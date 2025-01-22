@@ -9,7 +9,7 @@ module.exports = {
   theme: {
   	extend: {
   		colors: {
-			'custom-orange': '#fc4b08',
+			'custom-orange': '#ff943d',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
