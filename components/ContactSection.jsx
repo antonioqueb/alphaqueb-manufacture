@@ -52,7 +52,7 @@ export default function ContactSection() {
             Contáctanos
           </h2>
           <p className="mt-4 text-lg text-zinc-500 dark:text-zinc-400">
-            Estamos aquí para ayudarte con cualquier duda o inquietud que tengas. No dudes en contactarnos y uno de nuestros representantes se pondrá en contacto contigo lo antes posible.
+          ¿Listo para llevar tu manufactura al siguiente nivel? Completa el formulario y un experto se pondrá en contacto contigo.
           </p>
           <form onSubmit={handleSubmit} className="mt-8 space-y-6">
             <div>
