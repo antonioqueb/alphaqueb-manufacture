@@ -67,7 +67,7 @@ export default function Banner() {
             {/* Input de Nombre */}
             <input
               type="text"
-              className="w-56 px-4 py-2 h-12 rounded-lg shadow-md border border-zinc-900 dark:border-zinc-300 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition-all duration-300 dark:bg-zinc-800 text-zinc-900  dark:text-white"
+              className="w-56 px-4 py-2 h-12 rounded-lg shadow-md border border-zinc-900 dark:border-zinc-300 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition-all duration-300 dark:bg-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-500"
               placeholder="Nombre"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -75,7 +75,7 @@ export default function Banner() {
             {/* Input de Teléfono */}
             <input
               type="tel"
-              className="w-56 px-4 py-2 h-12 rounded-lg shadow-md border border-zinc-900 dark:border-zinc-300 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition-all duration-300 dark:bg-zinc-800 text-zinc-900  dark:text-white"
+              className="w-56 px-4 py-2 h-12 rounded-lg shadow-md border border-zinc-900 dark:border-zinc-300 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition-all duration-300 dark:bg-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-500"
               placeholder="Teléfono"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
@@ -91,7 +91,7 @@ export default function Banner() {
           </div>
           {/* Mensajes de Éxito y Error */}
           {status === 'success' && (
-            <p className="mt-4 text-green-500">Número enviado con éxito.</p>
+            <p className="mt-4 text-green-500">Número recibido con éxito.</p>
           )}
           {status === 'error' && (
             <p className="mt-4 text-red-500">Error al enviar el número de teléfono.</p>
