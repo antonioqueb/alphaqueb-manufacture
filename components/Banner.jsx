@@ -102,13 +102,15 @@ export default function Banner() {
         </CardHeader>
       </div>
       <div className="w-full lg:w-5/12 py-4 flex items-center justify-center">
-        <Image
-          src="/industrial.png"
-          width={450}
-          height={150}
-          alt={copy.bannerAlt}
-          className="lg:w-[640px] lg:h-[440px] 2xl:w-[640px] 2xl:h-[525px]"
-        />
+        <div className="relative w-full aspect-square">
+          <Image
+            src="/industrial.png"
+            fill
+            alt={copy.bannerAlt}
+            className="object-contain"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </div>
       </div>
     </section>
   );
