@@ -47,11 +47,6 @@ const App = () => {
             })}
           </ul>
           <div className="flex items-center">
-            <Button size="lg" variant="solid" color="primary" asChild>
-              <a href="/more-info" className="text-white no-underline">
-                {COPY.buttonLabel}
-              </a>
-            </Button>
             <Tooltip>
               <TooltipContent>
                 <p className="text-sm text-zinc-700 dark:text-zinc-200">{COPY.tooltipContent}</p>

@@ -1,9 +1,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Badge } from '@/components/ui/badge';
 import ContactSection from '@/components/ContactSection';
 
 const COPY = {
@@ -47,11 +45,6 @@ const App = () => {
                })}
              </ul>
              <div className="flex items-center">
-               <Button size="lg" variant="solid" color="primary" asChild>
-                 <a href="/more-info" className="text-white no-underline">
-                   {COPY.buttonLabel}
-                 </a>
-               </Button>
                <Tooltip>
                  <TooltipContent>
                    <p className="text-sm text-zinc-700 dark:text-zinc-200">{COPY.tooltipContent}</p>

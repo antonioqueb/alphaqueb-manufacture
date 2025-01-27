@@ -17,6 +17,12 @@ const COPY = {
     title: "Servicios Industriales",
     mainDescription: "Soluciones tecnológicas diseñadas para transformar la manufactura con innovación y eficiencia.",
     projects: [
+    
+      {
+        href: "/servicios/transformar",
+        title: "Transformación Digital",
+        description: "Estrategias personalizadas para digitalizar y optimizar operaciones manufactureras."
+      },
       {
         href: "/servicios/scada",
         title: "Sistemas SCADA",
@@ -27,11 +33,6 @@ const COPY = {
         title: "Automatización Industrial",
         description: "Implementación de soluciones robóticas que incrementan la productividad hasta un 40%."
       },
-      {
-        href: "/servicios/transformar",
-        title: "Transformación Digital",
-        description: "Estrategias personalizadas para digitalizar y optimizar operaciones manufactureras."
-      }
     ]
   },
   blogs: {
