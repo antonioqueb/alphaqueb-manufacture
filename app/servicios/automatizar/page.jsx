@@ -1,14 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Badge } from '@/components/ui/badge';
 import ContactSection from '@/components/ContactSection';
+import { Rocket, Zap, BarChart, Clock, Users, Terminal } from 'lucide-react';
+import Link from 'next/link'; // Importamos el componente Link
 
 const COPY = {
-  title: "Potencia Tu Producción con Automatización Avanzada",
-  description1: "¿Te imaginas una línea de producción que nunca se detiene, opera con máxima eficiencia y entrega resultados consistentemente de alta calidad? Esto es lo que nuestras soluciones de automatización avanzada pueden hacer por tu industria. Desde aumentar la capacidad productiva hasta reducir costos operativos, te ayudamos a transformar tus procesos con tecnología de vanguardia, diseñada específicamente para las necesidades de la manufactura moderna.",
+  title: "Automatización Avanzada para la manufactura moderna",
+  description1: "Desde aumentar la capacidad productiva hasta reducir costos operativos, te ayudamos a transformar tus procesos con tecnología de vanguardia, diseñada específicamente para las necesidades de la manufactura moderna.",
   description2: "La automatización avanzada no es un lujo, es una necesidad estratégica para cualquier negocio industrial que quiera mantenerse competitivo. Nuestras soluciones personalizadas te permiten optimizar cada etapa del proceso productivo, desde la planificación hasta la ejecución. Con un monitoreo constante y un control preciso, aseguramos un flujo de trabajo sin interrupciones, minimizamos errores y maximizamos la productividad en todas las áreas de tu operación.",
   description3: "Nuestro enfoque no se limita a implementar sistemas de automatización: construimos soluciones a tu medida. Ya sea que necesites aumentar la velocidad de tu producción, reducir el consumo de recursos, o integrar tus procesos con otros sistemas empresariales como ERP o MES, tenemos la experiencia y las herramientas necesarias para hacer realidad tu visión. Además, acompañamos a tu equipo en todo el proceso: desde la consultoría inicial hasta el soporte post-implementación, garantizando resultados sólidos y sostenibles.",
   description4: "Con años de experiencia en la industria manufacturera, nuestro equipo entiende los desafíos operativos a los que te enfrentas: tiempos muertos, inconsistencias en la calidad y altos costos de operación. Por eso, nuestras soluciones no solo automatizan procesos, sino que optimizan la totalidad de tu sistema de producción, permitiéndote obtener el máximo rendimiento de tus recursos. Al invertir en automatización avanzada, estarás garantizando no solo una mejora en la eficiencia, sino también la sostenibilidad y competitividad de tu empresa a largo plazo.",
@@ -29,31 +30,98 @@ const COPY = {
 const App = () => {
   return (
     <TooltipProvider>
-      <div className="p-6">
-    
-          <h2 className="text-3xl font-bold mb-4 text-zinc-900 dark:text-zinc-200">{COPY.title}</h2>
-          <p className="text-lg mb-4 text-zinc-700 dark:text-zinc-200">{COPY.description1}</p>
-          <p className="text-base mb-4 text-zinc-600 dark:text-zinc-200">{COPY.description2}</p>
-          <p className="text-base mb-4 text-zinc-600 dark:text-zinc-200">{COPY.description3}</p>
-          <p className="text-base mb-4 font-semibold text-zinc-900">{COPY.advantagesTitle}</p>
-          <ul className="list-disc pl-6 mb-6 space-y-2">
-            {COPY.advantages.map((advantage, index) => {
-              const [key, value] = advantage.split(": ");
-              return (
-                <li key={index} className="text-zinc-600 dark:text-zinc-200">
-                  <strong className="text-zinc-900 dark:text-zinc-200">{key}:</strong> {value}
-                </li>
-              );
-            })}
-          </ul>
-          <div className="flex items-center">
-            <Tooltip>
-              <TooltipContent>
-                <p className="text-sm text-zinc-700 dark:text-zinc-200">{COPY.tooltipContent}</p>
-              </TooltipContent>
-            </Tooltip>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section con imagen */}
+        <section className="relative dark:bg-zinc-900 py-10 md:py-28 rounded-3xl overflow-hidden mb-16">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-custom-orange to-orange-700 bg-clip-text text-transparent dark:from-custom-orange dark:to-zinc-400 leading-tight">
+                {COPY.title}
+              </h1>
+              <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-8">
+                {COPY.description1}
+              </p>
+              {/* Botón para ir a la sección de contacto */}
+              <Link href="#contacto">
+                <Button variant="default" size="lg" style={{ backgroundColor: '#ff943d', color: '#0d0d0d', margin: '2rem 0rem', padding: '0.75rem 2rem' }}>
+                  Contáctanos
+                </Button>
+              </Link>
+            </div>
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/fulfillment.jpg"
+                alt="Digital Transformation"
+                fill
+                className="object-cover object-center"
+                quality={100}
+                priority
+              />
+            </div>
           </div>
-          <ContactSection/>
+        </section>
+        {/* Sección de Ventajas */}
+        <section className="grid lg:grid-cols-2 gap-8 mb-10">
+          <div className="bg-zinc-50 dark:bg-zinc-900/50 p-8 rounded-lg shadow-md col-span-1">
+            <ul className="space-y-8">
+              {COPY.advantages.slice(0, Math.ceil(COPY.advantages.length / 2)).map((advantage, index) => {
+                const [key, value] = advantage.split(": ");
+                const icons = [<Zap key="0" />, <BarChart key="1" />, <Clock key="2" />, 
+                              <Terminal key="3" />, <Users key="4" />, <Rocket key="5" />];
+                
+                return (
+                  <li key={index} className="flex items-start group">
+                    <div className="flex-shrink-0 mt-1 mr-6 text-custom-orange">
+                      <div className="w-10 h-10 bg-custom-orange/20 rounded-lg flex items-center justify-center p-2">
+                        {React.cloneElement(icons[index], { className: 'w-6 h-6' })}
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
+                        {key}
+                      </h4>
+                      <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        {value}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="bg-zinc-50 dark:bg-zinc-900/50 p-8 rounded-lg shadow-md col-span-1">
+            <ul className="space-y-8">
+              {COPY.advantages.slice(Math.ceil(COPY.advantages.length / 2)).map((advantage, index) => {
+                const [key, value] = advantage.split(": ");
+                const icons = [<Zap key="0" />, <BarChart key="1" />, <Clock key="2" />, 
+                              <Terminal key="3" />, <Users key="4" />, <Rocket key="5" />];
+                
+                return (
+                  <li key={index + Math.ceil(COPY.advantages.length / 2)} className="flex items-start group">
+                    <div className="flex-shrink-0 mt-1 mr-6 text-custom-orange">
+                      <div className="w-10 h-10 bg-custom-orange/20 rounded-lg flex items-center justify-center p-2">
+                        {React.cloneElement(icons[index + Math.ceil(COPY.advantages.length / 2)], { className: 'w-6 h-6' })}
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
+                        {key}
+                      </h4>
+                      <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        {value}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+       
+        {/* Sección de Contacto */}
+        <section id="contacto" className="border-t pt-5 border-zinc-200 dark:border-zinc-700"> {/* Añadimos el id "contacto" */}
+          <ContactSection />
+        </section>
       </div>
     </TooltipProvider>
   );
