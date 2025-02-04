@@ -32,7 +32,7 @@ const copy = {
 
 export default function Servicios() {
   return (
-    <div className="mx-auto pt-16 pb-4 px-4">
+    <div className="mx-auto pt-16 pb-28 px-4">
       <div className="text-start py-4">
         <h2 className="text-3xl font-semibold tracking-tighter sm:text-4xl md:text-5xl dark:text-zinc-50">
           {copy.title}
