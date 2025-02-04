@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
@@ -24,7 +24,6 @@ const copy = {
       imageSrc: "/automatizacion.jpg",
       imageAlt: "Automatización Industrial",
       slug: "automatizar",
-      
     },
     {
       title: "Consultoría en Transformación Digital",
@@ -49,38 +48,43 @@ export default function Servicios() {
           {copy.description}
         </p>
       </div>
-      <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+
+      {/* Contenedor en forma de 'timeline' vertical para reflejar la secuencia */}
+      <ol className="relative border-l border-zinc-200 dark:border-zinc-700 mt-6 ml-4">
         {copy.services.map((service, index) => (
-          <div
-            key={index}
-            className="group relative dark:bg-stone-900 bg-white rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl overflow-hidden border border-zinc-100 dark:border-zinc-800"
-          >
-            <div className="relative w-full aspect-w-16 aspect-h-9">
-              <Image
-                src={service.imageSrc}
-                alt={service.imageAlt}
-                fill
-                className="object-cover"
-              />
+          <li key={index} className="mb-10 ml-6">
+            {/* Indicador numérico del paso */}
+            <span className="absolute flex items-center justify-center w-8 h-8 bg-custom-orange text-white font-bold rounded-full -left-4 ring-8 ring-white dark:ring-stone-900">
+              {index + 1}
+            </span>
+            {/* Contenido del servicio */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="relative w-full sm:w-60 h-36 rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src={service.imageSrc}
+                  alt={service.imageAlt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="pt-2 sm:pt-0">
+                <h3 className="text-xl font-semibold text-zinc-800 dark:text-zinc-50">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-400">
+                  {service.description}
+                </p>
+                <Link
+                  href={`/servicios/${service.slug}`}
+                  className="inline-block mt-4 text-lg font-medium text-custom-orange hover:text-custom-orange-dark transition-colors duration-300"
+                >
+                  {copy.learnMore}
+                </Link>
+              </div>
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-zinc-800 dark:text-zinc-50">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-400">
-                {service.description}
-              </p>
-              <Link
-                href={`/servicios/${service.slug}`}
-                className="mt-4 block text-lg font-medium text-custom-orange hover:text-custom-orange-dark transition-colors duration-300"
-              >
-                {copy.learnMore}
-              </Link>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 }
