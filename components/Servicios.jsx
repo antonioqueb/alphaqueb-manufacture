@@ -42,31 +42,31 @@ export default function Servicios() {
         </p>
       </div>
 
-      {/* Timeline Horizontal */}
-      <ol className="flex items-center justify-between w-full mt-8 space-x-4 sm:space-x-8">
+      {/* Timeline Responsivo */}
+      <ol className="flex flex-col md:flex-row justify-between items-start w-full mt-8 gap-8">
         {copy.services.map((service, index) => (
-          <li key={index} className="relative flex-1 text-center">
-            {/* Línea horizontal que conecta cada paso, excepto el último */}
-            {index < copy.services.length - 1 && (
-              <div className="absolute top-1/2 left-full w-full h-0.5 bg-zinc-200 dark:bg-zinc-700 -translate-y-1/2"></div>
-            )}
-
-            {/* Círculo con el número del paso */}
-            <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 bg-custom-orange text-white font-bold rounded-full">
+          <li key={index} className="flex flex-col md:flex-row items-start gap-6 text-left flex-1">
+            {/* Círculo animado */}
+            <div
+              className="flex items-center justify-center aspect-square w-16 md:w-32 bg-custom-orange text-white font-bold rounded-full text-2xl relative"
+              style={{
+                animation: "pulse 1.5s infinite",
+              }}
+            >
               {index + 1}
             </div>
 
             {/* Contenido de cada paso */}
             <div>
-              <h3 className="text-xl font-semibold text-zinc-800 dark:text-zinc-50">
+              <h3 className="text-lg md:text-xl font-semibold text-zinc-800 dark:text-zinc-50">
                 {service.title}
               </h3>
-              <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-400">
+              <p className="mt-2 text-base md:text-lg text-zinc-600 dark:text-zinc-400">
                 {service.description}
               </p>
               <Link
                 href={`/servicios/${service.slug}`}
-                className="inline-block mt-3 text-lg font-medium text-custom-orange hover:text-custom-orange-dark transition-colors duration-300"
+                className="inline-block mt-3 text-base md:text-lg font-medium text-custom-orange hover:text-custom-orange-dark transition-colors duration-300"
               >
                 {copy.learnMore}
               </Link>
@@ -74,6 +74,21 @@ export default function Servicios() {
           </li>
         ))}
       </ol>
+
+      {/* Estilos en línea para la animación */}
+      <style jsx>{`
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.15);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+      `}</style>
     </div>
   );
 }
