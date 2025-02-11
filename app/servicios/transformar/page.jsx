@@ -1,7 +1,18 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Factory, User, Globe, Lock, TrendingUp, Cloud, ShieldAlert, Search, Wrench, ShieldUser } from 'lucide-react';
+import { 
+  Factory, 
+  User, 
+  Globe, 
+  Lock, 
+  TrendingUp, 
+  Cloud, 
+  ShieldAlert, 
+  Search, 
+  Wrench, 
+  ShieldCheck  // <-- Reemplazamos UserShield/ShieldUser por ShieldCheck
+} from 'lucide-react';
 import ContactSection from '@/components/ContactSection';
 
 // Diccionario de textos (copy)
@@ -81,7 +92,9 @@ const copy = {
         title: "Discreción y compromiso inquebrantable",
         description:
           "Nuestra integridad es parte de nuestra marca. Trabajamos con discreción y garantizamos la confidencialidad en cada proyecto. Tu confianza, nuestra responsabilidad.",
-        icon: <ShieldUser className="w-6 h-6" />
+        // Anteriormente se usaba "UserShield" o "ShieldUser"
+        // Lo sustituimos por "ShieldCheck", que sí existe en lucide-react
+        icon: <ShieldCheck className="w-6 h-6" />
       },
     ],
   },
