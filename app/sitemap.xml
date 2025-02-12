@@ -1,105 +1,98 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://alphaqueb.com/</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/nosotros</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/servicios/transformar</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/servicios/automatizar</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/servicios/scada</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/aviso-de-privacidad</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/terminos-y-condiciones</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/politica-de-seguridad</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/scada-automatizacion-lineas-produccion-manufactura-inteligente</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/consultoria-industrial-versus-consultoria-tecnologica-cual-es-la-mejor-opcion-para-tu-fabrica-analisis-comparativo</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/industria-4-0-mantenimiento-predictivo-evitar-fallos-maximizar-eficiencia-fabricas</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/automatizacion-industrial-procesos-productivos-la-revolucion-en-fabricas-y-como-tu-competencia-se-esta-beneficiando</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/que-es-un-gemelo-digital-en-la-manufactura</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/que-es-la-manufactura-inteligente</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/transformacion-digital-manufactura</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/que-es-sistema-scada</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/que-es-automatizacion-lineas-de-produccion</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://alphaqueb.com/blogs/el-futuro-de-la-manufactura-en-2025</loc>
-  <lastmod>2025-02-12T02:16:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<?xml version="1.0" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://alphaqueb.com/</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/aviso-de-privacidad</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/automatizacion-industrial-procesos-productivos-la-revolucion-en-fabricas-y-como-tu-competencia-se-esta-beneficiando</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/consultoria-industrial-versus-consultoria-tecnologica-cual-es-la-mejor-opcion-para-tu-fabrica-analisis-comparativo</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/el-futuro-de-la-manufactura-en-2025</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/industria-4-0-mantenimiento-predictivo-evitar-fallos-maximizar-eficiencia-fabricas</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/que-es-automatizacion-lineas-de-produccion</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/que-es-la-manufactura-inteligente</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/que-es-sistema-scada</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/que-es-un-gemelo-digital-en-la-manufactura</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/scada-automatizacion-lineas-produccion-manufactura-inteligente</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/blogs/transformacion-digital-manufactura</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/nosotros</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/politica-de-seguridad</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/servicios/automatizar</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/servicios/scada</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/servicios/transformar</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://alphaqueb.com/terminos-y-condiciones</loc>
+    <lastmod>2025-02-12T03:01:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>
