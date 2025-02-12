@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Nabvar";
 import Script from "next/script";
 import Footer from "@/components/Footer";
@@ -20,12 +20,10 @@ const geistMono = localFont({
 export const metadata = {
   title: "Manufactura Inteligente | Alphaqueb Consulting",
   description:
-    "Optimizamos procesos manufactureros con software avanzado, sistemas SCADA y soluciones de automatización industrial. Reducimos costos, aumentamos productividad hasta un 40% y aceleramos la transformación digital para mejorar la supervisión y toma de decisiones en tiempo real.",
+    "Transformamos tu industria con tecnología avanzada: automatización, digitalización de procesos y software industrial. Conectamos tus sistemas para mejorar la producción y reducir errores en la manufactura.",
 };
 
-
 export default function RootLayout({ children }) {
-    const initialTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : 'system';
   return (
     <html lang="en">
       <body
@@ -33,27 +31,24 @@ export default function RootLayout({ children }) {
       >
         {/* Google Analytics */}
         <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-WR7YX9PG6P"
-            strategy="afterInteractive" // Cargar después de la interacción del usuario
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-WR7YX9PG6P');
-            `}
-          </Script>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-        <Navbar />
-        {children}
-        <Toaster />
-        <Footer/>
+          src="https://www.googletagmanager.com/gtag/js?id=G-WR7YX9PG6P"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WR7YX9PG6P');
+          `}
+        </Script>
+
+        {/* Theme Provider */}
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Toaster />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
