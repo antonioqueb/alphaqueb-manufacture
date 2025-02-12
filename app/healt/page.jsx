@@ -1,12 +1,10 @@
+export const dynamic = "force-dynamic"; // Evita la generación estática
+export const runtime = "nodejs"; // Asegura que Next.js ejecute esto en el servidor
+
 export default function HealthCheck() {
-    const uptime = process.uptime(); // Tiempo en segundos desde que el servidor inició
-    const currentTime = new Date().toISOString(); // Fecha actual en formato ISO
-  
-    return Response.json({
-      status: "ok",
-      message: "El servidor está funcionando correctamente.",
-      uptime: `${Math.floor(uptime / 60)} minutos y ${Math.floor(uptime % 60)} segundos`,
-      timestamp: currentTime,
-    });
-  }
-  
+  return Response.json({
+    status: "ok",
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+  });
+}
