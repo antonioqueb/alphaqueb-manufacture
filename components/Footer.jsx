@@ -117,7 +117,7 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/politica-de-cookies" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
+                                    <Link href="/politica-de-coockies" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
                                         Política de Cookies
                                     </Link>
                                 </li>

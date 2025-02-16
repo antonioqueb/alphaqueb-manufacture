@@ -21,7 +21,15 @@ export default function CookieBanner() {
 
   return (
     <div className="fixed bottom-0 left-0 w-full bg-black text-white text-sm p-3 text-center z-50">
-      Usamos cookies para mejorar tu experiencia en nuestro sitio. Al continuar navegando, aceptas el uso de cookies.
+      Usamos cookies para mejorar tu experiencia en nuestro sitio. Al continuar navegando, aceptas el uso de cookies. 
+      <a 
+        href="https://alphaqueb.com/politica-de-coockies" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="underline text-blue-400 ml-2 hover:text-blue-300"
+      >
+        Ver política de cookies
+      </a>
     </div>
   );
 }
