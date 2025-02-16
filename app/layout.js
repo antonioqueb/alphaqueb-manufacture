@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Nabvar";
 import Script from "next/script";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner"; // ⬅️ Importamos el nuevo componente
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Toaster />
+          <CookieBanner />  {/* ⬅️ Agregamos la barra de cookies aquí */}
           <Footer />
         </ThemeProvider>
       </body>
