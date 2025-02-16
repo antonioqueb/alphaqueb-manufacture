@@ -13,7 +13,7 @@ export default function CookieBanner() {
       setTimeout(() => {
         setIsVisible(false);
         localStorage.setItem("cookiesAccepted", "true");
-      }, 3000); // Desaparece después de 3 segundos
+      }, 8000); // Desaparece después de 3 segundos
     }
   }, []);
 
