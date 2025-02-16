@@ -5,7 +5,6 @@ export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Verificamos si ya se mostró la barra antes
     const hasAcceptedCookies = localStorage.getItem("cookiesAccepted");
 
     if (!hasAcceptedCookies) {
@@ -13,7 +12,15 @@ export default function CookieBanner() {
       setTimeout(() => {
         setIsVisible(false);
         localStorage.setItem("cookiesAccepted", "true");
-      }, 8000); // Desaparece después de 3 segundos
+
+        // 🔹 Hacer tracking solo después de 3 segundos
+        if (typeof window !== "undefined" && window.gtag) {
+          window.gtag("event", "accept_cookies", {
+            event_category: "Cookies",
+            event_label: "El usuario aceptó las cookies automáticamente",
+          });
+        }
+      }, 5000);
     }
   }, []);
 
