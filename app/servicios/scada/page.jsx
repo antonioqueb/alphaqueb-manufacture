@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import ContactSection from '@/components/ContactSection';
 import { Rocket, Zap, BarChart, Clock, Users, Terminal } from 'lucide-react';
+import {  Settings, Server, Shield, Factory, Cpu, Lock, Database } from "lucide-react";
+
 import Link from 'next/link'; // Importamos el componente Link
 
 const COPY = {
@@ -26,6 +28,15 @@ const COPY = {
   buttonLabel: "Reserva tu Consultoría por $1 →",
   tooltipContent: "Haz que cada minuto de tu producción cuente. Reserva una sesión personalizada y descubre cómo un sistema SCADA puede transformar tus operaciones industriales."
 };
+
+const services = [
+  { name: "Automatización de Procesos Industriales", slug: "automatizacion-procesos-industriales", icon: <Cpu className="w-6 h-6 text-custom-orange" /> },
+  { name: "Implementación y Configuración de Sistemas SCADA", slug: "implementacion-configuracion-sistemas-scada", icon: <Server className="w-6 h-6 text-custom-orange" /> },
+  { name: "Mantenimiento Predictivo y Reducción de Tiempos de Inactividad", slug: "mantenimiento-predictivo-reduccion-tiempos-inactividad", icon: <Zap className="w-6 h-6 text-custom-orange" /> },
+  { name: "Ciberseguridad y Protección de Datos en SCADA", slug: "ciberseguridad-proteccion-datos-en-scada", icon: <Lock className="w-6 h-6 text-custom-orange" /> },
+  { name: "Integración SCADA con ERP y MES", slug: "integracion-scada-erp-mes-sistemas-gestion", icon: <Database className="w-6 h-6 text-custom-orange" /> },
+];
+
 
 const App = () => {
   return (
@@ -86,6 +97,30 @@ const App = () => {
             );
           })}
         </section>
+
+        <section className="max-w-7xl mx-auto px-6 py-16 text-center">
+      <h2 className="text-4xl font-extrabold text-custom-orange dark:text-zinc-100 mb-12">
+        Servicios Especializados
+      </h2>
+      <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
+        {services.map((service) => (
+          <Link key={service.slug} href={`/servicios/scada/${service.slug}`} passHref>
+            <div className="bg-zinc-50 dark:bg-zinc-900/50 p-6 sm:p-8 rounded-lg shadow-md flex items-start hover:shadow-lg transition-all transform hover:scale-105 cursor-pointer border border-gray-200 dark:border-zinc-700">
+              <div className="flex-shrink-0 mt-1 mr-4 text-custom-orange">
+                <div className="w-12 h-12 bg-custom-orange/20 rounded-lg flex items-center justify-center p-2">
+                  {service.icon}
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-lg text-zinc-900 dark:text-zinc-100">
+                  {service.name}
+                </h3>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
        
         {/* Sección de Contacto */}
         <section id="contacto" className="border-t pt-5 border-zinc-200 dark:border-zinc-700"> 

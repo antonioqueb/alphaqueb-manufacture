@@ -6,6 +6,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import ContactSection from '@/components/ContactSection';
 import { Rocket, Zap, BarChart, Clock, Users, Terminal } from 'lucide-react';
 import Link from 'next/link'; // Importamos el componente Link
+import { Cpu, Server, Lock, Database, Settings, Bot, Eye, TrendingDown } from "lucide-react";
+
 
 const COPY = {
   title: "Automatización Avanzada para la manufactura moderna",
@@ -26,6 +28,34 @@ const COPY = {
   buttonLabel: "Reserva Tu Consultoría por $1 →",
   tooltipContent: "Descubre cómo nuestras soluciones de automatización pueden transformar tu producción. Reserva tu consultoría inicial y empieza a optimizar tu negocio hoy mismo."
 };
+
+const services = [
+  { 
+    name: "Desarrollo e Implementación de Sistemas de Automatización", 
+    slug: "desarrollo-implementacion-sistemas-automatizacion", 
+    icon: <Settings className="w-6 h-6 text-custom-orange" /> 
+  },
+  { 
+    name: "Integración de Sistemas de Automatización con ERP y MES", 
+    slug: "integracion-sistemas-automatizacion-erp-mes", 
+    icon: <Database className="w-6 h-6 text-custom-orange" /> 
+  },
+  { 
+    name: "Integración de Robots Industriales con Sistemas de Control", 
+    slug: "integracion-robots-industriales-sistemas-control", 
+    icon: <Bot className="w-6 h-6 text-custom-orange" /> 
+  },
+  { 
+    name: "Monitoreo y Control Inteligente en Tiempo Real", 
+    slug: "monitoreo-control-inteligente-tiempo-real", 
+    icon: <Eye className="w-6 h-6 text-custom-orange" /> 
+  },
+  { 
+    name: "Reducción de Costos Operativos y Optimización de Recursos", 
+    slug: "reduccion-costos-operativos-optimizacion-recursos", 
+    icon: <TrendingDown className="w-6 h-6 text-custom-orange" /> 
+  },
+];
 
 const App = () => {
   return (
@@ -86,6 +116,32 @@ const App = () => {
             );
           })}
         </section>
+
+
+
+        <section className="max-w-7xl mx-auto px-6 py-16 text-center">
+      <h2 className="text-4xl font-extrabold text-custom-orange dark:text-zinc-100 mb-12">
+        Servicios Especializados
+      </h2>
+      <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
+        {services.map((service) => (
+          <Link key={service.slug} href={`/servicios/automatizar/${service.slug}`} passHref>
+            <div className="bg-zinc-50 dark:bg-zinc-900/50 p-6 sm:p-8 rounded-lg shadow-md flex items-start hover:shadow-lg transition-all transform hover:scale-105 cursor-pointer border border-gray-200 dark:border-zinc-700">
+              <div className="flex-shrink-0 mt-1 mr-4 text-custom-orange">
+                <div className="w-12 h-12 bg-custom-orange/20 rounded-lg flex items-center justify-center p-2">
+                  {service.icon}
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-lg text-zinc-900 dark:text-zinc-100">
+                  {service.name}
+                </h3>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
        
         {/* Sección de Contacto */}
         <section id="contacto" className="border-t pt-5 border-zinc-200 dark:border-zinc-700"> 
