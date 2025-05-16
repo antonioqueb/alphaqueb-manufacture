@@ -9,7 +9,7 @@ const copy = {
     "Convertimos tus procesos industriales en flujos digitales eficientes. Implantamos y configuramos ERP, CRM o sistemas MES exactamente donde generan valor, garantizando la adopción total mediante capacitación y soporte continuo.",
 
   service: {
-    title: "Servicio Integral de Implementación de Sistemas",
+    title: "Flujo Integral de Implementación de Sistemas",
     slug: "integracion-sistemas",
     phases: [
       {
