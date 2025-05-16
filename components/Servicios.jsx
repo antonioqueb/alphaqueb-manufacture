@@ -1,81 +1,111 @@
 "use client";
-import React from 'react';
+import React from "react";
 import Link from "next/link";
 
-// Diccionario de textos (copy)
+/* ───────────── Copy ───────────── */
 const copy = {
-  title: "Nuestros Servicios de Consultoría para Manufactura",
+  title: "Integración y Adaptación de Sistemas Empresariales",
   description:
-    "Transformamos procesos industriales mediante soluciones tecnológicas avanzadas que reducen costos, optimizan la producción y mejoran la competitividad de tu empresa manufacturera.",
-  services: [
-    {
-      title: "Consultoría en Transformación Digital",
-      description:
-        "Acompañamiento estratégico para digitalizar procesos operativos, comerciales y administrativos, mejorando la toma de decisiones y la eficiencia global.",
-      slug: "transformar",
-    },
-    {
-      title: "Automatización de Líneas de Producción",
-      description:
-        "Diseñamos soluciones de automatización personalizadas que incrementan la capacidad de producción, mejoran la consistencia y reducen costos operativos.",
-      slug: "automatizar",
-    },
-    {
-      title: "Implementación de Sistemas SCADA",
-      description:
-        "Monitoreo y control en tiempo real de procesos industriales, optimizando la supervisión y reduciendo tiempos de inactividad hasta un 40%.",
-      slug: "scada",
-    },
-  ],
-  learnMore: "Conoce más →",
+    "Convertimos tus procesos industriales en flujos digitales fluidos. Implantamos y configuramos ERP, CRM o sistemas de manufactura (MES) exactamente donde generan valor, garantizando adopción total a través de capacitación y soporte continuo.",
+
+  service: {
+    title: "Servicio Integral de Implementación de Sistemas",
+    slug:  "integracion-sistemas",
+    phases: [
+      {
+        title: "Levantamiento & Diagnóstico Profundo",
+        description:
+          "Mapeamos cada área operativa, detectamos cuellos de botella y cuantificamos el impacto económico de digitalizar tus procesos.",
+      },
+      {
+        title: "Diseño de Solución",
+        description:
+          "Seleccionamos el sistema (ERP, CRM o MES) y la arquitectura más eficiente, priorizando quick-wins y ROI medible.",
+      },
+      {
+        title: "Implementación & Configuración",
+        description:
+          "Parametrizamos la plataforma para reflejar tus flujos reales; migramos datos y garantizamos cero interrupciones en la operación.",
+      },
+      {
+        title: "Personalización Específica",
+        description:
+          "Cuando el sistema estándar no cubre una necesidad crítica, desarrollamos módulos o integraciones a medida.",
+      },
+      {
+        title: "Capacitación & Adopción",
+        description:
+          "Entrenamos a tus equipos con casos reales, asegurando que cada usuario domine la herramienta antes del Go-Live.",
+      },
+      {
+        title: "Soporte & Mejora Continua",
+        description:
+          "Monitoreamos KPIs, liberamos mejoras iterativas y mantenemos el sistema alineado con tu crecimiento.",
+      },
+    ],
+  },
+
+  learnMore: "Descubre cómo transformar tu operación →",
 };
 
+/* ───────────── Componente ───────────── */
 export default function Servicios() {
   return (
     <div className="mx-auto pt-16 pb-28 px-4">
-      <div className="text-start py-4">
+      {/* Encabezado principal */}
+      <header className="text-start py-4">
         <h2 className="text-3xl font-semibold tracking-tighter sm:text-4xl md:text-5xl dark:text-zinc-50">
           {copy.title}
         </h2>
         <p className="mt-4 text-lg text-zinc-600 md:text-xl dark:text-zinc-400">
           {copy.description}
         </p>
-      </div>
+      </header>
 
-      {/* Timeline Responsivo */}
-      <ol className="flex flex-col md:flex-row justify-between items-start w-full mt-8 gap-8">
-        {copy.services.map((service, index) => (
-          <li key={index} className="flex flex-col md:flex-row items-start gap-6 text-left flex-1">
-            {/* Círculo animado */}
-            <div
-              className="flex items-center justify-center aspect-square w-16 md:w-32 bg-custom-orange text-white font-bold rounded-full text-2xl relative"
-              style={{
-                animation: "pulse 1.5s infinite",
-              }}
+      {/* Título del servicio */}
+      <h3 className="mt-12 text-2xl md:text-3xl font-semibold text-custom-orange dark:text-custom-orange-light">
+        {copy.service.title}
+      </h3>
+
+      {/* Timeline de fases */}
+      <ol className="flex flex-col md:flex-row md:flex-wrap gap-8 mt-8 w-full">
+        {copy.service.phases.map((phase, index) => (
+          <li
+            key={index}
+            className="flex flex-col md:flex-row md:basis-1/2 items-start gap-6"
+          >
+            {/* Círculo numerado */}
+            <span
+              className="flex items-center justify-center w-16 md:w-20 aspect-square bg-custom-orange text-white font-bold rounded-full text-2xl"
+              style={{ animation: "pulse 1.5s infinite" }}
             >
               {index + 1}
-            </div>
+            </span>
 
-            {/* Contenido de cada paso */}
+            {/* Contenido de la fase */}
             <div>
-              <h3 className="text-lg md:text-xl font-semibold text-zinc-800 dark:text-zinc-50">
-                {service.title}
-              </h3>
+              <h4 className="text-lg md:text-xl font-semibold text-zinc-800 dark:text-zinc-50">
+                {phase.title}
+              </h4>
               <p className="mt-2 text-base md:text-lg text-zinc-600 dark:text-zinc-400">
-                {service.description}
+                {phase.description}
               </p>
-              <Link
-                href={`/servicios/${service.slug}`}
-                className="inline-block mt-3 text-base md:text-lg font-medium text-custom-orange hover:text-custom-orange-dark transition-colors duration-300"
-              >
-                {copy.learnMore}
-              </Link>
             </div>
           </li>
         ))}
       </ol>
 
-      {/* Estilos en línea para la animación */}
+      {/* CTA */}
+      <div className="mt-12">
+        <Link
+          href={`/servicios/${copy.service.slug}`}
+          className="inline-block text-lg md:text-xl font-medium text-custom-orange hover:text-custom-orange-dark transition-colors duration-300"
+        >
+          {copy.learnMore}
+        </Link>
+      </div>
+
+      {/* Animación pulse */}
       <style jsx>{`
         @keyframes pulse {
           0% {

@@ -4,10 +4,12 @@ import { useState } from "react";
 
 // Diccionario de textos (copy)
 const copy = {
-  title: "Digitalizamos y automatizamos procesos industriales",
-  description: "Transformamos tu industria con tecnología avanzada: automatización, digitalización de procesos y software industrial. Conectamos tus sistemas para mejorar la producción y reducir errores en la manufactura.",
-  bannerAlt: "Consultoría tecnológica - Impulsa la eficiencia y competitividad de tu empresa manufacturera con Alphaqueb Consulting",
+  title: "Transformamos y automatizamos tu industria",
+  description: "Implementamos soluciones tecnológicas a medida para optimizar procesos industriales: digitalización, automatización, software especializado y cumplimiento normativo. Integramos manufactura, logística y cadena de suministro para maximizar productividad y minimizar errores.",
+  bannerAlt: "Consultoría tecnológica – Impulsa la eficiencia, competitividad y cumplimiento normativo de tu empresa industrial con Alphaqueb Consulting",
 };
+
+
 
 export default function Banner() {
   const [name, setName] = useState("");
