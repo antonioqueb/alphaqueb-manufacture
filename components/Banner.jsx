@@ -94,7 +94,7 @@ export default function Banner() {
       <div className="w-full lg:w-5/12 py-2 flex items-center justify-center">
         <div className="relative w-full aspect-square">
           <Image
-            src="/industrial.png"
+            src="/industrial.webp"
             fill
             alt={copy.bannerAlt}
             className="object-contain"
