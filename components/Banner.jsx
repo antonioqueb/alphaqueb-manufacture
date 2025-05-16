@@ -5,7 +5,7 @@ import { useState } from "react";
 // Diccionario de textos (copy)
 const copy = {
   title: "Integración de sistemas industriales",
-  description: "Implementamos soluciones tecnológicas a medida para optimizar procesos industriales: digitalización, automatización, software especializado y cumplimiento normativo. Integramos manufactura, logística y cadena de suministro para maximizar productividad y minimizar errores.",
+  description: "Implementamos soluciones tecnológicas a medida para optimizar procesos industriales: digitalización, automatización, software especializado y cumplimiento normativo.",
   bannerAlt: "Consultoría tecnológica – Impulsa la eficiencia, competitividad y cumplimiento normativo de tu empresa industrial con Alphaqueb Consulting",
 };
 
