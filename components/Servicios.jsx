@@ -4,7 +4,7 @@ import Link from "next/link";
 
 /* ───────────── Copy en español neutro ───────────── */
 const copy = {
-  title: "Transformación Industrial con Sistemas Especializados",
+  title: "Transformación Digital con Sistemas Especializados",
   description:
     "Convertimos tus procesos industriales en flujos digitales eficientes. Implantamos y configuramos ERP, CRM o sistemas MES exactamente donde generan valor, garantizando la adopción total mediante capacitación y soporte continuo.",
 
