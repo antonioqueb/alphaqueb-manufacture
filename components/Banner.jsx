@@ -4,8 +4,8 @@ import { useState } from "react";
 
 // Diccionario de textos (copy)
 const copy = {
-  title: "Integración de sistemas industriales",
-  description: "Implementamos soluciones tecnológicas a medida para optimizar procesos industriales: digitalización, automatización, software especializado y cumplimiento normativo.",
+  title: "La industria que crece, es la que evoluciona.",
+  description: "Transforma tu fábrica en una máquina de eficiencia, cumplimiento y resultados medibles.",
   bannerAlt: "Consultoría tecnológica – Impulsa la eficiencia, competitividad y cumplimiento normativo de tu empresa industrial con Alphaqueb Consulting",
 };
 
@@ -94,7 +94,7 @@ export default function Banner() {
       <div className="w-full lg:w-5/12 py-2 flex items-center justify-center">
         <div className="relative w-full aspect-square">
           <Image
-            src="/industrial.webp"
+            src="/beneficio-alpha.png"
             fill
             alt={copy.bannerAlt}
             className="object-contain"
