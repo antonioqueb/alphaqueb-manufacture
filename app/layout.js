@@ -2,7 +2,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
-import Navbar from "@/components/Nabvar";
+import Navbar from "@/components/Navbar";
 import Script from "next/script";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner"; // ⬅️ Importamos el nuevo componente
