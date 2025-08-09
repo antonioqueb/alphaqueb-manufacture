@@ -1,78 +1,90 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import {
+  Search,
+  Target,
+  Settings,
+  Wrench,
+  GraduationCap,
+  ShieldCheck,
+} from "lucide-react";
 
-/* ───────────── Copy mejorado con fórmula de ventas ───────────── */
+/* ───────────── Copy profesional ───────────── */
 const copy = {
-  hook: "¿Por qué algunas industrias mexicanas generan 3X más utilidades que sus competidores usando exactamente los mismos recursos?",
-  promise: "Implementación de sistemas industriales que elimina el 73% de las ineficiencias ocultas",
-  proof: "Comprobado en 69 industrias reales. Resultados garantizados o dinero de vuelta.",
-  
-  title: "La única consultora que implementa sistemas que se adaptan a TU industria, no al revés",
-  subtitle: "Somos expertos en ERP, CRM y MES industriales. Convertimos tus procesos en flujos digitales que generan utilidades reales",
-  
+  hook: "Optimiza tu operación industrial con tecnología confiable.",
+  promise: "Integramos soluciones que reducen ineficiencias y elevan la rentabilidad.",
+  proof: "Más de 70 proyectos industriales respaldan nuestra metodología.",
+
+  title: "Consultoría tecnológica para la industria",
+  subtitle: "Especialistas en ERP, CRM y MES adaptados a tus procesos.",
+
   problems: [
-    "Perdiendo $847 pesos por hora en procesos manuales",
-    "Pagando multas evitables por incumplimiento normativo", 
-    "Rechazando pedidos por falta de visibilidad",
-    "Trabajando con datos de ayer para decisiones de hoy"
+    "Procesos manuales costosos e ineficientes",
+    "Riesgos por incumplimiento normativo",
+    "Falta de visibilidad para planear la producción",
+    "Decisiones basadas en datos desactualizados",
   ],
 
   service: {
-    title: "Flujo Integral de Implementación de Sistemas",
+    title: "Metodología de implementación",
     slug: "integracion-sistemas",
     phases: [
       {
-        title: "Auditoría Express y Diagnóstico ROI",
-        description: "Nuestros consultores especializados mapean cada área operativa, detectan las 7 fugas de dinero ocultas y cuantifican el beneficio económico exacto de implementar sistemas ERP, CRM o MES. Garantizamos encontrar $50,000+ en ahorros identificables.",
-        icon: "🔍",
-        highlight: "ROI visible en 24 horas"
+        title: "Diagnóstico Operativo",
+        description:
+          "Analizamos tu operación y definimos indicadores para medir la mejora. Entregamos un informe con oportunidades de optimización.",
+        icon: Search,
+        highlight: "Visión clara del punto de partida",
       },
       {
-        title: "Selección y Diseño de Solución",
-        description: "Seleccionamos el sistema industrial más eficiente (SAP, Oracle, Microsoft, Odoo, etc.) y diseñamos la arquitectura específica para TU industria. Priorizamos resultados rápidos con retorno de inversión medible en 90 días.",
-        icon: "🎯", 
-        highlight: "Sistemas líderes del mercado"
+        title: "Diseño de la Solución",
+        description:
+          "Seleccionamos las herramientas que mejor se ajustan a tus objetivos y diseñamos la arquitectura del sistema.",
+        icon: Target,
+        highlight: "Tecnología alineada al negocio",
       },
       {
-        title: "Implementación y Configuración Experta",
-        description: "Nuestros desarrolladores e ingenieros implementan y configuran la plataforma para reflejar tus flujos reales. Migramos datos con seguridad bancaria y garantizamos cero tiempo fuera de operación.",
-        icon: "⚡",
-        highlight: "100% uptime garantizado"
+        title: "Implementación y Configuración",
+        description:
+          "Configuramos los sistemas y migramos la información con un plan que asegura la continuidad de la operación.",
+        icon: Settings,
+        highlight: "Despliegue sin contratiempos",
       },
       {
-        title: "Desarrollo y Personalización a Medida", 
-        description: "Cuando los sistemas estándar no cubren necesidades críticas de tu industria, nuestro equipo de desarrollo crea módulos exactos o integraciones personalizadas que se pagan solos en menos de 6 meses.",
-        icon: "🔧",
-        highlight: "Desarrollo personalizado"
+        title: "Desarrollo Personalizado",
+        description:
+          "Creamos integraciones y módulos específicos cuando los sistemas estándar no cubren requerimientos críticos.",
+        icon: Wrench,
+        highlight: "Soluciones a medida",
       },
       {
-        title: "Capacitación y Adopción Garantizada",
-        description: "Nuestros consultores entrenan a tu gente con casos reales de tu planta. Garantizamos que tu equipo domine las herramientas desde el día 1, con 95%+ de adopción antes de la puesta en marcha oficial.",
-        icon: "🎓",
-        highlight: "95% adopción garantizada"
+        title: "Capacitación y Acompañamiento",
+        description:
+          "Entrenamos a tu equipo con casos reales y damos seguimiento durante el arranque para garantizar la adopción.",
+        icon: GraduationCap,
+        highlight: "Equipo preparado desde el día uno",
       },
       {
-        title: "Soporte Continuo y Consultoría Especializada",
-        description: "Un consultor senior asignado exclusivamente a tu cuenta. Monitoreamos KPIs críticos 24/7, liberamos mejoras iterativas y proporcionamos consultoría estratégica para mantener tu ventaja competitiva.",
-        icon: "🛡️",
-        highlight: "Consultor dedicado 24/7"
+        title: "Soporte y Mejora Continua",
+        description:
+          "Monitoreamos indicadores clave y proponemos ajustes que mantengan la eficiencia a largo plazo.",
+        icon: ShieldCheck,
+        highlight: "Acompañamiento permanente",
       },
     ],
   },
 
-
-
   guarantees: [
-    "90 días: Si no ves ROI medible, cancelamos sin costo",
-    "6 meses: Si no recuperas la inversión, te devolvemos todo",
-    "12 meses: Si no estás satisfecho, migramos tu data gratis"
+    "Diagnóstico inicial sin costo",
+    "Acompañamiento durante la implementación",
+    "Soporte especializado posterior al arranque",
   ],
 
-  cta: "OBTÉN TU CONSULTORÍA GRATUITA DE $18,500",
-  ctaSubtitle: "Descubre las 7 fugas de dinero ocultas en tu industria",
-  urgency: "Solo trabajamos con 12 nuevas industrias por trimestre",
-  learnMore: "Agenda tu consultoría ahora →",
+  cta: "Agenda una consultoría sin costo",
+  ctaSubtitle: "Identifica oportunidades de mejora en tu planta",
+  urgency: "Disponibilidad limitada cada trimestre",
+  learnMore: "Solicita información",
 };
 
 /* ───────────── Componente ───────────── */
@@ -99,7 +111,7 @@ export default function Servicios() {
                 >
                   {index + 1}
                 </div>
-                <div className="text-4xl">{phase.icon}</div>
+                <phase.icon className="w-10 h-10 text-custom-orange" />
                 <div className="bg-orange-100 dark:bg-orange-900/30 px-3 py-1 rounded-full">
                   <span className="text-orange-700 dark:text-orange-300 text-sm font-semibold">
                     {phase.highlight}
@@ -143,16 +155,15 @@ export default function Servicios() {
           {copy.learnMore}
         </Link>
         <p className="text-sm mt-4 opacity-90">
-          No enviamos vendedores. Solo consultores especializados e ingenieros que entienden tu negocio.
+          Te atenderá un consultor especializado en procesos industriales.
         </p>
       </div>
 
       {/* P.S. */}
       <div className="mt-12 text-center bg-white dark:bg-stone-900 rounded-2xl p-6 shadow-lg border border-stone-100 dark:border-stone-800">
         <p className="text-lg text-stone-700 dark:text-stone-300">
-          <strong>P.S.</strong> Las 69 industrias que ya transformamos con ALPHAQUEB tenían algo en común: 
-          todas pensaron "esto es demasiado bueno para ser verdad" antes de llamar. 
-          La diferencia es que ellas sí llamaron. <strong>¿Cuál será tu historia en 6 meses?</strong>
+          <strong>P.S.</strong> Las empresas que ya trabajan con ALPHAQUEB compartían las mismas dudas.
+          Hoy operan con mayor control y rentabilidad. <strong>¿Qué podríamos lograr juntos?</strong>
         </p>
       </div>
 
