@@ -11,7 +11,7 @@ export default function CoverageMap() {
   return (
     <section className="mx-auto max-w-14xl px-4 py-16">
       <h3 className="text-center text-2xl md:text-3xl font-bold text-custom-orange dark:text-custom-orange-light mb-4">
-        Nuestra cobertura actual
+        Nuestra cobertura presencial en México
       </h3>
       <p className="text-center text-stone-600 dark:text-stone-400 mb-8">
         Presencia de servicio en México.
