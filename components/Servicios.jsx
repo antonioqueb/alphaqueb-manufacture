@@ -137,40 +137,34 @@ export default function Servicios() {
       </div>
 
       {/* CTA principal */}
-      <div className="relative max-w-3xl mx-auto">
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#ff943d] to-[#ff7f00] blur-xl opacity-60"></div>
-        <div className="relative text-center rounded-2xl p-12 text-white bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl">
-          <div className="mb-4 bg-yellow-300 text-yellow-800 px-4 py-2 rounded-full inline-block font-bold">
-            {copy.urgency}
-          </div>
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            {copy.cta}
-          </h3>
-          <p className="text-xl mb-8">
-            {copy.ctaSubtitle}
-          </p>
-          <Link
-            href={`#contacto`}
-            className="inline-block bg-white px-8 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            style={{ color: '#ff943d' }}
-          >
-            {copy.learnMore}
-          </Link>
-          <p className="text-sm mt-4 opacity-90">
-            Te atenderá un consultor especializado en procesos industriales.
-          </p>
+      <div className="text-center rounded-xl p-12 text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #ff943d 0%, #ff7f00 100%)' }}>
+        <div className="mb-4 bg-yellow-300 text-yellow-800 px-4 py-2 rounded-full inline-block font-bold">
+          {copy.urgency}
         </div>
+        <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          {copy.cta}
+        </h3>
+        <p className="text-xl mb-8">
+          {copy.ctaSubtitle}
+        </p>
+        <Link
+          href={`#contacto`}
+          className="inline-block bg-white px-8 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+          style={{ color: '#ff943d' }}
+        >
+          {copy.learnMore}
+        </Link>
+        <p className="text-sm mt-4 opacity-90">
+          Te atenderá un consultor especializado en procesos industriales.
+        </p>
       </div>
 
       {/* P.S. */}
-      <div className="relative mt-12 max-w-3xl mx-auto">
-        <div className="absolute inset-0 rounded-2xl bg-white/40 dark:bg-stone-900/40 blur-lg"></div>
-        <div className="relative text-center rounded-2xl p-6 shadow-lg border border-white/20 dark:border-stone-700 bg-white/10 dark:bg-stone-900/30 backdrop-blur-md">
-          <p className="text-lg text-stone-700 dark:text-stone-300">
-            <strong>P.S.</strong> Las empresas que ya trabajan con ALPHAQUEB compartían las mismas dudas.
-            Hoy operan con mayor control y rentabilidad. <strong>¿Qué podríamos lograr juntos?</strong>
-          </p>
-        </div>
+      <div className="mt-12 text-center bg-white dark:bg-stone-900 rounded-2xl p-6 shadow-lg border border-stone-100 dark:border-stone-800">
+        <p className="text-lg text-stone-700 dark:text-stone-300">
+          <strong>P.S.</strong> Las empresas que ya trabajan con ALPHAQUEB compartían las mismas dudas.
+          Hoy operan con mayor control y rentabilidad. <strong>¿Qué podríamos lograr juntos?</strong>
+        </p>
       </div>
 
     </section>
