@@ -4,6 +4,7 @@ import Faq from '@/components/Faq';
 import Baner from '@/components/Banner';
 import ContactSection from '@/components/ContactSection';
 import MultiCards from '@/components/MultiCards';
+import CoverageMap from '@/components/CoverageMap';
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Baner />
       <MultiCards  />
       <Servicios />
+      <CoverageMap />
       {/* <Testimonials /> */}
       {/* <Hero /> */}
       {/* <LastProjects /> */}
