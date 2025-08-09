@@ -5,7 +5,7 @@ import { useState } from "react";
 // Diccionario de textos (copy)
 const copy = {
   title: "La industria que crece, es la que evoluciona.",
-  description: "Transforma tu fábrica en una máquina de eficiencia, cumplimiento y resultados medibles.",
+  description: "Transforma tu empresa en una máquina de eficiencia, cumplimiento y resultados medibles.",
   bannerAlt: "Consultoría tecnológica – Impulsa la eficiencia, competitividad y cumplimiento normativo de tu empresa industrial con Alphaqueb Consulting",
 };
 
