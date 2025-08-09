@@ -22,27 +22,42 @@ export default function CoverageMap() {
           projectionConfig={{ scale: 1000, center: [-102, 24] }}
           width={800}
           height={600}
+          aria-label="Mapa de México con cobertura nacional"
         >
           <Geographies geography="/mexico.json">
             {({ geographies }) =>
               geographies.map((geo) => (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  fill="#EAEAEC"
-                  stroke="#D6D6DA"
-                  className="hover:fill-custom-orange transition-colors"
-                />
+                <g key={geo.rsmKey}>
+                  {/* Base map for light and dark modes */}
+                  <Geography
+                    geography={geo}
+                    className="fill-stone-200 dark:fill-stone-700 stroke-stone-400 dark:stroke-stone-500 hover:fill-custom-orange/60 transition-colors"
+                  />
+                  {/* Coverage overlay */}
+                  <Geography
+                    geography={geo}
+                    className="fill-custom-orange dark:fill-custom-orange-light opacity-20 pointer-events-none"
+                  />
+                </g>
               ))
             }
           </Geographies>
           {locations.map(({ name, coordinates }) => (
             <Marker key={name} coordinates={coordinates}>
-              <circle r={5} fill="#ff943d" stroke="#fff" strokeWidth={2} />
+              <g aria-label={name} tabIndex={0}>
+                <circle
+                  r={8}
+                  className="animate-ping fill-custom-orange/70 dark:fill-custom-orange-light/70"
+                />
+                <circle
+                  r={5}
+                  className="fill-custom-orange dark:fill-custom-orange-light stroke-white dark:stroke-stone-900 stroke-2"
+                />
+              </g>
               <text
                 textAnchor="middle"
                 y={-10}
-                className="text-xs font-medium text-stone-700 dark:text-stone-200"
+                className="text-xs font-medium text-stone-900 dark:text-stone-100 drop-shadow-[0_1px_1px_rgba(0,0,0,0.7)]"
               >
                 {name}
               </text>
