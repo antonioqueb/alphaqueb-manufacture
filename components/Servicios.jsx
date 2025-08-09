@@ -8,6 +8,7 @@ import {
   Wrench,
   GraduationCap,
   ShieldCheck,
+  PhoneCall,
 } from "lucide-react";
 
 /* ───────────── Copy profesional ───────────── */
@@ -137,26 +138,36 @@ export default function Servicios() {
       </div>
 
       {/* CTA principal */}
-      <div className="text-center rounded-xl p-12 text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #ff943d 0%, #ff7f00 100%)' }}>
-        <div className="mb-4 bg-yellow-300 text-yellow-800 px-4 py-2 rounded-full inline-block font-bold">
-          {copy.urgency}
+      <div
+        className="rounded-xl p-12 text-white shadow-2xl"
+        style={{ background: 'linear-gradient(135deg, #ff943d 0%, #ff7f00 100%)' }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="text-center md:text-left">
+            <div className="mb-4 bg-yellow-300 text-yellow-800 px-4 py-2 rounded-full inline-block font-bold">
+              {copy.urgency}
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              {copy.cta}
+            </h3>
+            <p className="text-xl mb-8">
+              {copy.ctaSubtitle}
+            </p>
+            <Link
+              href={`#contacto`}
+              className="inline-block bg-white px-8 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              style={{ color: '#ff943d' }}
+            >
+              {copy.learnMore}
+            </Link>
+            <p className="text-sm mt-4 opacity-90">
+              Te atenderá un consultor especializado en procesos industriales.
+            </p>
+          </div>
+          <div className="flex justify-center md:justify-end mt-8 md:mt-0">
+            <PhoneCall className="w-24 h-24 md:w-32 md:h-32 animate-bounce" />
+          </div>
         </div>
-        <h3 className="text-3xl md:text-4xl font-bold mb-4">
-          {copy.cta}
-        </h3>
-        <p className="text-xl mb-8">
-          {copy.ctaSubtitle}
-        </p>
-        <Link
-          href={`#contacto`}
-          className="inline-block bg-white px-8 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-          style={{ color: '#ff943d' }}
-        >
-          {copy.learnMore}
-        </Link>
-        <p className="text-sm mt-4 opacity-90">
-          Te atenderá un consultor especializado en procesos industriales.
-        </p>
       </div>
 
       {/* P.S. */}
