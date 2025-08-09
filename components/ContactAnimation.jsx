@@ -25,8 +25,18 @@ export default function ContactAnimation() {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-24 h-24 md:w-32 md:h-32">
-      {animationData && <Lottie animationData={animationData} loop autoplay />}
+    <div
+      ref={containerRef}
+      className="flex items-center justify-center w-40 h-40 md:w-64 md:h-64 p-4 bg-white dark:bg-black rounded-xl shadow-lg"
+    >
+      {animationData && (
+        <Lottie
+          className="w-full h-full"
+          animationData={animationData}
+          loop
+          autoplay
+        />
+      )}
     </div>
   );
 }
