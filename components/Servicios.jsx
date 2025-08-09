@@ -8,8 +8,8 @@ import {
   Wrench,
   GraduationCap,
   ShieldCheck,
-  PhoneCall,
 } from "lucide-react";
+import ContactAnimation from "./ContactAnimation";
 
 /* ───────────── Copy profesional ───────────── */
 const copy = {
@@ -165,7 +165,7 @@ export default function Servicios() {
             </p>
           </div>
           <div className="flex justify-center md:justify-end mt-8 md:mt-0">
-            <PhoneCall className="w-24 h-24 md:w-32 md:h-32 animate-bounce" />
+            <ContactAnimation />
           </div>
         </div>
       </div>
