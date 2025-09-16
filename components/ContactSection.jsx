@@ -49,10 +49,10 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col justify-center">
           <h2 className="text-3xl xl:text-5xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-            Contáctanos
+            ¡Contáctanos hoy mismo!
           </h2>
           <p className="mt-4 text-lg text-zinc-500 dark:text-zinc-400">
-          ¿Listo para llevar tu manufactura al siguiente nivel? Completa el formulario y un experto se pondrá en contacto contigo.
+          ¿Listo para llevar tu industria al siguiente nivel? Completa el formulario y un experto se pondrá en contacto contigo lo antes posible.
           </p>
           <form onSubmit={handleSubmit} className="mt-8 space-y-6">
             <div>
