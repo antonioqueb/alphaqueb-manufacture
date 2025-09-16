@@ -28,19 +28,19 @@ function useIncrement(initialValue, increment, max, decimals, interval) {
 
 export default function MultiCards() {
   const dineroAhorrado = formatNumber(
-    useIncrement(18.2, 0.01, 1237, 2, 12100),
+    useIncrement(28.2, 0.01, 1237, 2, 12100),
     2,
   );
-  const proyectosActivos = useIncrement(149, 1, 57, 0, 1800000000); // cada 5 segundos
-  const clientesTotales = useIncrement(69, 1, 10000, 0, 180000000); // cada 30 minutos
-  const clientesActivos = useIncrement(48, 1, 2000, 0, 180000000); // cada 30 minutos
+  const proyectosActivos = useIncrement(179, 1, 57, 0, 1800000000); // cada 5 segundos
+  const clientesTotales = useIncrement(89, 1, 10000, 0, 180000000); // cada 30 minutos
+  const clientesActivos = useIncrement(72, 1, 2000, 0, 180000000); // cada 30 minutos
 
   const cards = [
     {
       title: "Ahorros Anuales Generados",
       icon: FaDollarSign,
       value: `$${dineroAhorrado} M`,
-      description: "+19% desde el año pasado",
+      description: "+20% desde el año pasado",
     },
     {
       title: "Desarrollos Activos",
@@ -58,7 +58,7 @@ export default function MultiCards() {
       title: "Clientes Totales",
       icon: FaUsers,
       value: `+${clientesTotales}`,
-      description: "+2 desde el mes pasado",
+      description: "+3 desde el mes pasado",
     },
   ];
 
