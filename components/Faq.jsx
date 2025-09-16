@@ -145,24 +145,27 @@ export default function FAQ() {
             para recibir respuestas.
           </CardDescription>
         </CardHeader>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
-          {[0, 1].map((colIndex) => (
-            <div key={colIndex}>
-              <Accordion type="single" collapsible>
-                {FAQ_ITEMS.slice(colIndex * 2, colIndex * 2 + 2).map((item, index) => (
-                  <AccordionItem key={index} value={`item-${colIndex * 2 + index + 1}`}>
-                    <AccordionTrigger className="text-lg md:text-xl text-left dark:text-white">
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="mt-2 text-base md:text-lg text-left text-zinc-600 dark:text-zinc-300">
-                      {item.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          ))}
-        </div>
+        {/* Acordeón con dos columnas */}
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
+            {[0, 1].map((colIndex) => (
+              <div key={colIndex}>
+                <Accordion type="single" collapsible>
+                  {FAQ_ITEMS
+                    .filter((_, index) => index % 2 === colIndex)
+                    .map((item, index) => (
+                      <AccordionItem key={index} value={`item-${colIndex}-${index}`}>
+                        <AccordionTrigger className="text-lg md:text-xl text-left dark:text-white">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="mt-2 text-base md:text-lg text-left text-zinc-600 dark:text-zinc-300">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                </Accordion>
+              </div>
+            ))}
+          </div>
       </div>
     </div>
   );
