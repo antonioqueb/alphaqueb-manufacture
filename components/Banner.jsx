@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // Diccionario de textos (copy)
 const copy = {
-  title: "Implementación de tecnología para la industria",
+  title: "Tecnología para la industria mexicana",
   description: "Transforma tu empresa en una máquina de eficiencia, cumplimiento y resultados medibles.",
   bannerAlt: "Consultoría tecnológica – Impulsa la eficiencia, competitividad y cumplimiento normativo de tu empresa industrial con Alphaqueb Consulting",
 };
