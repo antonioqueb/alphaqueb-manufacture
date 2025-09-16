@@ -102,30 +102,21 @@ export default function Servicios() {
           {copy.service.phases.map((phase, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 sm:p-8 border border-stone-100 dark:border-stone-800 relative group"
+              className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-8 border border-stone-100 dark:border-stone-800 relative group"
             >
-              {/* Número e ícono - LEFT fijo para mantener alineación */}
-              <div className="flex items-start gap-4 mb-6">
-                {/* Left: número + icono. shrink-0 y min-width para mantener alineación */}
-                <div className="flex items-center gap-3 shrink-0 min-w-[7.5rem]">
-                  <div
-                    className="flex items-center justify-center w-16 h-16 text-white font-bold rounded-full text-xl shadow-lg"
-                    style={{ backgroundColor: "#ff943d" }}
-                  >
-                    {index + 1}
-                  </div>
-                  <phase.icon className="w-10 h-10 text-custom-orange" />
+              {/* Número e ícono */}
+              <div className="flex items-center gap-4 mb-6">
+                <div 
+                  className="flex items-center justify-center w-16 h-16 text-white font-bold rounded-full text-xl shadow-lg"
+                  style={{ backgroundColor: '#ff943d' }}
+                >
+                  {index + 1}
                 </div>
-
-                {/* Right: badge (puede envolver en móvil) y ocupa el resto */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-start">
-                    <div className="bg-orange-100 dark:bg-orange-900/30 px-3 py-1 rounded-full w-full sm:w-auto mt-0">
-                      <span className="text-orange-700 dark:text-orange-300 text-sm font-semibold block truncate">
-                        {phase.highlight}
-                      </span>
-                    </div>
-                  </div>
+                <phase.icon className="w-10 h-10 text-custom-orange" />
+                <div className="bg-orange-100 dark:bg-orange-900/30 px-3 py-1 rounded-full">
+                  <span className="text-orange-700 dark:text-orange-300 text-sm font-semibold">
+                    {phase.highlight}
+                  </span>
                 </div>
               </div>
 
@@ -134,17 +125,18 @@ export default function Servicios() {
                 <h4 className="text-xl md:text-2xl font-bold text-stone-800 dark:text-stone-100 mb-4 group-hover:text-custom-orange transition-colors">
                   {phase.title}
                 </h4>
-                <p className="text-base md:text-lg text-stone-600 dark:text-stone-400 leading-relaxed break-words whitespace-normal">
+                <p className="text-base md:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
                   {phase.description}
                 </p>
               </div>
-
+              
               {/* Línea de gradiente inferior al hover */}
               <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>
       </div>
+
     </section>
   );
 }
