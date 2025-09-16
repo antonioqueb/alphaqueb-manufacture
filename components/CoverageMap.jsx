@@ -11,6 +11,8 @@ const activeStates = [
   "Jalisco",
   "Ciudad de México",
   "Puebla",
+  "Estado de México",
+  "Baja California",
 ];
 
 export default function CoverageMap() {
@@ -32,10 +34,10 @@ export default function CoverageMap() {
   return (
     <section className="mx-auto max-w-14xl px-4 py-4">
       <h3 className="text-center text-2xl md:text-3xl font-bold text-custom-orange dark:text-custom-orange-light mb-2">
-        Estados con proyectos activos
+        Presencia Nacional Activa
       </h3>
       <p className="text-center text-stone-600 dark:text-stone-400 mb-2">
-        Ubicaciones donde actualmente trabajamos.
+        Lugares donde tenemos proyectos en marcha
       </p>
       <div className="relative flex justify-center">
         <ComposableMap

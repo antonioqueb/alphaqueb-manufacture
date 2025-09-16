@@ -28,7 +28,7 @@ const copy = {
   ],
 
   service: {
-    title: "Metodología de implementación",
+    title: "Nuestro enfoque de servicio",
     slug: "integracion-sistemas",
     phases: [
       {
@@ -135,16 +135,6 @@ export default function Servicios() {
             </div>
           ))}
         </div>
-      </div>
-
-
-
-      {/* P.S. */}
-      <div className="mt-12 text-center bg-white dark:bg-stone-900 rounded-2xl p-6 shadow-lg border border-stone-100 dark:border-stone-800">
-        <p className="text-lg text-stone-700 dark:text-stone-300">
-          <strong>P.S.</strong> Las empresas que ya trabajan con ALPHAQUEB compartían las mismas dudas.
-          Hoy operan con mayor control y rentabilidad. <strong>¿Qué podríamos lograr juntos?</strong>
-        </p>
       </div>
 
     </section>
