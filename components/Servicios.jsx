@@ -104,19 +104,28 @@ export default function Servicios() {
               key={index}
               className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 sm:p-8 border border-stone-100 dark:border-stone-800 relative group"
             >
-              {/* Número e ícono */}
-              <div className="flex flex-wrap items-start gap-3 sm:gap-4 mb-6">
-                <div 
-                  className="flex items-center justify-center w-16 h-16 text-white font-bold rounded-full text-xl shadow-lg shrink-0"
-                  style={{ backgroundColor: '#ff943d' }}
-                >
-                  {index + 1}
+              {/* Número e ícono - LEFT fijo para mantener alineación */}
+              <div className="flex items-start gap-4 mb-6">
+                {/* Left: número + icono. shrink-0 y min-width para mantener alineación */}
+                <div className="flex items-center gap-3 shrink-0 min-w-[7.5rem]">
+                  <div
+                    className="flex items-center justify-center w-16 h-16 text-white font-bold rounded-full text-xl shadow-lg"
+                    style={{ backgroundColor: "#ff943d" }}
+                  >
+                    {index + 1}
+                  </div>
+                  <phase.icon className="w-10 h-10 text-custom-orange" />
                 </div>
-                <phase.icon className="w-10 h-10 text-custom-orange shrink-0" />
-                <div className="bg-orange-100 dark:bg-orange-900/30 px-3 py-1 rounded-full w-full sm:w-auto mt-2 sm:mt-0">
-                  <span className="text-orange-700 dark:text-orange-300 text-sm font-semibold">
-                    {phase.highlight}
-                  </span>
+
+                {/* Right: badge (puede envolver en móvil) y ocupa el resto */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start">
+                    <div className="bg-orange-100 dark:bg-orange-900/30 px-3 py-1 rounded-full w-full sm:w-auto mt-0">
+                      <span className="text-orange-700 dark:text-orange-300 text-sm font-semibold block truncate">
+                        {phase.highlight}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -129,14 +138,13 @@ export default function Servicios() {
                   {phase.description}
                 </p>
               </div>
-              
+
               {/* Línea de gradiente inferior al hover */}
               <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>
       </div>
-
     </section>
   );
 }
