@@ -5,7 +5,7 @@ import { useState } from "react";
 // Diccionario de textos (copy)
 const copy = {
   title: "Tecnología para la industria mexicana",
-  description: "Sistemas Industriales un signo de eficiencia, cumplimiento y resultados medibles.",
+  description: "Sistemas Industriales un signo de eficiencia, cumplimiento y resultados.",
   bannerAlt: "Consultoría tecnológica – Impulsa la eficiencia, competitividad y cumplimiento normativo de tu empresa industrial con Alphaqueb Consulting",
 };
 
