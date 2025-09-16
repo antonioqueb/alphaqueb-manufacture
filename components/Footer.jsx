@@ -64,7 +64,7 @@ const Footer = () => {
                     )}
                 </Link>
                 <p className="text-base pl-4 dark:text-slate-100">
-                    Alphaqueb Consulting SAS <br /> Acercando la sistematización a empresas manufactureras.
+                    Alphaqueb Consulting SAS <br /> Acercando los sistemas industriales a las empresas mexicanas.
                 </p>
             </aside>
 
