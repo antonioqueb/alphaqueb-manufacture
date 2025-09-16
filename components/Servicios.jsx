@@ -102,18 +102,18 @@ export default function Servicios() {
           {copy.service.phases.map((phase, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-8 border border-stone-100 dark:border-stone-800 relative group"
+              className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-6 sm:p-8 border border-stone-100 dark:border-stone-800 relative group"
             >
               {/* Número e ícono */}
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex flex-wrap items-start gap-3 sm:gap-4 mb-6">
                 <div 
-                  className="flex items-center justify-center w-16 h-16 text-white font-bold rounded-full text-xl shadow-lg"
+                  className="flex items-center justify-center w-16 h-16 text-white font-bold rounded-full text-xl shadow-lg shrink-0"
                   style={{ backgroundColor: '#ff943d' }}
                 >
                   {index + 1}
                 </div>
-                <phase.icon className="w-10 h-10 text-custom-orange" />
-                <div className="bg-orange-100 dark:bg-orange-900/30 px-3 py-1 rounded-full">
+                <phase.icon className="w-10 h-10 text-custom-orange shrink-0" />
+                <div className="bg-orange-100 dark:bg-orange-900/30 px-3 py-1 rounded-full w-full sm:w-auto mt-2 sm:mt-0">
                   <span className="text-orange-700 dark:text-orange-300 text-sm font-semibold">
                     {phase.highlight}
                   </span>
@@ -125,7 +125,7 @@ export default function Servicios() {
                 <h4 className="text-xl md:text-2xl font-bold text-stone-800 dark:text-stone-100 mb-4 group-hover:text-custom-orange transition-colors">
                   {phase.title}
                 </h4>
-                <p className="text-base md:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+                <p className="text-base md:text-lg text-stone-600 dark:text-stone-400 leading-relaxed break-words whitespace-normal">
                   {phase.description}
                 </p>
               </div>
