@@ -120,6 +120,8 @@ export default function Servicios() {
                 <div className="p-3 md:p-4 bg-orange-50 dark:bg-orange-900/20 rounded-2xl group-hover:scale-110 transition-transform duration-300 text-custom-orange">
                   <phase.icon className="w-6 h-6 md:w-8 md:h-8 translate-x-[1px] translate-y-[-1px]" />
                 </div>
+              </div>
+
               {/* Contenido */}
               <div className="relative z-10">
                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 mb-4">
