@@ -6,9 +6,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import ThemeMode from "../components/ThemeMode";
 import { AiOutlineMenu } from "react-icons/ai";
-import { useTheme } from "next-themes";
 import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import { cn } from "@/lib/utils";
 
@@ -124,60 +122,20 @@ function NavigationMenuDemo() {
 }
 
 export default function Navbar() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  useEffect(() => {
-    const classList = document.documentElement.classList;
-    setIsDarkMode(classList.contains('dark'));
-  }, []);
-  const { theme, setTheme, resolvedTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      setTheme(storedTheme);
-      setIsDarkMode(storedTheme === "dark");
-    } else {
-      setTheme(resolvedTheme);
-      setIsDarkMode(resolvedTheme === "dark");
-    }
-  }, [resolvedTheme, setTheme]);
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDarkMode]);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    setTheme(isDarkMode ? "light" : "dark");
-  };
   return (
     <nav className="flex py-4 w-full justify-between items-center">
       <div className="flex items-center gap-4">
         <Link href="/">
-          {isDarkMode ? (
-            <div className="cursor-pointer">
-              <Image
-                src={MyDarkImage}
-                alt="Logo de Alphaqueb"
-                width={45}
-                height={45}
-              />
-            </div>
-          ) : (
-            <div className="cursor-pointer">
-              <Image
-                src={MyLightImage}
-                alt="Logo de Alphaqueb"
-                width={45}
-                height={45}
-              />
-            </div>
-          )}
+          <div className="cursor-pointer">
+            <Image
+              src={MyDarkImage}
+              alt="Logo de Alphaqueb"
+              width={45}
+              height={45}
+            />
+          </div>
         </Link>
       </div>
       {/* Desktop Navigation */}
@@ -189,7 +147,6 @@ export default function Navbar() {
           {COPY.navigation.impulseButton}
         </Link>
         <div className="hidden md:block">
-          <ThemeMode toggleTheme={toggleTheme} />
         </div>
         {/* Mobile Menu Button */}
         <Drawer open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -220,7 +177,6 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="mt-4">
-                <ThemeMode toggleTheme={toggleTheme} />
               </div>
             </DrawerDescription>
           </DrawerContent>

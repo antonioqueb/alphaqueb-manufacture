@@ -3,35 +3,11 @@ import MyLightImage from '@/public/brand/white.png';
 import MyDarkImage from '@/public/brand/dark.png';
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
+import { useState } from "react";
 import { FaAngleDown } from 'react-icons/fa';
 
 const Footer = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-    const { theme, setTheme, resolvedTheme } = useTheme();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-    useEffect(() => {
-        const storedTheme = localStorage.getItem("theme");
-        if (storedTheme) {
-            setTheme(storedTheme);
-            setIsDarkMode(storedTheme === "dark");
-        } else {
-            setTheme(resolvedTheme);
-            setIsDarkMode(resolvedTheme === "dark");
-        }
-    }, [resolvedTheme, setTheme]);
-
-    useEffect(() => {
-        if (isDarkMode) {
-            document.documentElement.classList.add("dark");
-            localStorage.setItem("theme", "dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("theme", "light");
-        }
-    }, [isDarkMode]);
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -41,27 +17,15 @@ const Footer = () => {
         <footer className="footer py-4 border-t bg-base-200 text-base-content border-base-300 flex flex-col md:flex-row justify-between items-center mt-24 px-8">
             <aside className="flex items-center mb-4 md:mb-0">
                 <Link href="/">
-                    {isDarkMode ? (
-                        <div className="cursor-pointer">
-                            <Image
-                                src={MyDarkImage}
-                                alt="Logo de Alphaqueb"
-                                width={40}
-                                height={40}
-                                className="rounded-full"
-                            />
-                        </div>
-                    ) : (
-                        <div className="cursor-pointer">
-                            <Image
-                                src={MyLightImage}
-                                alt="Logo de Alphaqueb"
-                                width={40}
-                                height={40}
-                                className="rounded-full"
-                            />
-                        </div>
-                    )}
+                    <div className="cursor-pointer">
+                        <Image
+                            src={MyDarkImage}
+                            alt="Logo de Alphaqueb"
+                            width={40}
+                            height={40}
+                            className="rounded-full"
+                        />
+                    </div>
                 </Link>
                 <p className="text-base pl-4 dark:text-slate-100">
                     Alphaqueb Consulting SAS <br /> Acercando los sistemas industriales a las empresas mexicanas.
