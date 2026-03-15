@@ -115,6 +115,8 @@ export default function Banner() {
               scene="https://prod.spline.design/5rtKOYNXop9ZZvTn/scene.splinecode" 
               style={{ width: '100%', height: '100%' }}
             />
+            {/* Elemento superpuesto para ocultar la parte inferior */}
+            <div className="absolute bottom-0 left-0 w-full h-16 bg-background z-20 border-2 border-white"></div>
           </div>
         </motion.div>
       </div>
