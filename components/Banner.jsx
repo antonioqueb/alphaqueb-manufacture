@@ -116,7 +116,7 @@ export default function Banner() {
               style={{ width: '100%', height: '100%' }}
             />
             {/* Elemento superpuesto para ocultar la parte inferior */}
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-background z-20 border-2 border-white"></div>
+            <div className="absolute bottom-0 left-0 w-full h-24 bg-background z-20"></div>
           </div>
         </motion.div>
       </div>
