@@ -76,22 +76,27 @@ export default function MultiCards() {
             transition={{ duration: 0.5, delay: idx * 0.15, ease: "easeOut" }}
           >
             <Card
-              className="relative h-full overflow-hidden bg-white dark:bg-stone-900 shadow-lg rounded-2xl border border-zinc-100 dark:border-zinc-800 transition-all duration-500 transform hover:scale-105 hover:shadow-xl group"
+              className="relative h-full overflow-hidden bg-white/70 dark:bg-stone-900/40 backdrop-blur-xl shadow-sm rounded-3xl border border-white/40 dark:border-stone-700/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.03)] group"
             >
-            <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-custom-orange/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 relative z-10">
-              <CardTitle className="text-lg font-semibold text-custom-orange dark:text-zinc-200">
+            <span className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-custom-orange/5 dark:from-white/5 dark:to-custom-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4 pt-6 px-6 relative z-10">
+              <CardTitle className="text-sm md:text-base font-semibold text-zinc-500 dark:text-zinc-400 tracking-wide uppercase">
                 {card.title}
               </CardTitle>
-              <Icon className="h-6 w-6 text-custom-orange dark:text-zinc-200 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" />
+              <div className="p-3 bg-custom-orange/10 dark:bg-custom-orange/20 rounded-2xl group-hover:scale-110 group-hover:bg-custom-orange/20 transition-all duration-300">
+                <Icon className="h-5 w-5 text-custom-orange dark:text-orange-400" />
+              </div>
             </CardHeader>
-            <CardContent className="relative z-10">
-              <div className="text-3xl font-bold text-zinc-800 dark:text-zinc-100 transition-colors duration-300 group-hover:text-custom-orange">
+            <CardContent className="relative z-10 px-6 pb-6 pt-2">
+              <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-zinc-800 to-zinc-600 dark:from-zinc-100 dark:to-zinc-300 transition-all duration-300 group-hover:from-custom-orange group-hover:to-orange-400">
                 {card.value}
               </div>
-              <p className="text-lg text-zinc-600 dark:text-zinc-400 mt-2">
-                {card.description}
-              </p>
+              <div className="flex items-center gap-2 mt-4">
+                <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                  {card.description}
+                </p>
+              </div>
             </CardContent>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Card>

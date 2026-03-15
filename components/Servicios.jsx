@@ -107,36 +107,33 @@ export default function Servicios() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-              className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-8 border border-stone-100 dark:border-stone-800 relative group"
+              className="bg-white/70 dark:bg-stone-900/40 backdrop-blur-xl shadow-sm rounded-3xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.03)] p-8 border border-white/40 dark:border-stone-700/50 relative group overflow-hidden"
             >
+              <span className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-custom-orange/5 dark:from-white/5 dark:to-custom-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               {/* Número e ícono */}
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-5 mb-8 relative z-10">
                 <div 
-                  className="flex items-center justify-center w-16 h-16 text-white font-bold rounded-full text-xl shadow-lg"
-                  style={{ backgroundColor: '#ff943d' }}
+                  className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 text-white font-black rounded-2xl text-2xl shadow-inner bg-gradient-to-br from-custom-orange to-orange-400 transform group-hover:rotate-6 transition-transform duration-300"
                 >
                   {index + 1}
                 </div>
-                <phase.icon className="w-10 h-10 text-custom-orange" />
-                <div className="bg-orange-100 dark:bg-orange-900/30 px-3 py-1 rounded-full">
-                  <span className="text-orange-700 dark:text-orange-300 text-sm font-semibold">
+                <div className="p-3 md:p-4 bg-orange-50 dark:bg-orange-900/20 rounded-2xl group-hover:scale-110 transition-transform duration-300 text-custom-orange">
+                  <phase.icon className="w-6 h-6 md:w-8 md:h-8 translate-x-[1px] translate-y-[-1px]" />
+                </div>
+              {/* Contenido */}
+              <div className="relative z-10">
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 mb-4">
+                  <span className="text-zinc-600 dark:text-zinc-400 text-xs font-semibold uppercase tracking-wider">
                     {phase.highlight}
                   </span>
                 </div>
-              </div>
-
-              {/* Contenido */}
-              <div>
-                <h4 className="text-xl md:text-2xl font-bold text-stone-800 dark:text-stone-100 mb-4 group-hover:text-custom-orange transition-colors">
+                <h4 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-zinc-800 to-zinc-600 dark:from-zinc-100 dark:to-zinc-300 mb-4 group-hover:from-custom-orange group-hover:to-orange-400 transition-all duration-300">
                   {phase.title}
                 </h4>
-                <p className="text-base md:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+                <p className="text-base md:text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed font-light">
                   {phase.description}
                 </p>
               </div>
-              
-              {/* Línea de gradiente inferior al hover */}
-              <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.div>
           ))}
         </div>
