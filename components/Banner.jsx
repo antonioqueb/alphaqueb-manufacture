@@ -106,9 +106,16 @@ export default function Banner() {
           animate={{ y: [0, -15, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         >
-          <Spline
-            scene="https://prod.spline.design/5rtKOYNXop9ZZvTn/scene.splinecode" 
-          />
+          <div className="w-full h-full relative spline-container">
+            <style>{`
+              .spline-container a { display: none !important; }
+            `}</style>
+            <div className="absolute inset-0 z-10" />
+            <Spline
+              scene="https://prod.spline.design/5rtKOYNXop9ZZvTn/scene.splinecode" 
+              style={{ width: '100%', height: '100%' }}
+            />
+          </div>
         </motion.div>
       </div>
     </section>
