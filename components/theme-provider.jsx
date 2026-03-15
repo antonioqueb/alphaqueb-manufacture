@@ -4,5 +4,5 @@ import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 
 export function ThemeProvider({ children, ...props }) {
-  return <NextThemesProvider defaultTheme="dark" forcedTheme="dark" enableSystem={false} {...props}>{children}</NextThemesProvider>
+  return <NextThemesProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false} {...props}>{children}</NextThemesProvider>
 }
