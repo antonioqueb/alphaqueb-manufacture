@@ -2,6 +2,7 @@ import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Spline from '@splinetool/react-spline/next';
 
 // Diccionario de textos (copy)
 const copy = {
@@ -105,14 +106,8 @@ export default function Banner() {
           animate={{ y: [0, -15, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         >
-          <Image
-            src="/beneficio-alpha.png"
-            fill
-            alt={copy.bannerAlt}
-            className="object-contain"
-            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 50vw"
-            priority
-            quality={95}
+          <Spline
+            scene="https://prod.spline.design/5rtKOYNXop9ZZvTn/scene.splinecode" 
           />
         </motion.div>
       </div>
