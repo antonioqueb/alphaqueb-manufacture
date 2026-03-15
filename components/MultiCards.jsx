@@ -1,6 +1,7 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
 import { FaDollarSign, FaUsers, FaCode } from "react-icons/fa";
 
 // Función para formatear el número con comas como separadores decimales
@@ -62,42 +63,21 @@ export default function MultiCards() {
     },
   ];
 
-  const [visibleCards, setVisibleCards] = useState(
-    new Array(cards.length).fill(false),
-  );
-  const cardRefs = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          const index = cardRefs.current.indexOf(entry.target);
-          if (entry.isIntersecting && index !== -1) {
-            setVisibleCards(prev => {
-              const updated = [...prev];
-              updated[index] = true;
-              return updated;
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-    cardRefs.current.forEach(card => card && observer.observe(card));
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 py-12">
       {cards.map((card, idx) => {
         const Icon = card.icon;
         return (
-          <Card
+          <motion.div
             key={idx}
-            ref={el => (cardRefs.current[idx] = el)}
-            className={`relative overflow-hidden bg-white dark:bg-stone-900 shadow-lg rounded-2xl border border-zinc-100 dark:border-zinc-800 transition-all duration-700 transform hover:scale-105 hover:shadow-xl group ${visibleCards[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: idx * 0.15, ease: "easeOut" }}
           >
+            <Card
+              className="relative h-full overflow-hidden bg-white dark:bg-stone-900 shadow-lg rounded-2xl border border-zinc-100 dark:border-zinc-800 transition-all duration-500 transform hover:scale-105 hover:shadow-xl group"
+            >
             <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-custom-orange/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 relative z-10">
               <CardTitle className="text-lg font-semibold text-custom-orange dark:text-zinc-200">
@@ -113,8 +93,9 @@ export default function MultiCards() {
                 {card.description}
               </p>
             </CardContent>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </Card>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </Card>
+          </motion.div>
         );
       })}
     </div>

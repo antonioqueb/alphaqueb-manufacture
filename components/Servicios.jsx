@@ -9,6 +9,7 @@ import {
   GraduationCap,
   ShieldCheck,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import ContactAnimation from "./ContactAnimation";
 
 /* ───────────── Copy profesional ───────────── */
@@ -100,8 +101,12 @@ export default function Servicios() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {copy.service.phases.map((phase, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
               className="bg-white dark:bg-stone-900 shadow-lg rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl p-8 border border-stone-100 dark:border-stone-800 relative group"
             >
               {/* Número e ícono */}
@@ -132,7 +137,7 @@ export default function Servicios() {
               
               {/* Línea de gradiente inferior al hover */}
               <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent to-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

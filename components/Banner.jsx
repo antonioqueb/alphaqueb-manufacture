@@ -1,6 +1,7 @@
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 // Diccionario de textos (copy)
 const copy = {
@@ -54,7 +55,13 @@ export default function Banner() {
   return (
     <section className="w-full flex flex-col lg:flex-row xl:pb-2">
       <div className="w-full lg:w-7/12 py-2 flex flex-col justify-center">
-      <CardHeader className="text-start animate-fade-in-up px-0 space-y-1">
+      <motion.div 
+        className="text-start px-0 space-y-1 bg-white/0"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <CardHeader className="px-0">
         <CardTitle className="text-balance text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-extrabold text-zinc-800 mb-3 dark:text-zinc-100">
           {copy.title}
         </CardTitle>
@@ -87,12 +94,17 @@ export default function Banner() {
         {status === 'success' && <p className="mt-4 text-green-500">Número recibido con éxito.</p>}
         {status === 'error' && <p className="mt-4 text-red-500">Error al enviar el número de teléfono.</p>}
         {status === 'empty' && <p className="mt-4 text-yellow-500">Por favor, ingresa un nombre y un número de teléfono.</p>}
-      </CardHeader>
+        </CardHeader>
+      </motion.div>
     </div>
 
 
       <div className="w-full lg:w-5/12 py-2 flex items-center justify-center">
-        <div className="relative w-full aspect-square">
+        <motion.div 
+          className="relative w-full aspect-square"
+          animate={{ y: [0, -15, 0] }}
+          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+        >
           <Image
             src="/beneficio-alpha.png"
             fill
@@ -102,7 +114,7 @@ export default function Banner() {
             priority
             quality={95}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
