@@ -379,7 +379,7 @@ export default function HomeLanding() {
           <div className="aq-hero-grid">
             <div>
               <div className="aq-eyebrow">Consultoría selectiva · Monterrey · operación nacional</div>
-              <h1 className="aq-hero-title">El sistema se adapta a <span className="lime">tu operación.</span><br/><span className="stroke">No al revés.</span></h1>
+              <h1 className="aq-hero-title">No adaptas <span className="lime">tu negocio</span> al sistema.<br/><span className="stroke">El sistema se adapta a ti.</span></h1>
               <p className="aq-hero-sub">Implementamos y desarrollamos sistemas a la medida para empresas que ya crecieron más allá de los sistemas que tienen hoy. No tomamos cualquier proyecto: tomamos los que exigen construir alrededor de tu forma de operar y medir lo que realmente mueve la operación.</p>
               <div className="aq-cta-row"><Link href="#contacto" className="aq-btn aq-btn-primary">Plantea tu reto <IconArrow size={14} /></Link><Link href="#servicios" className="aq-btn aq-btn-ghost">Qué hacemos</Link></div>
               <div className="aq-stat-row">
