@@ -116,7 +116,7 @@ export default function ContactSection() {
               <dt>Correo</dt>
               <dd><a href="mailto:hola@alphaqueb.com">hola@alphaqueb.com</a></dd>
               <dt>Horario</dt>
-              <dd>Lun–Vie · 09:00 — 19:00 CDT</dd>
+              <dd>Lun–Vie · 09:00 — 19:00 CDMX</dd>
             </dl>
             <div style={{ marginTop: 48, paddingTop: 32, borderTop: "1px solid var(--aq-line-soft)" }}>
               <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 12.5, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--aq-text-dim)", marginBottom: 16 }}>Disponibilidad</div>
