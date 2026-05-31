@@ -36,9 +36,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`dark ${bebas.variable} ${roboto.variable} ${oxanium.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      </head>
       <body>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-WR7YX9PG6P" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-WR7YX9PG6P" strategy="lazyOnload" />
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
