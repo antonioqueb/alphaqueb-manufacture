@@ -5,9 +5,9 @@ import Link from "next/link";
 import AqLogo from "@/components/AqLogo";
 
 const SERVICES = [
-  { href: "/servicios/transformar", title: "Transformación Digital", description: "ERP, MES, BI, automatización administrativa y arquitectura digital." },
-  { href: "/servicios/scada", title: "Sistemas SCADA", description: "Supervisión, control, trazabilidad e integración con datos de planta." },
-  { href: "/servicios/automatizar", title: "Automatización Industrial", description: "PLC, robótica, monitoreo inteligente y reducción de costos operativos." },
+  { href: "/servicios/transformar", title: "Sistemas a la medida", description: "Operación, procesos, datos e integración cuando el software estándar ya se quedó corto." },
+  { href: "/servicios/scada", title: "Supervisión industrial", description: "Visibilidad de planta, control operativo, trazabilidad y evidencia para decisiones reales." },
+  { href: "/servicios/automatizar", title: "Automatización operativa", description: "Automatizar procesos críticos sin romper lo que ya funciona en tu operación." },
 ];
 
 const LINKS = [

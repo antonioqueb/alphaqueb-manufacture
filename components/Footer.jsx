@@ -15,13 +15,13 @@ export default function Footer() {
         <div className="aq-foot-grid">
           <div className="aq-foot-brand">
             <AqLogo />
-            <p>Consultoría estratégica para los retos más exigentes de la industria mexicana. Manufactura compleja, comercio internacional, eventos masivos y cumplimiento ambiental. Datos que informan. Estrategias que transforman.</p>
+            <p>Construimos sistemas alrededor de tu operación, no al revés. Desde Monterrey, para todo México. Datos que informan. Estrategias que transforman.</p>
           </div>
-          <div className="aq-foot-col"><h4>Verticales</h4><ul><li><Link href="/#verticales">Manufactura compleja</Link></li><li><Link href="/#verticales">Comercio internacional</Link></li><li><Link href="/#verticales">Eventos masivos</Link></li><li><Link href="/#verticales">Cumplimiento ambiental</Link></li></ul></div>
+          <div className="aq-foot-col"><h4>Verticales</h4><ul><li><Link href="/#verticales">Manufactura y calidad</Link></li><li><Link href="/#verticales">Importación y cadena de suministro</Link></li><li><Link href="/#verticales">Eventos y renta</Link></li><li><Link href="/#verticales">Cumplimiento ambiental</Link></li></ul></div>
           <div className="aq-foot-col"><h4>Empresa</h4><ul><li><Link href="/#enfoque">Enfoque</Link></li><li><Link href="/#casos">Casos</Link></li><li><Link href="/#valores">Valores</Link></li><li><Link href="/blogs">Insights</Link></li><li><Link href="/#contacto">Contacto</Link></li></ul></div>
           <div className="aq-foot-col"><h4>Legal</h4><ul>{POLICIES.map(([href, label]) => <li key={href}><Link href={href}>{label}</Link></li>)}</ul></div>
         </div>
-        <div className="aq-foot-bar"><span>© 2026 Alphaqueb · Hecho en México</span><span>Aviso de privacidad · Términos</span><span style={{ color: "var(--aq-lime)" }}>● Sistema operativo · v2.6</span></div>
+        <div className="aq-foot-bar"><span>© 2026 Alphaqueb · Monterrey, México</span><span>Operación nacional · proyectos selectivos</span><span style={{ color: "var(--aq-lime)" }}>● Sistema operativo · v3.0</span></div>
       </div>
     </footer>
   );

@@ -1,44 +1,31 @@
 import ServiceIndexPage from "@/components/ServiceIndexPage";
 
 const COPY = {
-  title: "Automatización Avanzada para la manufactura moderna",
-  description1: "Desde aumentar la capacidad productiva hasta reducir costos operativos, te ayudamos a transformar tus procesos con tecnología de vanguardia, diseñada específicamente para las necesidades de la manufactura moderna.",
-  description2: "La automatización avanzada no es un lujo, es una necesidad estratégica para cualquier negocio industrial que quiera mantenerse competitivo. Nuestras soluciones personalizadas te permiten optimizar cada etapa del proceso productivo, desde la planificación hasta la ejecución. Con un monitoreo constante y un control preciso, aseguramos un flujo de trabajo sin interrupciones, minimizamos errores y maximizamos la productividad en todas las áreas de tu operación.",
-  description3: "Nuestro enfoque no se limita a implementar sistemas de automatización: construimos soluciones a tu medida. Ya sea que necesites aumentar la velocidad de tu producción, reducir el consumo de recursos, o integrar tus procesos con otros sistemas empresariales como ERP o MES, tenemos la experiencia y las herramientas necesarias para hacer realidad tu visión. Además, acompañamos a tu equipo en todo el proceso: desde la consultoría inicial hasta el soporte post-implementación, garantizando resultados sólidos y sostenibles.",
-  description4: "Con años de experiencia en la industria manufacturera, nuestro equipo entiende los desafíos operativos a los que te enfrentas: tiempos muertos, inconsistencias en la calidad y altos costos de operación. Por eso, nuestras soluciones no solo automatizan procesos, sino que optimizan la totalidad de tu sistema de producción, permitiéndote obtener el máximo rendimiento de tus recursos. Al invertir en automatización avanzada, estarás garantizando no solo una mejora en la eficiencia, sino también la sostenibilidad y competitividad de tu empresa a largo plazo.",
-  advantagesTitle: "Ventajas que transformarán tu línea de producción:",
-  advantages: [
-      "Aumento de la capacidad de producción: Eleva la velocidad y eficiencia de tu línea de producción sin sacrificar calidad. Nuestros sistemas manejan altos volúmenes con precisión y consistencia.",
-      "Consistencia garantizada: Evita variabilidades y errores. Nuestra tecnología asegura resultados uniformes en cada ciclo de producción, mejorando la calidad final de tus productos.",
-      "Reducción de costos operativos: Identifica y elimina ineficiencias en el uso de mano de obra y materiales, maximizando la rentabilidad en cada etapa del proceso.",
-      "Monitoreo constante: Obtén visibilidad total sobre tus operaciones con paneles personalizados y datos en tiempo real. Esto te permite tomar decisiones rápidas e informadas.",
-      "Control preciso y dinámico: Realiza ajustes en tiempo real con nuestras interfaces intuitivas, manteniendo un desempeño óptimo incluso en entornos industriales complejos.",
-      "Integración total: Conecta tu sistema de automatización con plataformas empresariales como ERP y MES, logrando una gestión completamente integrada y eficiente."
-  ],
-  costDetails: "Dar el primer paso hacia la transformación de tu producción nunca fue tan accesible. Por solo **1 dólar**, ofrecemos una consultoría inicial donde analizaremos tus procesos actuales, identificaremos oportunidades clave y diseñaremos un plan personalizado para implementar automatización avanzada en tu negocio. Este no es solo un servicio; es una inversión estratégica que puede cambiar el rumbo de tu empresa.",
-  buttonLabel: "Reserva Tu Consultoría por $1 →",
-  tooltipContent: "Descubre cómo nuestras soluciones de automatización pueden transformar tu producción. Reserva tu consultoría inicial y empieza a optimizar tu negocio hoy mismo."
+  title: "Automatización operativa sin romper lo que ya funciona",
+  description1: "Automatizamos procesos críticos cuando el trabajo manual ya genera errores, retrasos o falta de visibilidad. La prioridad no es automatizar por moda, sino construir control donde la operación lo necesita.",
+  advantages: ["Menos errores manuales: Reducimos capturas repetidas, pasos ambiguos y dependencias de memoria operativa.", "Flujos más claros: Convertimos procesos críticos en rutas visibles, medibles y fáciles de seguir.", "Ahorro de tiempo: Quitamos carga operativa donde el equipo repite tareas que un sistema puede resolver mejor.", "Control por etapas: Automatizamos lo que tiene sentido primero y dejamos espacio para crecer sin rehacer todo.", "Integración de información: Conectamos datos de operación, inventario, administración o proveedores cuando el flujo lo requiere.", "Adopción real: Diseñamos pensando en las personas que usarán el sistema todos los días."],
+  costDetails: "La entrada es un diagnóstico pagado de 30 a 40 horas. Primero entendemos procesos, sistemas actuales, datos y responsables; después definimos alcance, ruta y precio del proyecto."
 };
 const SERVICES = [
   {
-    "slug": "desarrollo-implementacion-sistemas-automatizacion",
-    "name": "Desarrollo e Implementación de Sistemas de Automatización"
+    slug: "desarrollo-implementacion-sistemas-automatizacion",
+    name: "Desarrollo e implementación de automatizaciones"
   },
   {
-    "slug": "integracion-robots-industriales-sistemas-control",
-    "name": "Integración de Robots Industriales y Sistemas de Control"
+    slug: "integracion-sistemas-automatizacion-erp-mes",
+    name: "Integración de automatización con sistemas empresariales"
   },
   {
-    "slug": "integracion-sistemas-automatizacion-erp-mes",
-    "name": "Integración de Sistemas de Automatización con ERP y MES"
+    slug: "integracion-robots-industriales-sistemas-control",
+    name: "Integración de robots y controles industriales"
   },
   {
-    "slug": "monitoreo-control-inteligente-tiempo-real",
-    "name": "Monitoreo y Control Inteligente en Tiempo Real"
+    slug: "monitoreo-control-inteligente-tiempo-real",
+    name: "Monitoreo y control en tiempo real"
   },
   {
-    "slug": "reduccion-costos-operativos-optimizacion-recursos",
-    "name": "Reducción de Costos Operativos mediante Optimización de Recursos"
+    slug: "reduccion-costos-operativos-optimizacion-recursos",
+    name: "Optimización de recursos y costos operativos"
   }
 ];
 

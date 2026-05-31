@@ -1,23 +1,13 @@
 import ServiceDetailPage from "@/components/ServiceDetailPage";
 
 const COPY = {
-  title: "Integración SCADA con ERP, MES y Sistemas de Gestión",
-  description1: "Optimiza la conectividad y el flujo de información entre tus sistemas SCADA, ERP y MES para una gestión industrial eficiente y centralizada.",
-  description2: "La integración de SCADA con sistemas de gestión permite una supervisión en tiempo real, automatización avanzada y mejor toma de decisiones basadas en datos precisos.",
-  description3: "Conectamos plataformas industriales para que tu producción, inventarios y mantenimiento operen de manera sincronizada, mejorando la trazabilidad y eficiencia operativa.",
-  description4: "Implementamos arquitecturas escalables que permiten una integración flexible y segura, adaptada a las necesidades de tu empresa.",
-  advantagesTitle: "Beneficios de la integración SCADA con ERP y MES:",
-  advantages: [
-    "Supervisión en tiempo real: Conecta datos de producción con tu sistema de gestión empresarial.",
-    "Automatización y control centralizado: Mejora la coordinación entre producción y gestión de recursos.",
-    "Optimización del mantenimiento: Detecta fallos y genera órdenes de trabajo de manera automática.",
-    "Gestión eficiente de inventarios: Sincroniza niveles de stock con la producción en tiempo real.",
-    "Reducción de costos operativos: Minimiza desperdicios y optimiza la planificación de recursos.",
-    "Mayor trazabilidad: Registra y analiza datos históricos para mejorar la toma de decisiones estratégicas."
-  ],
-  costDetails: "Empieza con una consultoría inicial por solo **1 dólar**. Evaluaremos tu infraestructura y te mostraremos cómo una integración SCADA eficiente puede potenciar tu operación.",
-  buttonLabel: "Reserva tu Consultoría por $1 →",
-  tooltipContent: "Optimiza la conectividad de tus sistemas industriales. Agenda una sesión y descubre cómo mejorar la gestión de tu empresa."
+  title: "Integración con sistemas empresariales",
+  description1: "Conectamos la información de planta con procesos administrativos para que producción, inventario y dirección trabajen con datos consistentes.",
+  description2: "Definimos qué información debe subir, qué debe bajar y dónde se debe validar.",
+  description3: "Construimos integraciones por etapas para evitar dependencias frágiles o flujos imposibles de mantener.",
+  description4: "La integración correcta evita capturas dobles y permite que los datos de operación sí sirvan para decidir.",
+  advantages: ["Datos conectados: La operación no queda aislada de administración.", "Menos captura doble: Reduce errores y tiempos muertos.", "Inventario alineado: Movimientos de producción con impacto administrativo.", "Trazabilidad: Historial entre planta y sistema empresarial.", "Reportes útiles: Dirección ve información más cercana a la realidad.", "Mantenimiento simple: Integraciones documentadas y sostenibles."],
+  costDetails: "La entrada es un diagnóstico pagado de 30 a 40 horas. Primero entendemos procesos, sistemas actuales, datos y responsables; después definimos alcance, ruta y precio del proyecto."
 };
 
 export const metadata = { title: `${COPY.title} | Alphaqueb` };

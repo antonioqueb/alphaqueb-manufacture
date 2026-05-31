@@ -1,23 +1,13 @@
 import ServiceDetailPage from "@/components/ServiceDetailPage";
 
 const COPY = {
-  title: "Automatización de Procesos Industriales",
-  description1: "Optimiza la producción y reduce costos con soluciones de automatización industrial diseñadas para mejorar la eficiencia operativa y la seguridad.",
-  description2: "Nuestros sistemas de automatización integran tecnologías avanzadas para el control y monitoreo de procesos, minimizando errores y maximizando la productividad.",
-  description3: "Desarrollamos soluciones a medida que incluyen controladores lógicos programables (PLC), robots industriales, sensores y software de gestión inteligente.",
-  description4: "Implementamos estrategias de automatización flexibles y escalables para adaptarnos a las necesidades de tu industria, mejorando la calidad y tiempos de producción.",
-  advantagesTitle: "Beneficios de la automatización industrial:",
-  advantages: [
-    "Incremento de la productividad: Reduce tiempos de producción y optimiza la eficiencia operativa.",
-    "Reducción de errores: Minimiza fallos en los procesos gracias a sistemas automatizados y precisos.",
-    "Seguridad mejorada: Disminuye riesgos laborales mediante la implementación de robots y controles automatizados.",
-    "Integración con sistemas ERP y SCADA: Garantiza un flujo de información en tiempo real para una gestión óptima.",
-    "Ahorro en costos operativos: Reduce desperdicios de materiales y consumo energético.",
-    "Escalabilidad: Diseñamos soluciones modulares para crecer según las necesidades de tu empresa."
-  ],
-  costDetails: "Empieza con una consultoría inicial por solo **1 dólar**. Evaluaremos tus procesos actuales y te mostraremos cómo la automatización puede mejorar tu producción.",
-  buttonLabel: "Reserva tu Consultoría por $1 →",
-  tooltipContent: "Descubre cómo la automatización puede transformar tu industria. Agenda una sesión y optimiza tu producción."
+  title: "Automatización de procesos industriales",
+  description1: "Automatizamos procesos donde la operación necesita reducir variabilidad, errores manuales o tiempos muertos.",
+  description2: "Primero revisamos qué proceso realmente conviene automatizar y qué parte debe seguir bajo criterio humano.",
+  description3: "Diseñamos controles, validaciones y flujos que ayudan a operar con mayor consistencia.",
+  description4: "La automatización se conecta con reportes y seguimiento para que no sea una caja negra.",
+  advantages: ["Consistencia: Menos variaciones entre turnos o responsables.", "Menos errores: Validaciones en pasos críticos.", "Control visible: Lo automatizado puede revisarse y medirse.", "Mejor respuesta: Alertas ante condiciones fuera de rango.", "Integración: Conexión con reportes o sistemas internos.", "Escalabilidad: Automatización por etapas según prioridad."],
+  costDetails: "La entrada es un diagnóstico pagado de 30 a 40 horas. Primero entendemos procesos, sistemas actuales, datos y responsables; después definimos alcance, ruta y precio del proyecto."
 };
 
 export const metadata = { title: `${COPY.title} | Alphaqueb` };

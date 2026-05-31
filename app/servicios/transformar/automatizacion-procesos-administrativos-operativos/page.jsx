@@ -1,23 +1,13 @@
 import ServiceDetailPage from "@/components/ServiceDetailPage";
 
 const COPY = {
-  title: "Automatización de Procesos Administrativos y Operativos",
-  description1: "Optimiza la eficiencia de tu empresa mediante la automatización de procesos clave. Reduce costos, minimiza errores y libera recursos para enfocarte en la estrategia y el crecimiento.",
-  description2: "La automatización es la clave para mejorar la productividad. Permite eliminar tareas repetitivas, mejorar la gestión de tiempos y asegurar que cada proceso funcione con la máxima eficiencia.",
-  description3: "Implementamos soluciones de automatización adaptadas a las necesidades de tu empresa, desde flujos de trabajo digitales hasta la integración con sistemas empresariales para un funcionamiento más ágil y preciso.",
-  description4: "Nuestro equipo de expertos trabaja contigo para diseñar estrategias de automatización que reduzcan la carga operativa y mejoren la eficiencia en cada nivel de tu organización.",
-  advantagesTitle: "Beneficios de la automatización de procesos:",
-  advantages: [
-      "Reducción de errores: Minimiza riesgos y garantiza la precisión en cada tarea.",
-      "Ahorro de tiempo: Elimina tareas manuales repetitivas y optimiza los flujos de trabajo.",
-      "Mayor productividad: Permite a tu equipo enfocarse en tareas estratégicas de mayor valor.",
-      "Integración con sistemas existentes: Sincroniza procesos con ERP, CRM y otras herramientas clave.",
-      "Escalabilidad: Adapta la automatización a las necesidades crecientes de tu negocio.",
-      "Monitoreo y control: Mejora la visibilidad y gestión de procesos en tiempo real."
-  ],
-  costDetails: "Empieza a transformar tu empresa con una consultoría inicial por solo **1 dólar**. Evaluaremos tus procesos actuales y diseñaremos una estrategia de automatización adaptada a tus necesidades.",
-  buttonLabel: "Reserva tu Consultoría por $1 →",
-  tooltipContent: "Optimiza la gestión de tu empresa con la automatización de procesos. Reserva una sesión y descubre cómo mejorar la eficiencia operativa."
+  title: "Automatización de procesos administrativos y operativos",
+  description1: "Reducimos tareas repetitivas, capturas dobles y pasos manuales que frenan a tu equipo cuando la empresa ya creció.",
+  description2: "Analizamos cómo se mueve la información entre áreas y dónde se generan esperas, errores o retrabajo.",
+  description3: "Automatizamos flujos con validaciones, responsables, documentos y seguimiento para que el proceso sea claro.",
+  description4: "La automatización se diseña alrededor de usuarios reales, no alrededor de una pantalla que nadie termina usando.",
+  advantages: ["Menos retrabajo: Elimina capturas duplicadas y revisiones innecesarias.", "Responsables claros: Cada paso tiene dueño y seguimiento.", "Procesos medibles: La operación deja rastro y puede mejorarse.", "Adopción real: Interfaces pensadas para el equipo que opera todos los días.", "Control interno: Reglas y validaciones reducen errores críticos.", "Escalabilidad: El flujo puede crecer sin rehacer la operación desde cero."],
+  costDetails: "La entrada es un diagnóstico pagado de 30 a 40 horas. Primero entendemos procesos, sistemas actuales, datos y responsables; después definimos alcance, ruta y precio del proyecto."
 };
 
 export const metadata = { title: `${COPY.title} | Alphaqueb` };

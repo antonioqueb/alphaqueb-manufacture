@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
 export const metadata = {
-  title: "Alphaqueb — Consultoría estratégica para la industria",
-  description: "Consultoría estratégica para retos de alta exigencia: manufactura compleja, comercio internacional, eventos masivos y cumplimiento ambiental.",
+  title: "Alphaqueb — Sistemas a la medida para operaciones complejas",
+  description: "Desde Monterrey, implementamos y desarrollamos sistemas a la medida para empresas que ya crecieron más allá de sus sistemas actuales.",
 };
 
 export default function RootLayout({ children }) {

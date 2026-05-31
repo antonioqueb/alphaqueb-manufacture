@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, BarChart3, Bot, CalendarDays, Cpu, Database, Factory, Gauge, Globe2, Lock, Map, Route, ShieldCheck, Target, Truck, Users, Wrench, Zap } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BarChart3, Bot, CalendarDays, Cpu, Database, Factory, Gauge, Globe2, Lock, Map, Route, ShieldCheck, Target, Truck, Users, Wrench, Zap, CheckCircle2 } from "lucide-react";
 
 export const IconArrow = ArrowRight;
 export const IconArrowUR = ArrowUpRight;
@@ -21,6 +21,7 @@ const ICONS = {
   gauge: Gauge,
   users: Users,
   route: Route,
+  check: CheckCircle2,
 };
 
 export function AqIcon({ name = "plc", size = 24, className = "" }) {
