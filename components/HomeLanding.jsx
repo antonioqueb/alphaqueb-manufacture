@@ -45,6 +45,13 @@ const SERVICES = [
   },
 ];
 
+const CLIENTS = [
+  { name: "HEXÁGONOS MEXICANOS", area: "Manufactura y calidad" },
+  { name: "SERVICIOS AMBIENTALES INTERNACIONALES", area: "Cumplimiento ambiental" },
+  { name: "SOM GROUP", area: "Cadena de suministro" },
+  { name: "SOM CABOS", area: "Operación y logística" },
+];
+
 const STEPS = [
   {
     name: "Diagnóstico",
@@ -77,7 +84,7 @@ const INDUSTRIES = [
     tag: "V/02",
     icon: "truck",
     desc: "Empresas que necesitan visibilidad de embarques, contenedores, inventario, entregas y coordinación entre múltiples proveedores.",
-    tags: ["Capacidad", "SOM Group", "Logística"],
+    tags: ["Capacidad", "SOM Group", "SOM Cabos"],
   },
   {
     name: "Eventos y renta",
@@ -158,6 +165,7 @@ function SectionHead({ tag, title, lead }) {
 
 function HeroPanel() {
   const data = [42, 48, 45, 58, 62, 56, 71, 78, 74, 88, 95, 102, 118];
+
   return (
     <div style={{ position: "relative" }}>
       <div className="aq-panel" style={{ marginRight: 32 }}>
@@ -171,16 +179,119 @@ function HeroPanel() {
           </div>
           <div className="aq-live"><span className="aq-live-dot" />ILUSTRATIVO</div>
         </div>
+
         <div className="aq-kpi-row">
-          <div className="aq-kpi up"><div className="lbl">Producción</div><div className="val">Visible</div></div>
-          <div className="aq-kpi purp"><div className="lbl">Calidad</div><div className="val">Trazable</div></div>
-          <div className="aq-kpi"><div className="lbl">Documentos</div><div className="val" style={{ color: "var(--aq-lime)" }}>Ordenados</div></div>
+          <div className="aq-kpi up">
+            <div className="lbl">Producción</div>
+            <div className="val">Visible</div>
+          </div>
+          <div className="aq-kpi purp">
+            <div className="lbl">Calidad</div>
+            <div className="val">Trazable</div>
+          </div>
+          <div className="aq-kpi">
+            <div className="lbl">Documentos</div>
+            <div className="val" style={{ color: "var(--aq-lime)" }}>Ordenados</div>
+          </div>
         </div>
-        <div className="aq-chart"><LineChart data={data} /></div>
-        <div className="aq-panel-foot"><span>Procesos</span><span>Datos</span><span>Decisiones</span></div>
+
+        <div className="aq-chart">
+          <LineChart data={data} />
+        </div>
+
+        <div className="aq-panel-foot">
+          <span>Procesos</span>
+          <span>Datos</span>
+          <span>Decisiones</span>
+        </div>
       </div>
-      <div className="aq-float-card" style={{ left: -8, bottom: 84 }}><div className="l">Diagnóstico profundo</div><div className="v">30–40 h</div></div>
-      <div className="aq-float-card purple" style={{ right: -16, top: 32 }}><div className="l">Después del arranque</div><div className="v">Soporte recurrente</div></div>
+
+      <div className="aq-float-card" style={{ left: -8, bottom: 84 }}>
+        <div className="l">Diagnóstico profundo</div>
+        <div className="v">30–40 h</div>
+      </div>
+
+      <div className="aq-float-card purple" style={{ right: -16, top: 32 }}>
+        <div className="l">Después del arranque</div>
+        <div className="v">Soporte recurrente</div>
+      </div>
+    </div>
+  );
+}
+
+function ClientStrip() {
+  return (
+    <div
+      style={{
+        marginTop: 34,
+        padding: "18px 0 0",
+        borderTop: "1px solid var(--aq-line-soft)",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 20,
+          flexWrap: "wrap",
+        }}
+      >
+        <div
+          style={{
+            fontFamily: "var(--aq-font-tech)",
+            fontSize: 10,
+            letterSpacing: ".16em",
+            textTransform: "uppercase",
+            color: "var(--aq-text-mute)",
+          }}
+        >
+          Clientes y operaciones donde ya hemos estado involucrados
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            gap: 10,
+            flexWrap: "wrap",
+            justifyContent: "flex-end",
+          }}
+        >
+          {CLIENTS.map((client) => (
+            <div
+              key={client.name}
+              style={{
+                border: "1px solid var(--aq-line-soft)",
+                background: "rgba(255,255,255,.02)",
+                padding: "10px 14px",
+                minWidth: 178,
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "var(--aq-font-tech)",
+                  fontSize: 11,
+                  letterSpacing: ".12em",
+                  textTransform: "uppercase",
+                  color: "var(--aq-text)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {client.name}
+              </div>
+              <div
+                style={{
+                  marginTop: 4,
+                  fontSize: 12,
+                  color: "var(--aq-text-mute)",
+                }}
+              >
+                {client.area}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
@@ -197,17 +308,23 @@ function CaseDash({ c }) {
         </div>
         <div className="aq-live"><span className="aq-live-dot" />EN OPERACIÓN</div>
       </div>
+
       <div className="aq-dash-row">
         <div className="aq-dash-card">
           <div className="lbl">Cobertura funcional</div>
           <div className="aq-donut-wrap" style={{ marginTop: 6 }}>
             <Donut value={c.donut} size={56} />
             <div>
-              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 11, color: "var(--aq-text-dim)" }}>alcance implementado</div>
-              <div style={{ fontFamily: "var(--aq-font-head)", fontSize: 20, color: "var(--aq-lime)", lineHeight: 1 }}>Control operativo</div>
+              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 11, color: "var(--aq-text-dim)" }}>
+                alcance implementado
+              </div>
+              <div style={{ fontFamily: "var(--aq-font-head)", fontSize: 20, color: "var(--aq-lime)", lineHeight: 1 }}>
+                Control operativo
+              </div>
             </div>
           </div>
         </div>
+
         <div className="aq-dash-card purp">
           <div className="lbl">Indicador clave</div>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
@@ -216,13 +333,17 @@ function CaseDash({ c }) {
           </div>
         </div>
       </div>
+
       <div className="aq-dash-card" style={{ marginBottom: 14 }}>
         <div className="lbl" style={{ display: "flex", justifyContent: "space-between" }}>
           <span>Evolución del proyecto · antes vs después</span>
           <span style={{ color: "var(--aq-lime)" }}>● operación</span>
         </div>
-        <div style={{ marginTop: 10 }}><DualLineChart a={c.chartA} b={c.chartB} height={110} /></div>
+        <div style={{ marginTop: 10 }}>
+          <DualLineChart a={c.chartA} b={c.chartB} height={110} />
+        </div>
       </div>
+
       <div className="aq-dash-card">
         <div className="lbl">Mapa de impacto</div>
         <div className="aq-bar-row">
@@ -233,7 +354,9 @@ function CaseDash({ c }) {
           ].map((b, i) => (
             <div key={i} className="aq-bar">
               <span style={{ color: "var(--aq-text-dim)", width: 110 }}>{b.l}</span>
-              <span className="aq-bar-track"><span className={`aq-bar-fill ${b.p ? "p" : ""}`} style={{ width: `${b.v}%` }} /></span>
+              <span className="aq-bar-track">
+                <span className={`aq-bar-fill ${b.p ? "p" : ""}`} style={{ width: `${b.v}%` }} />
+              </span>
               <span style={{ color: "var(--aq-text)", width: 36, textAlign: "right" }}>{b.v}%</span>
             </div>
           ))}
@@ -246,6 +369,7 @@ function CaseDash({ c }) {
 function CaseStudies() {
   const [active, setActive] = useState(0);
   const c = CASES[active];
+
   return (
     <section id="casos" className="aq-section">
       <div className="aq-wrap">
@@ -254,23 +378,40 @@ function CaseStudies() {
           title={'Retos que ya <span class="accent">tocamos en operación real</span>.'}
           lead="Casos nombrables donde el reto no era instalar software: era ordenar la operación, construir alrededor de procesos existentes y dejar evidencia trazable."
         />
+
         <div className="aq-case-tabs">
           {CASES.map((cs, i) => (
-            <button key={i} className={`aq-case-tab ${active === i ? "active" : ""}`} onClick={() => setActive(i)}>
+            <button
+              key={i}
+              className={`aq-case-tab ${active === i ? "active" : ""}`}
+              onClick={() => setActive(i)}
+            >
               {String(i + 1).padStart(2, "0")} · {cs.industry}
             </button>
           ))}
         </div>
+
         <div className="aq-case-panel">
           <div>
-            <div className="aq-case-meta"><span>Estado · <b>{c.duration}</b></span><span>Alcance · <b>{c.scope}</b></span></div>
+            <div className="aq-case-meta">
+              <span>Estado · <b>{c.duration}</b></span>
+              <span>Alcance · <b>{c.scope}</b></span>
+            </div>
             <h3 className="aq-case-title">{c.title}</h3>
-            <p style={{ fontFamily: "var(--aq-font-tech)", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--aq-text-mute)", margin: "0 0 18px" }}>{c.client}</p>
+            <p style={{ fontFamily: "var(--aq-font-tech)", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--aq-text-mute)", margin: "0 0 18px" }}>
+              {c.client}
+            </p>
             <p className="aq-case-desc">{c.desc}</p>
             <div className="aq-case-results">
-              {c.results.map((r, i) => <div key={i} className="aq-kpi"><div className="lbl">{r.l}</div><div className="val">{r.v}</div></div>)}
+              {c.results.map((r, i) => (
+                <div key={i} className="aq-kpi">
+                  <div className="lbl">{r.l}</div>
+                  <div className="val">{r.v}</div>
+                </div>
+              ))}
             </div>
           </div>
+
           <CaseDash c={c} />
         </div>
       </div>
@@ -286,25 +427,48 @@ export default function HomeLanding() {
           <div className="aq-hero-grid">
             <div>
               <div className="aq-eyebrow">Consultoría selectiva · Monterrey · operación nacional</div>
-              <h1 className="aq-hero-title">El sistema se adapta a <span className="lime">tu operación.</span><br/><span className="stroke">No al revés.</span></h1>
-              <p className="aq-hero-sub">Implementamos y desarrollamos sistemas a la medida para empresas que ya crecieron más allá de los sistemas que tienen hoy. No tomamos cualquier proyecto: tomamos los que exigen construir alrededor de tu forma de operar.</p>
-              <div className="aq-cta-row"><Link href="#contacto" className="aq-btn aq-btn-primary">Plantea tu reto <IconArrow size={14} /></Link><Link href="#servicios" className="aq-btn aq-btn-ghost">Qué hacemos</Link></div>
+              <h1 className="aq-hero-title">
+                El sistema se adapta a <span className="lime">tu operación.</span><br />
+                <span className="stroke">No al revés.</span>
+              </h1>
+              <p className="aq-hero-sub">
+                Implementamos y desarrollamos sistemas a la medida para empresas que ya crecieron más allá de los sistemas que tienen hoy. No tomamos cualquier proyecto: tomamos los que exigen construir alrededor de tu forma de operar.
+              </p>
+
+              <div className="aq-cta-row">
+                <Link href="#contacto" className="aq-btn aq-btn-primary">
+                  Plantea tu reto <IconArrow size={14} />
+                </Link>
+                <Link href="#servicios" className="aq-btn aq-btn-ghost">
+                  Qué hacemos
+                </Link>
+              </div>
+
               <div className="aq-stat-row">
                 {[
                   { v: "30–40 h", l: "De análisis profundo antes de proponerte una ruta" },
-                  { v: "2", l: "Verticales comprobados en operación real" },
+                  { v: "4", l: "Referencias nombrables en distintos frentes de operación" },
                   { v: "Monterrey", l: "Presencia física y operación nacional" },
-                ].map((s, i) => <div key={i} className="aq-stat"><div className="aq-stat-v">{s.v}</div><div className="aq-stat-l">{s.l}</div></div>)}
+                ].map((s, i) => (
+                  <div key={i} className="aq-stat">
+                    <div className="aq-stat-v">{s.v}</div>
+                    <div className="aq-stat-l">{s.l}</div>
+                  </div>
+                ))}
               </div>
             </div>
+
             <HeroPanel />
           </div>
+
           <div className="aq-marquee">
             <div className="aq-marquee-track">
               <span>Trazabilidad · Producción en tiempo real · Importación y aduanas · Cumplimiento ambiental · Reportes regulatorios · Inventario · Logística de eventos · </span>
               <span>Trazabilidad · Producción en tiempo real · Importación y aduanas · Cumplimiento ambiental · Reportes regulatorios · Inventario · Logística de eventos · </span>
             </div>
           </div>
+
+          <ClientStrip />
         </div>
       </section>
 
@@ -315,46 +479,152 @@ export default function HomeLanding() {
             title={'Lo que <span class="accent">hacemos</span> por tu operación.'}
             lead="Combinamos análisis del negocio, desarrollo a la medida e integración para resolver lo que la mayoría de implementadores no toca. Sin promesas vacías. Con resultados que se miden."
           />
+
           <div className="aq-grid-3">
-            {SERVICES.map((s, i) => <article key={i} className="aq-card"><div className="aq-card-num">{String(i + 1).padStart(2, "0")} / {String(SERVICES.length).padStart(2, "0")}</div><div className="aq-card-icon"><AqIcon name={s.icon} size={32} /></div><h3 className="aq-card-title">{s.title}</h3><p className="aq-card-desc">{s.desc}</p><div className="aq-tags">{s.tags.map(t => <span key={t} className="aq-tag">{t}</span>)}</div><div className="aq-card-arrow"><IconArrowUR size={20} /></div></article>)}
+            {SERVICES.map((s, i) => (
+              <article key={i} className="aq-card">
+                <div className="aq-card-num">{String(i + 1).padStart(2, "0")} / {String(SERVICES.length).padStart(2, "0")}</div>
+                <div className="aq-card-icon"><AqIcon name={s.icon} size={32} /></div>
+                <h3 className="aq-card-title">{s.title}</h3>
+                <p className="aq-card-desc">{s.desc}</p>
+                <div className="aq-tags">
+                  {s.tags.map((t) => <span key={t} className="aq-tag">{t}</span>)}
+                </div>
+                <div className="aq-card-arrow"><IconArrowUR size={20} /></div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
       <section id="enfoque" className="aq-section compact">
         <div className="aq-wrap">
-          <SectionHead tag="02 · Enfoque" title={'Un método <span class="purp">claro</span> para retos reales.'} lead="No llegamos a cambiar todo por cambiarlo. Primero entendemos por qué tu operación funciona como funciona, qué la llevó hasta aquí y dónde los sistemas actuales ya se quedaron cortos." />
+          <SectionHead
+            tag="02 · Enfoque"
+            title={'Un método <span class="purp">claro</span> para retos reales.'}
+            lead="No llegamos a cambiar todo por cambiarlo. Primero entendemos por qué tu operación funciona como funciona, qué la llevó hasta aquí y dónde los sistemas actuales ya se quedaron cortos."
+          />
+
           <div className="aq-method-wrap">
             <div className="aq-method-grid">
-              {STEPS.map((s, i) => <div key={i} className={`aq-step ${i === 0 ? "active" : ""}`}><div className="aq-step-dot" /><div className="aq-step-num">{String(i + 1).padStart(2, "0")}</div><h3 className="aq-step-name">{s.name}</h3><p className="aq-step-desc">{s.desc}</p></div>)}
+              {STEPS.map((s, i) => (
+                <div key={i} className={`aq-step ${i === 0 ? "active" : ""}`}>
+                  <div className="aq-step-dot" />
+                  <div className="aq-step-num">{String(i + 1).padStart(2, "0")}</div>
+                  <h3 className="aq-step-name">{s.name}</h3>
+                  <p className="aq-step-desc">{s.desc}</p>
+                </div>
+              ))}
             </div>
+
             <div style={{ marginTop: 48, paddingTop: 24, borderTop: "1px solid var(--aq-line-soft)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 24, fontFamily: "var(--aq-font-tech)", fontSize: 11, letterSpacing: ".14em", color: "var(--aq-text-mute)", textTransform: "uppercase" }}>
-              <span>Entrada · diagnóstico pagado</span><span>Duración inicial · 30–40 horas</span><span>Relación típica · implementación + soporte recurrente</span>
+              <span>Entrada · diagnóstico pagado</span>
+              <span>Duración inicial · 30–40 horas</span>
+              <span>Relación típica · implementación + soporte recurrente</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="aq-pull"><div className="aq-wrap"><h2 className="aq-pull-quote"><span className="s">&quot;</span>Si cualquier <span className="p">integrador</span><br/>puede hacerlo,<br/><span className="l">no es para nosotros.</span><span className="s">&quot;</span></h2><div className="aq-pull-attr">— Cómo elegimos los proyectos que tomamos</div></div></section>
+      <section className="aq-pull">
+        <div className="aq-wrap">
+          <h2 className="aq-pull-quote">
+            <span className="s">&quot;</span>Si cualquier <span className="p">integrador</span><br />
+            puede hacerlo,<br />
+            <span className="l">no es para nosotros.</span><span className="s">&quot;</span>
+          </h2>
+          <div className="aq-pull-attr">— Cómo elegimos los proyectos que tomamos</div>
+        </div>
+      </section>
 
       <section id="verticales" className="aq-section">
         <div className="aq-wrap">
-          <SectionHead tag="03 · Verticales" title={'Dónde sabemos <span class="accent">de verdad</span>.'} lead="Dos industrias donde ya lo demostramos en operación. Dos más donde estamos creciendo. No prometemos lo que no hemos probado." />
+          <SectionHead
+            tag="03 · Verticales"
+            title={'Dónde sabemos <span class="accent">de verdad</span>.'}
+            lead="Industrias y frentes donde ya hemos construido, integrado o acompañado operación real. No prometemos lo que no entendemos."
+          />
+
           <div className="aq-grid-2">
-            {INDUSTRIES.map((ind) => <article key={ind.tag} className="aq-card"><div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 36 }}><span className="aq-card-num">{ind.tag}</span><span className="aq-card-icon"><AqIcon name={ind.icon} size={28} /></span></div><h3 className="aq-card-title" style={{ fontSize: 36 }}>{ind.name}</h3><p className="aq-card-desc">{ind.desc}</p><div className="aq-tags">{ind.tags.map(t => <span key={t} className="aq-tag">{t}</span>)}</div></article>)}
+            {INDUSTRIES.map((ind) => (
+              <article key={ind.tag} className="aq-card">
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 36 }}>
+                  <span className="aq-card-num">{ind.tag}</span>
+                  <span className="aq-card-icon"><AqIcon name={ind.icon} size={28} /></span>
+                </div>
+                <h3 className="aq-card-title" style={{ fontSize: 36 }}>{ind.name}</h3>
+                <p className="aq-card-desc">{ind.desc}</p>
+                <div className="aq-tags">
+                  {ind.tags.map((t) => <span key={t} className="aq-tag">{t}</span>)}
+                </div>
+              </article>
+            ))}
           </div>
+
           <div className="aq-vert-foot">
-            <div><div className="aq-vert-foot-l">No tomamos proyectos donde</div><div className="aq-vert-foot-v">No hay decisión de dirección · el requerimiento no tiene dueño · el cliente apenas está averiguando qué quiere</div></div>
-            <div style={{ textAlign: "right" }}><div className="aq-vert-foot-l">Base</div><div className="aq-vert-foot-v" style={{ color: "var(--aq-lime)" }}>Monterrey · operación nacional</div></div>
+            <div>
+              <div className="aq-vert-foot-l">No tomamos proyectos donde</div>
+              <div className="aq-vert-foot-v">
+                No hay decisión de dirección · el requerimiento no tiene dueño · el cliente apenas está averiguando qué quiere
+              </div>
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <div className="aq-vert-foot-l">Base</div>
+              <div className="aq-vert-foot-v" style={{ color: "var(--aq-lime)" }}>
+                Monterrey · operación nacional
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <CaseStudies />
 
-      <section id="valores" className="aq-section compact"><div className="aq-wrap"><SectionHead tag="05 · Valores" title={'Cómo <span class="accent">trabajamos</span>.'} lead="Cinco principios que rigen cada conversación con un cliente, cada decisión técnica y cada entregable." /><div className="aq-values">{VALUES.map((v, i) => <div key={v.name} className="aq-value"><div className="aq-value-num">V/0{i + 1}</div><h3 className="aq-value-name">{v.name}</h3><p className="aq-value-desc">{v.desc}</p></div>)}</div></div></section>
+      <section id="valores" className="aq-section compact">
+        <div className="aq-wrap">
+          <SectionHead
+            tag="05 · Valores"
+            title={'Cómo <span class="accent">trabajamos</span>.'}
+            lead="Cinco principios que rigen cada conversación con un cliente, cada decisión técnica y cada entregable."
+          />
 
-      <section id="insights" className="aq-section"><div className="aq-wrap"><SectionHead tag="06 · Insights" title={'Lecturas para equipos que <span class="accent">deciden</span>.'} lead="Ideas prácticas para dirección, responsables de operación y equipos de tecnología que ya saben que el problema no se resuelve instalando software genérico." /><div className="aq-insights-grid">{INSIGHTS.map((post) => <article key={post.title} className="aq-insight-card"><div className="aq-insight-meta"><span style={{ color: "var(--aq-lime)" }}>{post.cat}</span><span>{post.date}</span></div><h3 className="aq-insight-title">{post.title}</h3><div className="aq-insight-foot"><span>{post.read} de lectura</span><IconArrowUR size={16} /></div></article>)}</div></div></section>
+          <div className="aq-values">
+            {VALUES.map((v, i) => (
+              <div key={v.name} className="aq-value">
+                <div className="aq-value-num">V/0{i + 1}</div>
+                <h3 className="aq-value-name">{v.name}</h3>
+                <p className="aq-value-desc">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="insights" className="aq-section">
+        <div className="aq-wrap">
+          <SectionHead
+            tag="06 · Insights"
+            title={'Lecturas para equipos que <span class="accent">deciden</span>.'}
+            lead="Ideas prácticas para dirección, responsables de operación y equipos de tecnología que ya saben que el problema no se resuelve instalando software genérico."
+          />
+
+          <div className="aq-insights-grid">
+            {INSIGHTS.map((post) => (
+              <article key={post.title} className="aq-insight-card">
+                <div className="aq-insight-meta">
+                  <span style={{ color: "var(--aq-lime)" }}>{post.cat}</span>
+                  <span>{post.date}</span>
+                </div>
+                <h3 className="aq-insight-title">{post.title}</h3>
+                <div className="aq-insight-foot">
+                  <span>{post.read} de lectura</span>
+                  <IconArrowUR size={16} />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ContactSection />
     </>
