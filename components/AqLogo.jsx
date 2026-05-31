@@ -10,6 +10,7 @@ export default function AqLogo({ href = "/", compact = false }) {
         alt="Alphaqueb"
         width={height * 5}
         height={height}
+        sizes="180px"
         priority
         className="aq-brand-img"
         style={{ height, width: "auto" }}
