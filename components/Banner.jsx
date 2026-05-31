@@ -35,7 +35,7 @@ export default function Banner() {
         <div className="aq-hero-grid">
           <div>
             <div className="aq-eyebrow">Consultoría selectiva · Monterrey · operación nacional</div>
-            <h1 className="aq-hero-title">Donde <span className="lime">proceso</span> manda.<br/><span className="stroke">El sistema obedece.</span></h1>
+            <h1 className="aq-hero-title">El <span className="lime">proceso</span> manda.<br/><span className="stroke">Tu ERP se adapta.</span></h1>
             <p className="aq-hero-sub">Implementamos y desarrollamos sistemas a la medida para empresas que ya crecieron más allá de sus sistemas actuales.</p>
             <div className="aq-contact-form" style={{ maxWidth: 620 }}>
               <div className="aq-field-row">
