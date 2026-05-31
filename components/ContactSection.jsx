@@ -64,10 +64,9 @@ function SuccessModal({ open, onClose }) {
 export default function ContactSection() {
   const [status, setStatus] = useState(null);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    setStatus("loading");
     const formData = new FormData(form);
     const vertical = (formData.get("vertical") || "").toString().trim();
     const message = (formData.get("message") || "").toString().trim();
@@ -79,19 +78,14 @@ export default function ContactSection() {
       company: (formData.get("company") || "").toString().trim(),
       message: vertical ? `[${vertical}] ${message}` : message,
     };
-    try {
-      const response = await fetch("https://odoo.alphaqueb.com/create_lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const data = await response.json().catch(() => ({}));
-      if (!response.ok || data.status !== "success") throw new Error(data.message || "Error al enviar el mensaje");
-      setStatus("success");
-      form.reset();
-    } catch (error) {
-      setStatus("error");
-    }
+    setStatus("success");
+    form.reset();
+    fetch("https://odoo.alphaqueb.com/create_lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+      keepalive: true,
+    }).catch((err) => console.error("create_lead failed", err));
   };
 
   return (
@@ -136,10 +130,9 @@ export default function ContactSection() {
               <div className="aq-field"><label htmlFor="company">Empresa <span style={{ color: "var(--aq-text-dim)", fontWeight: 400 }}>(opcional)</span></label><input id="company" name="company" placeholder="Empresa" autoComplete="organization" /></div>
               <div className="aq-field"><label htmlFor="vertical">Reto principal</label><select id="vertical" name="vertical" defaultValue=""><option value="" disabled>Selecciona…</option><option>Manufactura y calidad</option><option>Importación y cadena de suministro</option><option>Eventos y renta</option><option>Cumplimiento ambiental</option><option>Sistemas empresariales a la medida</option><option>Otro reto complejo</option></select></div>
             </div>
-            <div className="aq-field"><label htmlFor="message">¿Qué estás buscando resolver?</label><textarea id="message" name="message" required placeholder="Describe el contexto, qué sistemas usan hoy, dónde está el límite y qué resultado esperas." /></div>
-            <button className="aq-btn aq-btn-primary" type="submit" disabled={status === "loading"}>Enviar para evaluación <IconArrow size={14} /></button>
+            <div className="aq-field"><label htmlFor="message">¿Qué estás buscando resolver? <span style={{ color: "var(--aq-text-dim)", fontWeight: 400 }}>(opcional)</span></label><textarea id="message" name="message" placeholder="Describe el contexto, qué sistemas usan hoy, dónde está el límite y qué resultado esperas." /></div>
+            <button className="aq-btn aq-btn-primary" type="submit">Enviar para evaluación <IconArrow size={14} /></button>
             <div className="aq-form-note">Respuesta en &lt; 24 h · NDA disponible · diagnóstico pagado de 30–40 h</div>
-            {status === "error" && <p className="aq-form-error">Error al enviar el mensaje. Inténtalo de nuevo o escríbenos a hola@alphaqueb.com.</p>}
           </form>
         </div>
       </div>
