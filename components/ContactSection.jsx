@@ -72,7 +72,8 @@ export default function ContactSection() {
     const vertical = (formData.get("vertical") || "").toString().trim();
     const message = (formData.get("message") || "").toString().trim();
     const payload = {
-      name: (formData.get("name") || "").toString().trim(),
+      first_name: (formData.get("first_name") || "").toString().trim(),
+      last_name: (formData.get("last_name") || "").toString().trim(),
       email: (formData.get("email") || "").toString().trim(),
       phone: (formData.get("phone") || "").toString().trim(),
       company: (formData.get("company") || "").toString().trim(),
@@ -124,14 +125,17 @@ export default function ContactSection() {
           </div>
           <form className="aq-contact-form" onSubmit={handleSubmit}>
             <div className="aq-field-row">
-              <div className="aq-field"><label htmlFor="name">Nombre completo</label><input id="name" name="name" required placeholder="Nombre" /></div>
-              <div className="aq-field"><label htmlFor="company">Empresa</label><input id="company" name="company" placeholder="Empresa" /></div>
+              <div className="aq-field"><label htmlFor="first_name">Nombre</label><input id="first_name" name="first_name" required placeholder="Nombre" autoComplete="given-name" /></div>
+              <div className="aq-field"><label htmlFor="last_name">Apellido <span style={{ color: "var(--aq-text-dim)", fontWeight: 400 }}>(opcional)</span></label><input id="last_name" name="last_name" placeholder="Apellido" autoComplete="family-name" /></div>
             </div>
             <div className="aq-field-row">
-              <div className="aq-field"><label htmlFor="email">Correo corporativo</label><input id="email" name="email" type="email" required placeholder="correo@empresa.com" /></div>
-              <div className="aq-field"><label htmlFor="phone">Teléfono <span style={{ color: "var(--aq-text-dim)", fontWeight: 400 }}>(opcional)</span></label><input id="phone" name="phone" type="tel" placeholder="+52 ..." /></div>
+              <div className="aq-field"><label htmlFor="email">Correo corporativo</label><input id="email" name="email" type="email" required placeholder="correo@empresa.com" autoComplete="email" /></div>
+              <div className="aq-field"><label htmlFor="phone">Teléfono <span style={{ color: "var(--aq-text-dim)", fontWeight: 400 }}>(opcional)</span></label><input id="phone" name="phone" type="tel" placeholder="+52 ..." autoComplete="tel" /></div>
             </div>
-            <div className="aq-field"><label htmlFor="vertical">Reto principal</label><select id="vertical" name="vertical" defaultValue=""><option value="" disabled>Selecciona…</option><option>Manufactura y calidad</option><option>Importación y cadena de suministro</option><option>Eventos y renta</option><option>Cumplimiento ambiental</option><option>Sistemas empresariales a la medida</option><option>Otro reto complejo</option></select></div>
+            <div className="aq-field-row">
+              <div className="aq-field"><label htmlFor="company">Empresa <span style={{ color: "var(--aq-text-dim)", fontWeight: 400 }}>(opcional)</span></label><input id="company" name="company" placeholder="Empresa" autoComplete="organization" /></div>
+              <div className="aq-field"><label htmlFor="vertical">Reto principal</label><select id="vertical" name="vertical" defaultValue=""><option value="" disabled>Selecciona…</option><option>Manufactura y calidad</option><option>Importación y cadena de suministro</option><option>Eventos y renta</option><option>Cumplimiento ambiental</option><option>Sistemas empresariales a la medida</option><option>Otro reto complejo</option></select></div>
+            </div>
             <div className="aq-field"><label htmlFor="message">¿Qué estás buscando resolver?</label><textarea id="message" name="message" required placeholder="Describe el contexto, qué sistemas usan hoy, dónde está el límite y qué resultado esperas." /></div>
             <button className="aq-btn aq-btn-primary" type="submit" disabled={status === "loading"}>Enviar para evaluación <IconArrow size={14} /></button>
             <div className="aq-form-note">Respuesta en &lt; 24 h · NDA disponible · diagnóstico pagado de 30–40 h</div>
