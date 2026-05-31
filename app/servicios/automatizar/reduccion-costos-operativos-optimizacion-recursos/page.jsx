@@ -6,7 +6,7 @@ const COPY = {
   description2: "No partimos de suposiciones: revisamos procesos, datos y responsables para encontrar dónde realmente se pierde valor.",
   description3: "Diseñamos automatizaciones, reportes o integraciones según el origen del problema.",
   description4: "La optimización debe poder sostenerse después de implementada, por eso dejamos seguimiento y soporte.",
-  advantages: ["Desperdicio visible: Detecta dónde se pierde material, tiempo o información.", "Prioridades claras: Ataca primero lo que más pesa.", "Seguimiento: Mide si la mejora se sostiene.", "Menos improvisación: Procesos definidos para casos recurrentes.", "Control operativo: Responsables y datos para decidir.", "Soporte continuo: Ajustes conforme la operación madura."],
+  advantages: ["Variance: Detecta desviaciones de material, tiempo o información contra la línea base.", "Prioridades claras: Ataca primero lo que más pesa.", "Seguimiento: Mide si la mejora se sostiene.", "Menos improvisación: Procesos definidos para casos recurrentes.", "KPI ownership: Responsables claros por indicador, dato y decisión.", "Soporte continuo: Ajustes conforme la operación madura."],
   costDetails: "La entrada es un diagnóstico pagado de 30 a 40 horas. Primero entendemos procesos, sistemas actuales, datos y responsables; después definimos alcance, ruta y precio del proyecto."
 };
 
