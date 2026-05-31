@@ -252,15 +252,15 @@ function ClientStrip() {
   return (
     <div style={{ marginTop: 34, padding: "18px 0 0", borderTop: "1px solid var(--aq-line-soft)" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
-        <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--aq-text-mute)" }}>
+        <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 12.5, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--aq-text-dim)" }}>
           Casos nombrables y frentes medibles
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "flex-end" }}>
           {CLIENTS.map((client) => (
             <div key={client.name} style={{ border: "1px solid var(--aq-line-soft)", background: "rgba(255,255,255,.02)", padding: "10px 14px", minWidth: 178 }}>
-              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 11, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--aq-text)", whiteSpace: "nowrap" }}>{client.name}</div>
-              <div style={{ marginTop: 4, fontSize: 12, color: "var(--aq-text-mute)" }}>{client.area}</div>
-              <div style={{ marginTop: 4, fontFamily: "var(--aq-font-tech)", fontSize: 10, letterSpacing: ".1em", color: "var(--aq-lime)", textTransform: "uppercase" }}>{client.kpi}</div>
+              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 13, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--aq-text)", whiteSpace: "nowrap" }}>{client.name}</div>
+              <div style={{ marginTop: 5, fontSize: 13.5, color: "var(--aq-text-dim)", fontWeight: 500 }}>{client.area}</div>
+              <div style={{ marginTop: 6, fontFamily: "var(--aq-font-tech)", fontSize: 12, fontWeight: 700, letterSpacing: ".09em", color: "var(--aq-lime)", textTransform: "uppercase" }}>{client.kpi}</div>
             </div>
           ))}
         </div>
@@ -294,7 +294,7 @@ function CaseDash({ c }) {
           <div className="aq-donut-wrap" style={{ marginTop: 6 }}>
             <Donut value={c.donut} size={56} />
             <div>
-              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 11, color: "var(--aq-text-dim)" }}>indicadores cubiertos</div>
+              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 13, fontWeight: 600, color: "var(--aq-text-dim)" }}>indicadores cubiertos</div>
               <div style={{ fontFamily: "var(--aq-font-head)", fontSize: 20, color: "var(--aq-lime)", lineHeight: 1 }}>{c.results[0].l}</div>
             </div>
           </div>
@@ -358,7 +358,7 @@ function CaseStudies() {
           <div>
             <div className="aq-case-meta"><span>Estado · <b>{c.duration}</b></span><span>Alcance · <b>{c.scope}</b></span></div>
             <h3 className="aq-case-title">{c.title}</h3>
-            <p style={{ fontFamily: "var(--aq-font-tech)", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--aq-text-mute)", margin: "0 0 18px" }}>{c.client}</p>
+            <p style={{ fontFamily: "var(--aq-font-tech)", fontSize: 13, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--aq-text-dim)", margin: "0 0 18px" }}>{c.client}</p>
             <p className="aq-case-desc">{c.desc}</p>
             <div className="aq-case-results">
               {c.results.map((r, i) => <div key={i} className="aq-kpi"><div className="lbl">{r.l}</div><div className="val">{r.v}</div></div>)}
@@ -422,7 +422,7 @@ export default function HomeLanding() {
             <div className="aq-method-grid">
               {STEPS.map((s, i) => <div key={i} className={`aq-step ${i === 0 ? "active" : ""}`}><div className="aq-step-dot" /><div className="aq-step-num">{String(i + 1).padStart(2, "0")}</div><h3 className="aq-step-name">{s.name}</h3><p className="aq-step-desc">{s.desc}</p></div>)}
             </div>
-            <div style={{ marginTop: 48, paddingTop: 24, borderTop: "1px solid var(--aq-line-soft)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 24, fontFamily: "var(--aq-font-tech)", fontSize: 11, letterSpacing: ".14em", color: "var(--aq-text-mute)", textTransform: "uppercase" }}>
+            <div style={{ marginTop: 48, paddingTop: 24, borderTop: "1px solid var(--aq-line-soft)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 24, fontFamily: "var(--aq-font-tech)", fontSize: 12.5, fontWeight: 700, letterSpacing: ".11em", color: "var(--aq-text-dim)", textTransform: "uppercase" }}>
               <span>Entrada · diagnóstico pagado</span><span>Duración inicial · 30–40 horas</span><span>Salida · baseline + roadmap + KPIs</span>
             </div>
           </div>

@@ -58,7 +58,7 @@ export default function ContactSection() {
               <dd>Lun–Vie · 09:00 — 19:00 CDT</dd>
             </dl>
             <div style={{ marginTop: 48, paddingTop: 32, borderTop: "1px solid var(--aq-line-soft)" }}>
-              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--aq-text-mute)", marginBottom: 16 }}>Disponibilidad</div>
+              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 12.5, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--aq-text-dim)", marginBottom: 16 }}>Disponibilidad</div>
               <div className="aq-live"><span className="aq-live-dot" />Aceptando proyectos selectivos</div>
             </div>
           </div>

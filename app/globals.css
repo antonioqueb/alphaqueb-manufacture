@@ -101,8 +101,7 @@
 .aq-nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.72);backdrop-filter:blur(18px) saturate(140%);border-bottom:1px solid var(--aq-line-soft)}
 .aq-nav-row{height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .aq-brand{display:flex;align-items:center;gap:12px;min-width:max-content}
-.aq-brand-mark{width:38px;height:28px;display:grid;place-items:center;border:1px solid var(--aq-lime);border-radius:2px;color:var(--aq-lime);font-family:var(--aq-font-head);font-size:19px;letter-spacing:.04em;line-height:1;background:rgba(185,232,86,.06)}
-.aq-brand-word{font-family:var(--aq-font-head);font-size:24px;letter-spacing:.08em;color:var(--aq-text);line-height:1}
+.aq-brand-img{display:block;object-fit:contain}
 .aq-nav-links{display:flex;align-items:center;gap:22px;font-family:var(--aq-font-tech);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--aq-text-dim)}
 .aq-nav-links a,.aq-nav-links button{transition:color .15s;white-space:nowrap;background:transparent;border:0;color:inherit;text-transform:uppercase;letter-spacing:.08em;padding:0;cursor:pointer}
 .aq-nav-links a:hover,.aq-nav-links button:hover{color:var(--aq-lime)}
@@ -187,3 +186,138 @@
 .aq-footer{border-top:1px solid var(--aq-line-soft);padding:64px 0 32px;background:var(--aq-bg-1);position:relative;z-index:1}.aq-foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}.aq-foot-brand{max-width:380px}.aq-foot-brand p{font-size:13.5px;color:var(--aq-text-dim);line-height:1.6;margin:16px 0 0}.aq-foot-col h4{font-family:var(--aq-font-tech);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--aq-text-mute);margin:0 0 16px;font-weight:500}.aq-foot-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}.aq-foot-col a{font-size:14px;color:var(--aq-text-dim);transition:color .15s}.aq-foot-col a:hover{color:var(--aq-lime)}.aq-foot-bar{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--aq-line-soft);font-family:var(--aq-font-tech);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--aq-text-mute);gap:16px;flex-wrap:wrap}.aq-cookie{position:fixed;left:20px;right:20px;bottom:20px;z-index:60;background:rgba(10,10,12,.94);border:1px solid var(--aq-line);box-shadow:0 24px 70px rgba(0,0,0,.55);padding:16px 18px;border-radius:6px;display:flex;justify-content:space-between;gap:18px;align-items:center;color:var(--aq-text-dim);font-size:13.5px}.aq-cookie a{color:var(--aq-lime);text-decoration:underline;text-underline-offset:4px}.aq-cookie button{background:var(--aq-lime);color:#000;border:1px solid var(--aq-lime);padding:9px 13px;font-family:var(--aq-font-tech);font-size:11px;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}
 @media (max-width:760px){.aq-foot-grid{grid-template-columns:1fr 1fr;gap:32px}.aq-cookie{flex-direction:column;align-items:flex-start}.aq-blog-cover{height:280px}}
 @media (max-width:520px){.aq-foot-grid{grid-template-columns:1fr}}
+
+/* ── Legibility patch: stronger microcopy for low-quality displays ───────── */
+:root{
+  --aq-text-dim:#bfc0c8;
+  --aq-text-mute:#a2a3af;
+  --aq-line:#55545f;
+  --aq-line-soft:#2a2a32;
+}
+
+.aq-section-tag,
+.aq-panel-tag,
+.aq-panel-head .title,
+.aq-live,
+.aq-card-num,
+.aq-vert-foot-l,
+.aq-pull-attr,
+.aq-case-meta,
+.aq-case-tab,
+.aq-value-num,
+.aq-insight-meta,
+.aq-insight-foot,
+.aq-contact-info dt,
+.aq-field label,
+.aq-form-note,
+.aq-foot-col h4,
+.aq-foot-bar,
+.aq-service-link-card span,
+.aq-scope-card .n,
+.aq-metric .k,
+.aq-panel-foot{
+  color:var(--aq-text-dim) !important;
+  font-weight:600 !important;
+  opacity:1 !important;
+}
+
+.aq-section-tag{
+  font-size:13px !important;
+  letter-spacing:.13em !important;
+  padding-top:16px !important;
+}
+
+.aq-eyebrow{
+  font-size:13px !important;
+  font-weight:600 !important;
+  color:var(--aq-lime) !important;
+}
+
+.aq-stat{max-width:275px !important;}
+.aq-stat-v{font-size:32px !important;font-weight:700 !important;}
+.aq-stat-l{
+  font-size:15px !important;
+  line-height:1.5 !important;
+  color:var(--aq-text-dim) !important;
+  font-weight:500 !important;
+}
+
+.aq-panel-tag,
+.aq-live,
+.aq-panel-head .title,
+.aq-panel-foot{
+  font-size:12px !important;
+  letter-spacing:.12em !important;
+}
+
+.aq-kpi .lbl,
+.aq-dash-card .lbl{
+  font-size:11.5px !important;
+  letter-spacing:.12em !important;
+  color:var(--aq-text-dim) !important;
+  font-weight:700 !important;
+}
+
+.aq-card-num,
+.aq-case-meta,
+.aq-case-tab,
+.aq-pull-attr,
+.aq-value-num,
+.aq-insight-meta,
+.aq-insight-foot,
+.aq-vert-foot-l,
+.aq-contact-info dt,
+.aq-field label,
+.aq-form-note,
+.aq-metric .k,
+.aq-scope-card .n,
+.aq-service-link-card span{
+  font-size:12.5px !important;
+  letter-spacing:.115em !important;
+}
+
+.aq-card-desc,
+.aq-benefit p,
+.aq-scope-card p,
+.aq-foot-brand p,
+.aq-blog-desc{
+  font-size:15.5px !important;
+  color:var(--aq-text-dim) !important;
+  line-height:1.65 !important;
+}
+
+.aq-step-desc,
+.aq-value-desc{
+  font-size:15.25px !important;
+  line-height:1.65 !important;
+  color:var(--aq-text-dim) !important;
+}
+
+.aq-step-name{font-size:27px !important;}
+.aq-tag{
+  font-size:11.5px !important;
+  font-weight:600 !important;
+  color:var(--aq-text) !important;
+  border-color:var(--aq-line) !important;
+  background:rgba(255,255,255,.035) !important;
+}
+
+.aq-vert-foot-v{
+  font-size:15.5px !important;
+  line-height:1.55 !important;
+}
+
+.aq-pull-attr{
+  font-size:13px !important;
+  color:var(--aq-text-dim) !important;
+}
+
+.aq-bar{font-size:12.5px !important;font-weight:600 !important;}
+.aq-nav-links,.aq-nav-cta,.aq-mobile-menu a{font-weight:600 !important;}
+.aq-btn{font-size:13.5px !important;font-weight:600 !important;}
+
+@media (max-width:760px){
+  .aq-section-tag{font-size:12.5px !important;}
+  .aq-stat-l{font-size:14.5px !important;}
+  .aq-card-num,.aq-case-meta,.aq-case-tab,.aq-pull-attr,.aq-value-num,.aq-insight-meta,.aq-insight-foot,.aq-vert-foot-l{font-size:12px !important;}
+}
