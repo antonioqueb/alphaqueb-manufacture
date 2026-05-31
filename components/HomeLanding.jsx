@@ -248,27 +248,6 @@ function HeroPanel() {
   );
 }
 
-function ClientStrip() {
-  return (
-    <div style={{ marginTop: 34, padding: "18px 0 0", borderTop: "1px solid var(--aq-line-soft)" }}>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
-        <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 12.5, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--aq-text-dim)" }}>
-          Casos nombrables y frentes medibles
-        </div>
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "flex-end" }}>
-          {CLIENTS.map((client) => (
-            <div key={client.name} style={{ border: "1px solid var(--aq-line-soft)", background: "rgba(255,255,255,.02)", padding: "10px 14px", minWidth: 178 }}>
-              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 13, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--aq-text)", whiteSpace: "nowrap" }}>{client.name}</div>
-              <div style={{ marginTop: 5, fontSize: 13.5, color: "var(--aq-text-dim)", fontWeight: 500 }}>{client.area}</div>
-              <div style={{ marginTop: 6, fontFamily: "var(--aq-font-tech)", fontSize: 12, fontWeight: 700, letterSpacing: ".09em", color: "var(--aq-lime)", textTransform: "uppercase" }}>{client.kpi}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function CaseDash({ c }) {
   const impact = c.impact || [
     { l: "OEE", v: 86 },
@@ -397,7 +376,6 @@ export default function HomeLanding() {
               <span>OEE · OTIF · SLA · MTTR · FPY · NCR · ETA Accuracy · Lead Time · Fill Rate · TAT · Audit Ready · Uptime · </span>
             </div>
           </div>
-          <ClientStrip />
         </div>
       </section>
 
