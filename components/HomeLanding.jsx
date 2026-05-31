@@ -385,7 +385,6 @@ export default function HomeLanding() {
               <div className="aq-stat-row">
                 {[
                   { v: "30–40 h", l: "De diagnóstico profundo antes de proponerte una ruta" },
-                  { v: "4 casos", l: "Hexágonos, SAI, SOM Group y SOM Cabos" },
                   { v: "OEE · OTIF · SLA", l: "Indicadores claros para dirección y operación" },
                 ].map((s, i) => <div key={i} className="aq-stat"><div className="aq-stat-v">{s.v}</div><div className="aq-stat-l">{s.l}</div></div>)}
               </div>
