@@ -8,26 +8,28 @@ export default function ContactSection() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const form = event.currentTarget;
     setStatus("loading");
-    const formData = new FormData(event.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      company: formData.get("company"),
-      vertical: formData.get("vertical"),
-      message: formData.get("message"),
-      user_id: 2,
-      company_id: 1,
+    const formData = new FormData(form);
+    const vertical = (formData.get("vertical") || "").toString().trim();
+    const message = (formData.get("message") || "").toString().trim();
+    const payload = {
+      name: (formData.get("name") || "").toString().trim(),
+      email: (formData.get("email") || "").toString().trim(),
+      phone: (formData.get("phone") || "").toString().trim(),
+      company: (formData.get("company") || "").toString().trim(),
+      message: vertical ? `[${vertical}] ${message}` : message,
     };
     try {
-      const response = await fetch("https://contact.alphaqueb.com/create_lead", {
+      const response = await fetch("https://odoo.alphaqueb.com/create_lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
-      if (!response.ok) throw new Error("Error al enviar el mensaje");
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || data.status !== "success") throw new Error(data.message || "Error al enviar el mensaje");
       setStatus("success");
-      event.currentTarget.reset();
+      form.reset();
     } catch (error) {
       setStatus("error");
     }
@@ -69,8 +71,9 @@ export default function ContactSection() {
             </div>
             <div className="aq-field-row">
               <div className="aq-field"><label htmlFor="email">Correo corporativo</label><input id="email" name="email" type="email" required placeholder="correo@empresa.com" /></div>
-              <div className="aq-field"><label htmlFor="vertical">Reto principal</label><select id="vertical" name="vertical" defaultValue=""><option value="" disabled>Selecciona…</option><option>Manufactura y calidad</option><option>Importación y cadena de suministro</option><option>Eventos y renta</option><option>Cumplimiento ambiental</option><option>Sistemas empresariales a la medida</option><option>Otro reto complejo</option></select></div>
+              <div className="aq-field"><label htmlFor="phone">Teléfono <span style={{ color: "var(--aq-text-dim)", fontWeight: 400 }}>(opcional)</span></label><input id="phone" name="phone" type="tel" placeholder="+52 ..." /></div>
             </div>
+            <div className="aq-field"><label htmlFor="vertical">Reto principal</label><select id="vertical" name="vertical" defaultValue=""><option value="" disabled>Selecciona…</option><option>Manufactura y calidad</option><option>Importación y cadena de suministro</option><option>Eventos y renta</option><option>Cumplimiento ambiental</option><option>Sistemas empresariales a la medida</option><option>Otro reto complejo</option></select></div>
             <div className="aq-field"><label htmlFor="message">¿Qué estás buscando resolver?</label><textarea id="message" name="message" required placeholder="Describe el contexto, qué sistemas usan hoy, dónde está el límite y qué resultado esperas." /></div>
             <button className="aq-btn aq-btn-primary" type="submit" disabled={status === "loading"}>Enviar para evaluación <IconArrow size={14} /></button>
             <div className="aq-form-note">Respuesta en &lt; 24 h · NDA disponible · diagnóstico pagado de 30–40 h</div>
