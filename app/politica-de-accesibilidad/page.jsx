@@ -2,7 +2,7 @@ import React from 'react';
 
 const AccessibilityPolicy = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Política de Accesibilidad</h1>
       <p className="mb-4 dark:text-zinc-200">
         En Alphaqueb Consulting, estamos comprometidos con la accesibilidad y la inclusión de todos los usuarios en nuestro sitio web y servicios. Esta política de accesibilidad describe los esfuerzos que realizamos para asegurar que nuestro contenido sea accesible para personas con discapacidades.

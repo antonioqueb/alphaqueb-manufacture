@@ -1,122 +1,28 @@
-"use client";
-import MyLightImage from '@/public/brand/white.png';
-import MyDarkImage from '@/public/brand/dark.png';
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { FaAngleDown } from 'react-icons/fa';
+import AqLogo from "@/components/AqLogo";
 
-const Footer = () => {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+const POLICIES = [
+  ["/aviso-de-privacidad", "Aviso de privacidad"],
+  ["/terminos-y-condiciones", "Términos y condiciones"],
+  ["/politica-de-seguridad", "Política de seguridad"],
+  ["/politica-de-coockies", "Política de cookies"],
+];
 
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
-    };
-
-    return (
-        <footer className="footer py-4 border-t bg-base-200 text-base-content border-base-300 flex flex-col md:flex-row justify-between items-center mt-24 px-8">
-            <aside className="flex items-center mb-4 md:mb-0">
-                <Link href="/">
-                    <div className="cursor-pointer">
-                        <Image
-                            src={MyDarkImage}
-                            alt="Logo de Alphaqueb"
-                            width={40}
-                            height={40}
-                            className="rounded-full"
-                        />
-                    </div>
-                </Link>
-                <p className="text-base pl-4 dark:text-slate-100">
-                    Alphaqueb Consulting SAS <br /> Acercando los sistemas industriales a las empresas mexicanas.
-                </p>
-            </aside>
-
-            <nav className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-                {/* Enlaces Relevantes */}
-                <Link href="/aviso-de-privacidad" className="text-base dark:text-slate-100 hover:text-orange-500">
-                    Aviso de Privacidad
-                </Link>
-                <Link href="/terminos-y-condiciones" className="text-base dark:text-slate-100 hover:text-orange-500">
-                    Términos y Condiciones
-                </Link>
-                <Link href="/politica-de-seguridad" className="text-base dark:text-slate-100 hover:text-orange-500">
-                    Política de Seguridad
-                </Link>
-
-                {/* Menú Desplegable */}
-                <div className="relative">
-                    <button
-                        onClick={toggleDropdown}
-                        className="text-base dark:text-slate-100 hover:text-orange-500 flex items-center"
-                    >
-                        Más Políticas <FaAngleDown className="ml-1" />
-                    </button>
-                    {isDropdownOpen && (
-                        <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-zinc-800 rounded shadow-lg z-10">
-                            <ul className="py-1">
-                                <li>
-                                    <Link href="/aviso-de-cumplimiento-ambiental" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Aviso de Cumplimiento Ambiental
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/aviso-legal" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Aviso Legal
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-accesibilidad" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Accesibilidad
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-anti-soborno-y-corrupcion" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Anti-Soborno y Corrupción
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-comentarios-o-contenido-generado-por-usuarios" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Comentarios o Contenido Generado por Usuarios
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-coockies" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Cookies
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-cumplimiento-regulatorio" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Cumplimiento Regulatorio
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-enlaces-externos" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Enlaces Externos
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-etica-empresarial" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Ética Empresarial
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-proteccion-de-datos-personales" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Protección de Datos Personales
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/politica-de-uso-aceptable-de-recursos-tecnologicos" className="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                                        Política de Uso Aceptable de Recursos Tecnológicos
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    )}
-                </div>
-            </nav>
-        </footer>
-    );
-};
-
-export default Footer;
+export default function Footer() {
+  return (
+    <footer className="aq-footer">
+      <div className="aq-wrap">
+        <div className="aq-foot-grid">
+          <div className="aq-foot-brand">
+            <AqLogo />
+            <p>Consultoría estratégica para los retos más exigentes de la industria mexicana. Manufactura compleja, comercio internacional, eventos masivos y cumplimiento ambiental. Datos que informan. Estrategias que transforman.</p>
+          </div>
+          <div className="aq-foot-col"><h4>Verticales</h4><ul><li><Link href="/#verticales">Manufactura compleja</Link></li><li><Link href="/#verticales">Comercio internacional</Link></li><li><Link href="/#verticales">Eventos masivos</Link></li><li><Link href="/#verticales">Cumplimiento ambiental</Link></li></ul></div>
+          <div className="aq-foot-col"><h4>Empresa</h4><ul><li><Link href="/#enfoque">Enfoque</Link></li><li><Link href="/#casos">Casos</Link></li><li><Link href="/#valores">Valores</Link></li><li><Link href="/blogs">Insights</Link></li><li><Link href="/#contacto">Contacto</Link></li></ul></div>
+          <div className="aq-foot-col"><h4>Legal</h4><ul>{POLICIES.map(([href, label]) => <li key={href}><Link href={href}>{label}</Link></li>)}</ul></div>
+        </div>
+        <div className="aq-foot-bar"><span>© 2026 Alphaqueb · Hecho en México</span><span>Aviso de privacidad · Términos</span><span style={{ color: "var(--aq-lime)" }}>● Sistema operativo · v2.6</span></div>
+      </div>
+    </footer>
+  );
+}

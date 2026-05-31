@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserGeneratedContentPolicy = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Política de Comentarios o Contenido Generado por Usuarios</h1>
       <p className="mb-4 dark:text-zinc-200">
         En Alphaqueb Consulting, valoramos la interacción y los comentarios de nuestros usuarios. Esta política de comentarios o contenido generado por usuarios establece las directrices para la publicación y gestión del contenido que comparten en nuestro sitio web.

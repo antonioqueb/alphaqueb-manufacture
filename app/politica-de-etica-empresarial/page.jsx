@@ -2,7 +2,7 @@ import React from 'react';
 
 const EthicsPolicy = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Política de Ética Empresarial</h1>
       <p className="mb-4 dark:text-zinc-200">
         En Alphaqueb Consulting, estamos comprometidos con la integridad y la ética en todas nuestras operaciones. Esta política de ética empresarial establece los principios y valores que guían nuestro comportamiento y decisiones en el día a día.

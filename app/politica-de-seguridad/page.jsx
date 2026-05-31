@@ -2,7 +2,7 @@ import React from 'react';
 
 const SecurityPolicy = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Política de Seguridad</h1>
       <p className="mb-4 dark:text-zinc-200">
         En Alphaqueb Consulting, valoramos la seguridad de la información personal y de los datos de nuestros clientes. Esta política de seguridad describe las medidas que tomamos para proteger la información que recopilamos y manejamos en nuestro sitio web y servicios.

@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsAndConditions = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Términos y Condiciones</h1>
       <p className="mb-4 dark:text-zinc-200">
         Bienvenido a Alphaqueb Consulting. Al utilizar nuestros servicios, aceptas cumplir con los siguientes términos y condiciones. Si no estás de acuerdo con estos términos, no puedes utilizar nuestros servicios.

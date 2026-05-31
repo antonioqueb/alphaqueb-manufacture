@@ -1,124 +1,80 @@
-'use client';
-import React, { useState } from 'react';
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+import { IconArrow } from "@/components/AqIcons";
 
 export default function ContactSection() {
   const [status, setStatus] = useState(null);
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Evita la recarga de la página al enviar el formulario
-    const formData = new FormData(event.target);
-    const email = formData.get('email');
-    const message = formData.get('message');
-    const name = formData.get('name');
-    // Incluimos user_id y company_id con los valores especificados
+    event.preventDefault();
+    setStatus("loading");
+    const formData = new FormData(event.currentTarget);
     const data = {
-      email,
-      message,
-      name,
+      name: formData.get("name"),
+      email: formData.get("email"),
+      company: formData.get("company"),
+      vertical: formData.get("vertical"),
+      message: formData.get("message"),
       user_id: 2,
       company_id: 1,
     };
     try {
-      const response = await fetch('https://contact.alphaqueb.com/create_lead', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          // Agrega cualquier encabezado adicional si es necesario
-        },
+      const response = await fetch("https://contact.alphaqueb.com/create_lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      if (!response.ok) {
-        throw new Error('Error al enviar el mensaje');
-      }
-      const result = await response.json();
-      console.log('Respuesta de la API:', result);
-      setStatus('success');
+      if (!response.ok) throw new Error("Error al enviar el mensaje");
+      setStatus("success");
+      event.currentTarget.reset();
     } catch (error) {
-      console.error('Error:', error);
-      setStatus('error');
+      setStatus("error");
     }
   };
 
   return (
-    <div id='contacto' className="my-4 dark:bg-stone-900 mx-auto px-7 py-16 border border-zinc-100 dark:border-zinc-800 rounded-2xl shadow-lg mb-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex flex-col justify-center">
-          <h2 className="text-3xl xl:text-5xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-            ¡Contáctanos hoy mismo!
-          </h2>
-          <p className="mt-4 text-lg text-zinc-500 dark:text-zinc-400">
-          ¿Listo para llevar tu industria al siguiente nivel? Completa el formulario y un experto se pondrá en contacto contigo lo antes posible.
-          </p>
-          <form onSubmit={handleSubmit} className="mt-8 space-y-6">
-            <div>
-              <Label className="block text-lg font-medium text-zinc-700 dark:text-zinc-200" htmlFor="name">
-                Nombre
-              </Label>
-              <Input
-                className="mt-1 block w-full rounded-md border-zinc-300 dark:border-zinc-700 shadow-sm focus:border-primary focus:ring-primary sm:text-lg text-zinc-900 dark:text-white bg-white dark:bg-zinc-800"
-                id="name"
-                name="name"
-                placeholder="Ingresa tu nombre"
-                type="text"
-                required
-              />
-            </div>
-            <div>
-              <Label className="block text-lg font-medium text-zinc-700 dark:text-zinc-200" htmlFor="email">
-                Correo electrónico
-              </Label>
-              <Input
-                className="mt-1 block w-full rounded-md border-zinc-300 dark:border-zinc-700 shadow-sm focus:border-primary focus:ring-primary sm:text-lg text-zinc-900 dark:text-white bg-white dark:bg-zinc-800"
-                id="email"
-                name="email"
-                placeholder="Ingresa tu correo electrónico"
-                type="email"
-                required
-              />
-            </div>
-            <div>
-              <Label className="block text-lg font-medium text-zinc-700 dark:text-zinc-200" htmlFor="message">
-                Mensaje
-              </Label>
-              <Textarea
-                className="mt-1 block w-full rounded-md border-zinc-300 dark:border-zinc-700 shadow-sm focus:border-primary focus:ring-primary sm:text-lg text-zinc-900 dark:text-white bg-white dark:bg-zinc-800"
-                id="message"
-                name="message"
-                placeholder="Escribe tu mensaje aquí"
-                rows={4}
-                required
-              />
-            </div>
-            <Button
-              className="w-full justify-center rounded-md border border-transparent bg-custom-orange py-3 px-4 text-lg font-medium text-white shadow-sm hover:bg-custom-orange-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors duration-300"
-              type="submit"
-            >
-              Enviar
-            </Button>
-          </form>
-          {status === 'success' && (
-            <p className="mt-4 text-green-500">Mensaje enviado con éxito.</p>
-          )}
-          {status === 'error' && (
-            <p className="mt-4 text-red-500">Error al enviar el mensaje.</p>
-          )}
+    <section id="contacto" className="aq-section" style={{ paddingBottom: 120 }}>
+      <div className="aq-wrap">
+        <div className="aq-section-head">
+          <span className="aq-section-tag">Contacto</span>
+          <div>
+            <h2 className="aq-section-title">Cuéntanos tu <span className="accent">reto</span>.</h2>
+            <p className="aq-section-lead">Si tu operación opera en uno de los verticales donde sabemos de verdad, en 30 minutos podemos definir si tenemos algo que aportar. Si no, te lo decimos de frente.</p>
+          </div>
         </div>
-        <div className="flex items-center justify-center">
-          <Image
-            src="/contact.jpg"
-            alt="Contact Image"
-            width={600}
-            height={400}
-            className="object-cover rounded-lg w-full h-full"
-            style={{ objectFit: "cover" }}
-          />
+        <div className="aq-contact-grid">
+          <div className="aq-contact-info">
+            <dl>
+              <dt>Estudio</dt>
+              <dd className="big">México · operación remota</dd>
+              <dt>Correo</dt>
+              <dd><a href="mailto:hola@alphaqueb.com">hola@alphaqueb.com</a></dd>
+              <dt>Horario</dt>
+              <dd>Lun–Vie · 09:00 — 19:00 CDT</dd>
+            </dl>
+            <div style={{ marginTop: 48, paddingTop: 32, borderTop: "1px solid var(--aq-line-soft)" }}>
+              <div style={{ fontFamily: "var(--aq-font-tech)", fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--aq-text-mute)", marginBottom: 16 }}>Disponibilidad</div>
+              <div className="aq-live"><span className="aq-live-dot" />Aceptando proyectos selectivos</div>
+            </div>
+          </div>
+          <form className="aq-contact-form" onSubmit={handleSubmit}>
+            <div className="aq-field-row">
+              <div className="aq-field"><label htmlFor="name">Nombre completo</label><input id="name" name="name" required placeholder="Nombre" /></div>
+              <div className="aq-field"><label htmlFor="company">Empresa</label><input id="company" name="company" placeholder="Empresa" /></div>
+            </div>
+            <div className="aq-field-row">
+              <div className="aq-field"><label htmlFor="email">Correo corporativo</label><input id="email" name="email" type="email" required placeholder="correo@empresa.com" /></div>
+              <div className="aq-field"><label htmlFor="vertical">Vertical</label><select id="vertical" name="vertical" defaultValue=""><option value="" disabled>Selecciona…</option><option>Manufactura compleja</option><option>Comercio internacional / importación</option><option>Eventos masivos / salud</option><option>Cumplimiento ambiental</option><option>Otro</option></select></div>
+            </div>
+            <div className="aq-field"><label htmlFor="message">¿Qué reto estás buscando resolver?</label><textarea id="message" name="message" required placeholder="Describe contexto, complejidad y resultado esperado." /></div>
+            <button className="aq-btn aq-btn-primary" type="submit" disabled={status === "loading"}>Enviar para evaluación <IconArrow size={14} /></button>
+            <div className="aq-form-note">Respuesta en &lt; 24 hrs · NDA disponible</div>
+            {status === "success" && <p className="aq-form-success">Mensaje enviado con éxito.</p>}
+            {status === "error" && <p className="aq-form-error">Error al enviar el mensaje.</p>}
+          </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

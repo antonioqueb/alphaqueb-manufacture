@@ -2,7 +2,7 @@ import React from 'react';
 
 const CopyrightNotice = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Derechos de Autor</h1>
       <p className="mb-4 dark:text-zinc-200">
         En Alphaqueb Consulting, valoramos la protección de los derechos de autor y respetamos la propiedad intelectual de todos. Este aviso de derechos de autor explica cómo se utiliza y protege el contenido disponible en nuestro sitio web.

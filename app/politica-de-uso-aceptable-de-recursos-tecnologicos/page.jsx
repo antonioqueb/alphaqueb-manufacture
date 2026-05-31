@@ -2,7 +2,7 @@ import React from 'react';
 
 const AcceptableUsePolicy = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Política de Uso Aceptable de Recursos Tecnológicos</h1>
       <p className="mb-4">
         En Alphaqueb Consulting, valoramos la integridad y la seguridad de nuestros recursos tecnológicos. Esta política de uso aceptable establece las normas y procedimientos que guian el uso de nuestros recursos tecnológicos por parte de los empleados, socios y contratistas.

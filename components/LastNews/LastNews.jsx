@@ -1,55 +1,21 @@
-import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import Image from 'next/image';
+import Link from "next/link";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Image from "next/image";
 
 function getPosts() {
-  const postsDirectory = path.join(process.cwd(), 'blogs');
+  const postsDirectory = path.join(process.cwd(), "blogs");
   const files = fs.readdirSync(postsDirectory);
   return files.map((filename) => {
-    const markdownFile = fs.readFileSync(path.join(postsDirectory, filename), 'utf-8');
-    const { data: frontMatter, content } = matter(markdownFile);
-    const slug = filename.replace('.mdx', '');
-    return {
-      frontMatter,
-      slug,
-    };
-  }).sort((a, b) => {
-    return new Date(b.frontMatter.date) - new Date(a.frontMatter.date);
-  });
+    const markdownFile = fs.readFileSync(path.join(postsDirectory, filename), "utf-8");
+    const { data: frontMatter } = matter(markdownFile);
+    const slug = filename.replace(".mdx", "");
+    return { frontMatter, slug };
+  }).sort((a, b) => new Date(b.frontMatter.date) - new Date(a.frontMatter.date));
 }
 
 export default function LastNews() {
-  const posts = getPosts().slice(0, 45); // Limitar a los últimos 30 posts
-  return (
-    <section className="py-8 text-center">
-      <h2 className="text-3xl font-semibold mb-6 dark:text-white">Últimas noticias</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {posts.map((post) => (
-          <Link href={`/blogs/${post.slug}`} key={post.slug} className="block rounded-md shadow-md hover:shadow-lg transition-shadow duration-300 dark:bg-zinc-800">
-            <div className="relative h-48 overflow-hidden">
-              <Image
-                src={post.frontMatter.image}
-                alt={post.frontMatter.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2 dark:text-white">{post.frontMatter.title}</h3>
-              <p className="text-zinc-700 dark:text-zinc-300 mb-4 line-clamp-3">{post.frontMatter.description}</p>
-              <span className="text-zinc-500 dark:text-zinc-400 text-sm">
-                {new Date(post.frontMatter.date).toLocaleDateString('es-ES', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </span>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
+  const posts = getPosts().slice(0, 45);
+  return <section className="aq-blog-list"><div className="aq-wrap"><div className="aq-section-head"><span className="aq-section-tag">Insights</span><div><h1 className="aq-section-title">Lecturas para equipos que <span className="accent">deciden</span>.</h1><p className="aq-section-lead">Notas técnicas, marcos de decisión y aprendizajes para manufactura, SCADA, automatización y transformación digital.</p></div></div><div className="aq-insights-grid">{posts.map((post) => <Link href={`/blogs/${post.slug}`} key={post.slug} className="aq-blog-card"><div className="aq-blog-img"><Image src={post.frontMatter.image} alt={post.frontMatter.title} fill /></div><div className="aq-blog-body"><h3 className="aq-blog-title">{post.frontMatter.title}</h3><p className="aq-blog-desc">{post.frontMatter.description}</p><span className="aq-blog-date">{new Date(post.frontMatter.date).toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" })}</span></div></Link>)}</div></div></section>;
 }

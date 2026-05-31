@@ -2,7 +2,7 @@ import React from 'react';
 
 const DataProtectionPolicy = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Política de Protección de Datos Personales</h1>
       <p className="mb-4 dark:text-zinc-200">
         En Alphaqueb Consulting, valoramos la privacidad y la seguridad de la información personal de nuestros usuarios. Esta política de protección de datos personales explica cómo recopilamos, usamos, compartimos y protegemos la información personal que nos proporcionas.

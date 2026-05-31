@@ -1,40 +1,26 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Navbar";
 import Script from "next/script";
 import Footer from "@/components/Footer";
-import CookieBanner from "@/components/CookieBanner"; // ⬅️ Importamos el nuevo componente
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata = {
-  title: "Manufactura Inteligente | Alphaqueb Consulting",
-  description:
-    "Transformamos tu industria con tecnología avanzada: automatización, digitalización de procesos y software industrial. Conectamos tus sistemas para mejorar la producción y reducir errores en la manufactura.",
+  title: "Alphaqueb — Consultoría estratégica para la industria",
+  description: "Consultoría estratégica para retos de alta exigencia: manufactura compleja, comercio internacional, eventos masivos y cumplimiento ambiental.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background font-sans mx-6 xl:mx-8 2xl:mx-16`}
-      >
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WR7YX9PG6P"
-          strategy="afterInteractive"
-        />
+    <html lang="es" className="dark">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&family=Oxanium:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
+      <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-WR7YX9PG6P" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -43,13 +29,12 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-WR7YX9PG6P');
           `}
         </Script>
-
-        {/* Theme Provider */}
         <ThemeProvider>
+          <div className="aq-grid-bg" />
           <Navbar />
-          {children}
+          <main className="aq-site-main">{children}</main>
           <Toaster />
-          <CookieBanner />  {/* ⬅️ Agregamos la barra de cookies aquí */}
+          <CookieBanner />
           <Footer />
         </ThemeProvider>
       </body>

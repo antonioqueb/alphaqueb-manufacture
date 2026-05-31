@@ -2,7 +2,7 @@ import React from 'react';
 
 const LegalNotice = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Aviso Legal</h1>
       <p className="mb-4 dark:text-zinc-200">
         En Alphaqueb Consulting, estamos comprometidos con proporcionar información precisa y actualizada sobre nuestros servicios. Este aviso legal establece los términos y condiciones generales de uso de nuestro sitio web y servicios.

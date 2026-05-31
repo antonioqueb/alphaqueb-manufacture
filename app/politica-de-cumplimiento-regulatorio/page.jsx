@@ -2,7 +2,7 @@ import React from 'react';
 
 const RegulatoryCompliancePolicy = () => {
   return (
-    <div className="p-8 rounded-lg max-w-4xl mx-auto dark:text-zinc-200">
+    <div className="aq-policy">
       <h1 className="text-3xl font-bold mb-6 text-center dark:text-zinc-200">Política de Cumplimiento Regulatorio</h1>
       <p className="mb-4 dark:text-zinc-200">
         En Alphaqueb Consulting, estamos comprometidos con el cumplimiento de todas las leyes, regulaciones y estándares aplicables en todas nuestras operaciones. Esta política de cumplimiento regulatorio establece los principios y procedimientos que guian nuestro comportamiento y decisiones para asegurar el cumplimiento regulatorio.
